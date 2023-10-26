@@ -6,6 +6,8 @@ import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
 import dotenv from 'dotenv';
 import replace from '@rollup/plugin-replace';
+import json from '@rollup/plugin-json';
+
 
 dotenv.config();
 
@@ -41,6 +43,7 @@ export default {
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
+		json(),
 		replace({
       _process: JSON.stringify({
         env: {

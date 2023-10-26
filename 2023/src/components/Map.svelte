@@ -50,9 +50,10 @@
 }
 
 .map {
-  position: absolute;
+
   width: 100%;
   height: 100%;
+  align-self: flex-start;
 }
 
 .watermark {
@@ -60,5 +61,6 @@
   left: 10px;
   bottom: 10px;
   z-index: 999;
+  
 }
 </style>
