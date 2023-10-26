@@ -497,15 +497,15 @@ var app = (function () {
     			div0 = element("div");
     			if (!src_url_equal(img.src, img_src_value = "https://api.maptiler.com/resources/logo.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "MapTiler logo");
-    			add_location(img, file$1, 38, 55, 994);
+    			add_location(img, file$1, 38, 55, 980);
     			attr_dev(a, "href", "https://www.maptiler.com");
     			attr_dev(a, "class", "watermark svelte-1d0n40d");
-    			add_location(a, file$1, 38, 2, 941);
+    			add_location(a, file$1, 38, 2, 927);
     			attr_dev(div0, "class", "map svelte-1d0n40d");
     			attr_dev(div0, "id", "map");
-    			add_location(div0, file$1, 40, 2, 1083);
+    			add_location(div0, file$1, 40, 2, 1069);
     			attr_dev(div1, "class", "map-wrap svelte-1d0n40d");
-    			add_location(div1, file$1, 37, 0, 916);
+    			add_location(div1, file$1, 37, 0, 902);
     		},
     		l: function claim(nodes) {
     			throw new Error_1("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -555,7 +555,7 @@ var app = (function () {
     			throw new Error("You need to configure env API_KEY first, see README");
     		}
 
-    		const initialState = { lng: 139.753, lat: 35.6844, zoom: 14 };
+    		const initialState = { lng: 0, lat: 0, zoom: 1 };
 
     		map = new maplibreGl.Map({
     				container: mapContainer,
@@ -565,7 +565,7 @@ var app = (function () {
     			});
 
     		map.addControl(new maplibreGl.NavigationControl(), 'top-right');
-    		new maplibreGl.Marker({ color: "#FF0000" }).setLngLat([139.7525, 35.6846]).addTo(map);
+    		new maplibreGl.Marker({ color: "#FF0000" }).setLngLat([5.55555, 5.55555]).addTo(map);
     	});
 
     	onDestroy(() => {

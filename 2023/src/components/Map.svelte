@@ -15,7 +15,7 @@
       throw new Error("You need to configure env API_KEY first, see README");
     }
 
-    const initialState = { lng: 139.753, lat: 35.6844, zoom: 14 };
+    const initialState = { lng: 0, lat: 0, zoom: 1 };
   
     map = new Map({
       container: mapContainer,
@@ -25,7 +25,7 @@
     });
     map.addControl(new NavigationControl(), 'top-right');
     new Marker({color: "#FF0000"})
-      .setLngLat([139.7525,35.6846])
+      .setLngLat([5.55555,5.55555])
       .addTo(map);
 
   });
