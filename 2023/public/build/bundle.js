@@ -1148,39 +1148,39 @@ var app = (function () {
     			div5 = element("div");
     			t24 = text(/*map*/ ctx[0]);
     			attr_dev(div0, "class", "scorebox svelte-141fzam");
-    			add_location(div0, file$1, 120, 4, 2687);
-    			add_location(p0, file$1, 122, 6, 2771);
-    			add_location(p1, file$1, 123, 9, 2834);
+    			add_location(div0, file$1, 124, 4, 2782);
+    			add_location(p0, file$1, 126, 6, 2866);
+    			add_location(p1, file$1, 127, 9, 2929);
     			attr_dev(img, "class", "quizz-img svelte-141fzam");
-    			if (!src_url_equal(img.src, img_src_value = "./img/" + question[/*day*/ ctx[3]].day + ".png")) attr_dev(img, "src", img_src_value);
+    			if (!src_url_equal(img.src, img_src_value = "./img/" + /*image_status*/ ctx[9] + "/" + question[/*day*/ ctx[3]].day + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = "map_" + question[/*day*/ ctx[3]].day);
-    			add_location(img, file$1, 125, 12, 2944);
-    			attr_dev(a, "href", a_href_value = "./img/" + question[/*day*/ ctx[3]].day + ".png");
+    			add_location(img, file$1, 129, 12, 3054);
+    			attr_dev(a, "href", a_href_value = "./img/" + /*image_status*/ ctx[9] + "/" + question[/*day*/ ctx[3]].day + ".png");
     			attr_dev(a, "target", "_blank");
-    			add_location(a, file$1, 124, 9, 2875);
+    			add_location(a, file$1, 128, 9, 2970);
     			attr_dev(div1, "class", "quizz");
-    			add_location(div1, file$1, 121, 4, 2745);
+    			add_location(div1, file$1, 125, 4, 2840);
     			attr_dev(input, "id", "inputBox");
     			attr_dev(input, "placeholder", "Your answer");
-    			add_location(input, file$1, 137, 9, 3384);
+    			add_location(input, file$1, 141, 9, 3509);
     			attr_dev(button0, "id", "submitBtn");
-    			add_location(button0, file$1, 138, 8, 3467);
-    			add_location(p2, file$1, 137, 6, 3381);
+    			add_location(button0, file$1, 142, 8, 3592);
+    			add_location(p2, file$1, 141, 6, 3506);
     			attr_dev(div2, "class", "submit");
-    			add_location(div2, file$1, 136, 4, 3354);
+    			add_location(div2, file$1, 140, 4, 3479);
     			attr_dev(div3, "id", "resultText");
     			attr_dev(div3, "class", "result svelte-141fzam");
     			set_style(div3, "--theme-color", /*answer_result_color*/ ctx[7]);
-    			add_location(div3, file$1, 140, 4, 3549);
-    			add_location(p3, file$1, 142, 6, 3686);
-    			add_location(i, file$1, 143, 9, 3719);
-    			add_location(p4, file$1, 143, 6, 3716);
-    			add_location(button1, file$1, 144, 6, 3753);
+    			add_location(div3, file$1, 144, 4, 3674);
+    			add_location(p3, file$1, 146, 6, 3811);
+    			add_location(i, file$1, 147, 9, 3844);
+    			add_location(p4, file$1, 147, 6, 3841);
+    			add_location(button1, file$1, 148, 6, 3878);
     			attr_dev(div4, "class", "answerbox svelte-141fzam");
-    			add_location(div4, file$1, 141, 4, 3656);
-    			add_location(div5, file$1, 146, 4, 3815);
+    			add_location(div4, file$1, 145, 4, 3781);
+    			add_location(div5, file$1, 150, 4, 3940);
     			attr_dev(div6, "class", "Quizzbox svelte-141fzam");
-    			add_location(div6, file$1, 119, 0, 2659);
+    			add_location(div6, file$1, 123, 0, 2754);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1231,9 +1231,9 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input, "input", /*input_input_handler*/ ctx[11]),
-    					listen_dev(button0, "click", /*answerClick*/ ctx[9], false, false, false),
-    					listen_dev(button1, "click", /*switchNextDay*/ ctx[10], false, false, false)
+    					listen_dev(input, "input", /*input_input_handler*/ ctx[12]),
+    					listen_dev(button0, "click", /*answerClick*/ ctx[10], false, false, false),
+    					listen_dev(button1, "click", /*switchNextDay*/ ctx[11], false, false, false)
     				];
 
     				mounted = true;
@@ -1246,7 +1246,7 @@ var app = (function () {
     			if (dirty & /*day*/ 8 && t8_value !== (t8_value = question[/*day*/ ctx[3]].theme + "")) set_data_dev(t8, t8_value);
     			if (dirty & /*day*/ 8 && t10_value !== (t10_value = question[/*day*/ ctx[3]].question + "")) set_data_dev(t10, t10_value);
 
-    			if (dirty & /*day*/ 8 && !src_url_equal(img.src, img_src_value = "./img/" + question[/*day*/ ctx[3]].day + ".png")) {
+    			if (dirty & /*image_status, day*/ 520 && !src_url_equal(img.src, img_src_value = "./img/" + /*image_status*/ ctx[9] + "/" + question[/*day*/ ctx[3]].day + ".png")) {
     				attr_dev(img, "src", img_src_value);
     			}
 
@@ -1254,7 +1254,7 @@ var app = (function () {
     				attr_dev(img, "alt", img_alt_value);
     			}
 
-    			if (dirty & /*day*/ 8 && a_href_value !== (a_href_value = "./img/" + question[/*day*/ ctx[3]].day + ".png")) {
+    			if (dirty & /*image_status, day*/ 520 && a_href_value !== (a_href_value = "./img/" + /*image_status*/ ctx[9] + "/" + question[/*day*/ ctx[3]].day + ".png")) {
     				attr_dev(a, "href", a_href_value);
     			}
 
@@ -1304,6 +1304,7 @@ var app = (function () {
     	let answer_result = '';
     	let answer_result_color = '#99140b';
     	let answer_comment = '';
+    	let image_status = 'q';
 
     	function answerClick() {
     		$$invalidate(2, count += 1);
@@ -1320,6 +1321,8 @@ var app = (function () {
     			$$invalidate(6, answer_result = 'Wrong');
     			$$invalidate(7, answer_result_color = '#99140b');
     		}
+
+    		$$invalidate(9, image_status = 'r');
 
     		// map
     		map.flyTo({
@@ -1381,9 +1384,11 @@ var app = (function () {
     	}
 
     	function switchNextDay() {
+    		$$invalidate(9, image_status = 'q');
     		$$invalidate(4, user_answer = '');
     		$$invalidate(5, answer_message = '');
     		$$invalidate(6, answer_result = '');
+    		$$invalidate(8, answer_comment = '');
     		$$invalidate(3, day += 1);
     		$$invalidate(2, count = day);
     		submitBtn.disabled = false;
@@ -1419,6 +1424,7 @@ var app = (function () {
     		answer_result,
     		answer_result_color,
     		answer_comment,
+    		image_status,
     		answerClick,
     		switchNextDay
     	});
@@ -1433,6 +1439,7 @@ var app = (function () {
     		if ('answer_result' in $$props) $$invalidate(6, answer_result = $$props.answer_result);
     		if ('answer_result_color' in $$props) $$invalidate(7, answer_result_color = $$props.answer_result_color);
     		if ('answer_comment' in $$props) $$invalidate(8, answer_comment = $$props.answer_comment);
+    		if ('image_status' in $$props) $$invalidate(9, image_status = $$props.image_status);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -1449,6 +1456,7 @@ var app = (function () {
     		answer_result,
     		answer_result_color,
     		answer_comment,
+    		image_status,
     		answerClick,
     		switchNextDay,
     		input_input_handler

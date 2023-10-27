@@ -10,6 +10,7 @@
   let answer_result = '';
   let answer_result_color = '#99140b'
   let answer_comment = ''
+  let image_status = 'q'
 
 
 	function answerClick() {
@@ -28,6 +29,7 @@
       answer_result_color = '#99140b'
     }
 
+    image_status = 'r'
     // map
     map.flyTo({
       center: [question[day].lon,question[day].lat], 
@@ -98,9 +100,11 @@
 		
 	}
   function switchNextDay(){
+    image_status = 'q'
     user_answer = ''
     answer_message = ''
     answer_result = ''
+    answer_comment = ''
     day += 1;
     count = day
     submitBtn.disabled = false
@@ -122,8 +126,8 @@
     <div class="quizz">
       <p>Day {question[day].day}: {question[day].theme}</p>
          <p>{question[day].question}</p>
-         <a href="./img/{question[day].day}.png" target="_blank">
-            <img class="quizz-img" src="./img/{question[day].day}.png" alt="map_{question[day].day}" />
+         <a href="./img/{image_status}/{question[day].day}.png" target="_blank">
+            <img class="quizz-img" src="./img/{image_status}/{question[day].day}.png" alt="map_{question[day].day}" />
          </a>
       <!-- {#each question as mapday}
          <p>Day {mapday.day}: {mapday.theme}</p>
