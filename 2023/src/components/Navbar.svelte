@@ -1,5 +1,5 @@
 <div class="heading">
-  <h1>#30DayMapChallenge 2023 Game</h1>
+  <h1>#30DayMapChallenge Game 2023</h1>
 </div>
 
 <style>
