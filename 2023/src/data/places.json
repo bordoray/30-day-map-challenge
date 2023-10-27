@@ -21,7 +21,7 @@
     "place_comment": "The top of the world!",
     "lat": 27.9881637480718,
     "lon": 86.9250962194349,
-    "zoom": 12
+    "zoom": 13
   },
   {
     "day": 3,
@@ -105,7 +105,7 @@
     "place_comment": "",
     "lat": 37.2147327312971,
     "lon": 14.6366290847497,
-    "zoom": 14
+    "zoom": 15
   },
   {
     "day": 10,
@@ -153,7 +153,7 @@
     "place_comment": "Digits shows the number of polar bear dens per square of 10km.",
     "lat": 78.6213595406461,
     "lon": 16.9864786456367,
-    "zoom": 5
+    "zoom": 4
   },
   {
     "day": 14,
@@ -165,7 +165,7 @@
     "place_comment": "",
     "lat": 64.9402837389247,
     "lon": -23.3064095046468,
-    "zoom": 13
+    "zoom": 12
   },
   {
     "day": 15,
@@ -249,7 +249,7 @@
     "place_comment": "",
     "lat": 47.808125132594,
     "lon": 107.529844055325,
-    "zoom": 13
+    "zoom": 15
   },
   {
     "day": 22,
@@ -309,7 +309,7 @@
     "place_comment": "Pitcairn is the dependency having the less population.",
     "lat": -25.0692396577367,
     "lon": -130.105773008269,
-    "zoom": 14
+    "zoom": 13.5
   },
   {
     "day": 27,
@@ -321,7 +321,7 @@
     "place_comment": "",
     "lat": 71.3597172198159,
     "lon": -154.724482964392,
-    "zoom": 7
+    "zoom": 4
   },
   {
     "day": 28,

@@ -535,15 +535,15 @@ var app = (function () {
     			div0 = element("div");
     			if (!src_url_equal(img.src, img_src_value = "https://api.maptiler.com/resources/logo.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "MapTiler logo");
-    			add_location(img, file$2, 48, 55, 1136);
+    			add_location(img, file$2, 45, 55, 1046);
     			attr_dev(a, "href", "https://www.maptiler.com");
     			attr_dev(a, "class", "watermark svelte-ou34wz");
-    			add_location(a, file$2, 48, 2, 1083);
+    			add_location(a, file$2, 45, 2, 993);
     			attr_dev(div0, "class", "map svelte-ou34wz");
     			attr_dev(div0, "id", "map");
-    			add_location(div0, file$2, 50, 2, 1225);
+    			add_location(div0, file$2, 47, 2, 1135);
     			attr_dev(div1, "class", "map-wrap svelte-ou34wz");
-    			add_location(div1, file$2, 47, 0, 1058);
+    			add_location(div1, file$2, 44, 0, 968);
     		},
     		l: function claim(nodes) {
     			throw new Error_1("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -607,7 +607,6 @@ var app = (function () {
     			}));
 
     		map.addControl(new maplibreGl.NavigationControl(), 'top-right');
-    		new maplibreGl.Marker({ color: "#FF0000" }).setLngLat([5.55555, 5.55555]).addTo(map);
     	});
 
     	onDestroy(() => {
@@ -706,7 +705,7 @@ var app = (function () {
     		place_comment: "The top of the world!",
     		lat: 27.9881637480718,
     		lon: 86.9250962194349,
-    		zoom: 12
+    		zoom: 13
     	},
     	{
     		day: 3,
@@ -790,7 +789,7 @@ var app = (function () {
     		place_comment: "",
     		lat: 37.2147327312971,
     		lon: 14.6366290847497,
-    		zoom: 14
+    		zoom: 15
     	},
     	{
     		day: 10,
@@ -838,7 +837,7 @@ var app = (function () {
     		place_comment: "Digits shows the number of polar bear dens per square of 10km.",
     		lat: 78.6213595406461,
     		lon: 16.9864786456367,
-    		zoom: 5
+    		zoom: 4
     	},
     	{
     		day: 14,
@@ -850,7 +849,7 @@ var app = (function () {
     		place_comment: "",
     		lat: 64.9402837389247,
     		lon: -23.3064095046468,
-    		zoom: 13
+    		zoom: 12
     	},
     	{
     		day: 15,
@@ -934,7 +933,7 @@ var app = (function () {
     		place_comment: "",
     		lat: 47.808125132594,
     		lon: 107.529844055325,
-    		zoom: 13
+    		zoom: 15
     	},
     	{
     		day: 22,
@@ -994,7 +993,7 @@ var app = (function () {
     		place_comment: "Pitcairn is the dependency having the less population.",
     		lat: -25.0692396577367,
     		lon: -130.105773008269,
-    		zoom: 14
+    		zoom: 13.5
     	},
     	{
     		day: 27,
@@ -1006,7 +1005,7 @@ var app = (function () {
     		place_comment: "",
     		lat: 71.3597172198159,
     		lon: -154.724482964392,
-    		zoom: 7
+    		zoom: 4
     	},
     	{
     		day: 28,
@@ -1138,34 +1137,34 @@ var app = (function () {
     			div5 = element("div");
     			t22 = text(/*map*/ ctx[0]);
     			attr_dev(div0, "class", "scorebox svelte-f81k69");
-    			add_location(div0, file$1, 45, 4, 829);
-    			add_location(p0, file$1, 47, 6, 913);
-    			add_location(p1, file$1, 48, 9, 976);
+    			add_location(div0, file$1, 113, 4, 2442);
+    			add_location(p0, file$1, 115, 6, 2526);
+    			add_location(p1, file$1, 116, 9, 2589);
     			attr_dev(img, "class", "quizz-img svelte-f81k69");
     			if (!src_url_equal(img.src, img_src_value = "./img/" + question[/*day*/ ctx[3]].day + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = "map_" + question[/*day*/ ctx[3]].day);
-    			add_location(img, file$1, 50, 12, 1086);
+    			add_location(img, file$1, 118, 12, 2699);
     			attr_dev(a, "href", a_href_value = "./img/" + question[/*day*/ ctx[3]].day + ".png");
     			attr_dev(a, "target", "_blank");
-    			add_location(a, file$1, 49, 9, 1017);
+    			add_location(a, file$1, 117, 9, 2630);
     			attr_dev(div1, "class", "quizz");
-    			add_location(div1, file$1, 46, 4, 887);
+    			add_location(div1, file$1, 114, 4, 2500);
     			attr_dev(input, "placeholder", "Your answer");
-    			add_location(input, file$1, 62, 9, 1526);
+    			add_location(input, file$1, 130, 9, 3139);
     			attr_dev(button0, "id", "submitBtn");
-    			add_location(button0, file$1, 63, 8, 1595);
-    			add_location(p2, file$1, 62, 6, 1523);
+    			add_location(button0, file$1, 131, 8, 3208);
+    			add_location(p2, file$1, 130, 6, 3136);
     			attr_dev(div2, "class", "submit");
-    			add_location(div2, file$1, 61, 4, 1496);
+    			add_location(div2, file$1, 129, 4, 3109);
     			attr_dev(div3, "class", "result");
-    			add_location(div3, file$1, 65, 4, 1677);
-    			add_location(p3, file$1, 67, 6, 1753);
-    			add_location(button1, file$1, 68, 6, 1783);
+    			add_location(div3, file$1, 133, 4, 3290);
+    			add_location(p3, file$1, 135, 6, 3366);
+    			add_location(button1, file$1, 136, 6, 3396);
     			attr_dev(div4, "class", "answerbox svelte-f81k69");
-    			add_location(div4, file$1, 66, 4, 1723);
-    			add_location(div5, file$1, 70, 4, 1845);
+    			add_location(div4, file$1, 134, 4, 3336);
+    			add_location(div5, file$1, 138, 4, 3458);
     			attr_dev(div6, "class", "Quizzbox svelte-f81k69");
-    			add_location(div6, file$1, 44, 0, 801);
+    			add_location(div6, file$1, 112, 0, 2414);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1294,8 +1293,59 @@ var app = (function () {
     		map.flyTo({
     			center: [question[day].lon, question[day].lat],
     			zoom: question[day].zoom,
-    			speed: 2
+    			speed: 3
     		});
+
+    		// add point
+    		const placedata = {
+    			'type': 'FeatureCollection',
+    			'features': [
+    				{
+    					'type': 'Feature',
+    					'properties': { "day": question[day].day },
+    					'geometry': {
+    						'type': 'Point',
+    						'coordinates': [question[day].lon, question[day].lat]
+    					}
+    				}
+    			]
+    		};
+
+    		let place_source = 'place_data_' + question[day].day.toString();
+    		map.addSource(place_source, { type: 'geojson', data: placedata });
+    		let color = "#660c06"; // red for bad  
+
+    		if (answer_result == 'Correct!') {
+    			color = "#066616";
+    		}
+
+    		map.addLayer({
+    			id: 'place_' + question[day].day.toString(),
+    			source: place_source,
+    			type: 'circle',
+    			paint: {
+    				'circle-color': color,
+    				'circle-opacity': 0.8,
+    				'circle-radius': 8
+    			}, // MapLibre Style Specification paint properties
+    			layout: {}, // MapLibre Style Specification layout properties
+    			
+    		});
+
+    		map.addLayer({
+    			id: 'place_label_' + question[day].day.toString(),
+    			// References the GeoJSON source defined above
+    			// and does not require a `source-layer`
+    			source: place_source,
+    			type: 'symbol',
+    			paint: { 'text-color': "#FFF" },
+    			layout: {
+    				'text-field': ['get', 'day'],
+    				'text-size': 14
+    			}, // 'text-color': "#FFF"
+    			// Set the label content to the
+    			
+    		}); // feature's `name` property
     	}
 
     	function switchNextDay() {
@@ -1305,6 +1355,9 @@ var app = (function () {
     		$$invalidate(3, day += 1);
     		$$invalidate(2, count = day);
     		submitBtn.disabled = false;
+
+    		// map
+    		map.flyTo({ center: [0, 0], zoom: 1, speed: 10 });
     	}
 
     	const writable_props = ['map'];

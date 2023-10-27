@@ -32,9 +32,6 @@
       zoom: initialState.zoom
     });
     map.addControl(new NavigationControl(), 'top-right');
-    new Marker({color: "#FF0000"})
-      .setLngLat([5.55555,5.55555])
-      .addTo(map);
 
 
   });

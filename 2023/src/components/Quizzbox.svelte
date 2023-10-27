@@ -26,7 +26,68 @@
     map.flyTo({
       center: [question[day].lon,question[day].lat], 
       zoom: question[day].zoom,
-      speed: 2
+      speed: 3
+    });
+
+    // add point
+    const placedata = {
+        'type': 'FeatureCollection',
+        'features': [
+            {
+            'type': 'Feature',
+            'properties': {
+              "day": question[day].day},
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [question[day].lon,question[day].lat]
+            }
+            }
+        ]
+    }
+
+    let place_source = 'place_data_' + question[day].day.toString()
+    map.addSource(place_source, {
+      type: 'geojson',
+      data: placedata
+    });
+
+    let color = "#660c06" // red for bad  
+    if(answer_result == 'Correct!'){
+      color = "#066616";
+    }
+
+    map.addLayer({
+      id: 'place_'+question[day].day.toString(),
+      source: place_source,
+      type: 'circle',
+      paint: {
+        'circle-color': color,
+        'circle-opacity': 0.8,
+        'circle-radius': 8
+        // MapLibre Style Specification paint properties
+      },
+      layout: {
+        // MapLibre Style Specification layout properties
+      }
+    });
+
+    map.addLayer({
+      id: 'place_label_'+question[day].day.toString(),
+      // References the GeoJSON source defined above
+      // and does not require a `source-layer`
+      source: place_source,
+      type: 'symbol',
+      paint: {
+        'text-color': "#FFF"
+      },
+      layout: {
+        'text-field': ['get', 'day'],
+        'text-size': 14
+        // 'text-color': "#FFF"
+        // Set the label content to the
+        // feature's `name` property
+        
+      }
     });
 		
 	}
@@ -37,6 +98,13 @@
     day += 1;
     count = day
     submitBtn.disabled = false
+
+    // map
+    map.flyTo({
+      center: [0,0], 
+      zoom: 1,
+      speed: 10
+    });
 
 
   }
