@@ -8,18 +8,24 @@
   let user_answer = '';
   let answer_message = '';
   let answer_result = '';
+  let answer_result_color = '#99140b'
+  let answer_comment = ''
 
 
 	function answerClick() {
     count += 1
     submitBtn.disabled = true
+    inputBox.disabled = true
     answer_message = "The answer is " + question[day].place
+    answer_comment = question[day].place_comment
     if (user_answer == question[day].place){
-      answer_result = 'Correct!'
+      answer_result = 'Correct'
       score += 1
+      answer_result_color = '#0b9917'
     }
     else{
-      answer_result = 'Oh no!'
+      answer_result = 'Wrong'
+      answer_result_color = '#99140b'
     }
 
     // map
@@ -52,7 +58,7 @@
     });
 
     let color = "#660c06" // red for bad  
-    if(answer_result == 'Correct!'){
+    if(answer_result == 'Correct'){
       color = "#066616";
     }
 
@@ -98,6 +104,7 @@
     day += 1;
     count = day
     submitBtn.disabled = false
+    inputBox.disabled = false
 
     // map
     map.flyTo({
@@ -128,12 +135,13 @@
       {/each} -->
     </div>
     <div class="submit">
-      <p><input bind:value={user_answer} placeholder="Your answer" />
+      <p><input id="inputBox" bind:value={user_answer} placeholder="Your answer" />
         <button id="submitBtn" on:click={answerClick}>Submit!</button></p>
     </div>
-    <div class="result">{answer_result}</div>
+    <div id="resultText" class="result" style="--theme-color: {answer_result_color}">{answer_result}</div>
     <div class="answerbox">
       <p>{answer_message}</p>
+      <p><i>{answer_comment}</i></p>
       <button on:click={switchNextDay}>Next</button>
     </div>
     <div>{map}</div>
@@ -153,7 +161,14 @@
 .scorebox{
   padding : 10px
 }
+
 .answerbox{
-  padding: 20px;
+  padding: 5px;
+}
+
+.result{
+  color: var(--theme-color);
+  font-size: 20pt;
+  font-weight: bold;
 }
 </style>

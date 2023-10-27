@@ -69,6 +69,9 @@ var app = (function () {
     function set_input_value(input, value) {
         input.value = value == null ? '' : value;
     }
+    function set_style(node, key, value, important) {
+        node.style.setProperty(key, value, important ? 'important' : '');
+    }
     function custom_event(type, detail, bubbles = false) {
         const e = document.createEvent('CustomEvent');
         e.initCustomEvent(type, bubbles, false, detail);
@@ -806,7 +809,7 @@ var app = (function () {
     	{
     		day: 11,
     		theme: "Retro",
-    		place: "Paris, 1859",
+    		place: "1860",
     		alt_place: "",
     		sub_place: "",
     		question: "Guess the year when Paris absorbed surrounding towns.",
@@ -1088,10 +1091,14 @@ var app = (function () {
     	let p3;
     	let t18;
     	let t19;
-    	let button1;
+    	let p4;
+    	let i;
+    	let t20;
     	let t21;
+    	let button1;
+    	let t23;
     	let div5;
-    	let t22;
+    	let t24;
     	let mounted;
     	let dispose;
 
@@ -1131,40 +1138,49 @@ var app = (function () {
     			p3 = element("p");
     			t18 = text(/*answer_message*/ ctx[5]);
     			t19 = space();
+    			p4 = element("p");
+    			i = element("i");
+    			t20 = text(/*answer_comment*/ ctx[8]);
+    			t21 = space();
     			button1 = element("button");
     			button1.textContent = "Next";
-    			t21 = space();
+    			t23 = space();
     			div5 = element("div");
-    			t22 = text(/*map*/ ctx[0]);
-    			attr_dev(div0, "class", "scorebox svelte-f81k69");
-    			add_location(div0, file$1, 113, 4, 2442);
-    			add_location(p0, file$1, 115, 6, 2526);
-    			add_location(p1, file$1, 116, 9, 2589);
-    			attr_dev(img, "class", "quizz-img svelte-f81k69");
+    			t24 = text(/*map*/ ctx[0]);
+    			attr_dev(div0, "class", "scorebox svelte-141fzam");
+    			add_location(div0, file$1, 120, 4, 2687);
+    			add_location(p0, file$1, 122, 6, 2771);
+    			add_location(p1, file$1, 123, 9, 2834);
+    			attr_dev(img, "class", "quizz-img svelte-141fzam");
     			if (!src_url_equal(img.src, img_src_value = "./img/" + question[/*day*/ ctx[3]].day + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = "map_" + question[/*day*/ ctx[3]].day);
-    			add_location(img, file$1, 118, 12, 2699);
+    			add_location(img, file$1, 125, 12, 2944);
     			attr_dev(a, "href", a_href_value = "./img/" + question[/*day*/ ctx[3]].day + ".png");
     			attr_dev(a, "target", "_blank");
-    			add_location(a, file$1, 117, 9, 2630);
+    			add_location(a, file$1, 124, 9, 2875);
     			attr_dev(div1, "class", "quizz");
-    			add_location(div1, file$1, 114, 4, 2500);
+    			add_location(div1, file$1, 121, 4, 2745);
+    			attr_dev(input, "id", "inputBox");
     			attr_dev(input, "placeholder", "Your answer");
-    			add_location(input, file$1, 130, 9, 3139);
+    			add_location(input, file$1, 137, 9, 3384);
     			attr_dev(button0, "id", "submitBtn");
-    			add_location(button0, file$1, 131, 8, 3208);
-    			add_location(p2, file$1, 130, 6, 3136);
+    			add_location(button0, file$1, 138, 8, 3467);
+    			add_location(p2, file$1, 137, 6, 3381);
     			attr_dev(div2, "class", "submit");
-    			add_location(div2, file$1, 129, 4, 3109);
-    			attr_dev(div3, "class", "result");
-    			add_location(div3, file$1, 133, 4, 3290);
-    			add_location(p3, file$1, 135, 6, 3366);
-    			add_location(button1, file$1, 136, 6, 3396);
-    			attr_dev(div4, "class", "answerbox svelte-f81k69");
-    			add_location(div4, file$1, 134, 4, 3336);
-    			add_location(div5, file$1, 138, 4, 3458);
-    			attr_dev(div6, "class", "Quizzbox svelte-f81k69");
-    			add_location(div6, file$1, 112, 0, 2414);
+    			add_location(div2, file$1, 136, 4, 3354);
+    			attr_dev(div3, "id", "resultText");
+    			attr_dev(div3, "class", "result svelte-141fzam");
+    			set_style(div3, "--theme-color", /*answer_result_color*/ ctx[7]);
+    			add_location(div3, file$1, 140, 4, 3549);
+    			add_location(p3, file$1, 142, 6, 3686);
+    			add_location(i, file$1, 143, 9, 3719);
+    			add_location(p4, file$1, 143, 6, 3716);
+    			add_location(button1, file$1, 144, 6, 3753);
+    			attr_dev(div4, "class", "answerbox svelte-141fzam");
+    			add_location(div4, file$1, 141, 4, 3656);
+    			add_location(div5, file$1, 146, 4, 3815);
+    			attr_dev(div6, "class", "Quizzbox svelte-141fzam");
+    			add_location(div6, file$1, 119, 0, 2659);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1204,16 +1220,20 @@ var app = (function () {
     			append_dev(div4, p3);
     			append_dev(p3, t18);
     			append_dev(div4, t19);
+    			append_dev(div4, p4);
+    			append_dev(p4, i);
+    			append_dev(i, t20);
+    			append_dev(div4, t21);
     			append_dev(div4, button1);
-    			append_dev(div6, t21);
+    			append_dev(div6, t23);
     			append_dev(div6, div5);
-    			append_dev(div5, t22);
+    			append_dev(div5, t24);
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input, "input", /*input_input_handler*/ ctx[9]),
-    					listen_dev(button0, "click", /*answerClick*/ ctx[7], false, false, false),
-    					listen_dev(button1, "click", /*switchNextDay*/ ctx[8], false, false, false)
+    					listen_dev(input, "input", /*input_input_handler*/ ctx[11]),
+    					listen_dev(button0, "click", /*answerClick*/ ctx[9], false, false, false),
+    					listen_dev(button1, "click", /*switchNextDay*/ ctx[10], false, false, false)
     				];
 
     				mounted = true;
@@ -1243,8 +1263,14 @@ var app = (function () {
     			}
 
     			if (dirty & /*answer_result*/ 64) set_data_dev(t16, /*answer_result*/ ctx[6]);
+
+    			if (dirty & /*answer_result_color*/ 128) {
+    				set_style(div3, "--theme-color", /*answer_result_color*/ ctx[7]);
+    			}
+
     			if (dirty & /*answer_message*/ 32) set_data_dev(t18, /*answer_message*/ ctx[5]);
-    			if (dirty & /*map*/ 1) set_data_dev(t22, /*map*/ ctx[0]);
+    			if (dirty & /*answer_comment*/ 256) set_data_dev(t20, /*answer_comment*/ ctx[8]);
+    			if (dirty & /*map*/ 1) set_data_dev(t24, /*map*/ ctx[0]);
     		},
     		i: noop,
     		o: noop,
@@ -1276,17 +1302,23 @@ var app = (function () {
     	let user_answer = '';
     	let answer_message = '';
     	let answer_result = '';
+    	let answer_result_color = '#99140b';
+    	let answer_comment = '';
 
     	function answerClick() {
     		$$invalidate(2, count += 1);
     		submitBtn.disabled = true;
+    		inputBox.disabled = true;
     		$$invalidate(5, answer_message = "The answer is " + question[day].place);
+    		$$invalidate(8, answer_comment = question[day].place_comment);
 
     		if (user_answer == question[day].place) {
-    			$$invalidate(6, answer_result = 'Correct!');
+    			$$invalidate(6, answer_result = 'Correct');
     			$$invalidate(1, score += 1);
+    			$$invalidate(7, answer_result_color = '#0b9917');
     		} else {
-    			$$invalidate(6, answer_result = 'Oh no!');
+    			$$invalidate(6, answer_result = 'Wrong');
+    			$$invalidate(7, answer_result_color = '#99140b');
     		}
 
     		// map
@@ -1315,7 +1347,7 @@ var app = (function () {
     		map.addSource(place_source, { type: 'geojson', data: placedata });
     		let color = "#660c06"; // red for bad  
 
-    		if (answer_result == 'Correct!') {
+    		if (answer_result == 'Correct') {
     			color = "#066616";
     		}
 
@@ -1355,6 +1387,7 @@ var app = (function () {
     		$$invalidate(3, day += 1);
     		$$invalidate(2, count = day);
     		submitBtn.disabled = false;
+    		inputBox.disabled = false;
 
     		// map
     		map.flyTo({ center: [0, 0], zoom: 1, speed: 10 });
@@ -1384,6 +1417,8 @@ var app = (function () {
     		user_answer,
     		answer_message,
     		answer_result,
+    		answer_result_color,
+    		answer_comment,
     		answerClick,
     		switchNextDay
     	});
@@ -1396,6 +1431,8 @@ var app = (function () {
     		if ('user_answer' in $$props) $$invalidate(4, user_answer = $$props.user_answer);
     		if ('answer_message' in $$props) $$invalidate(5, answer_message = $$props.answer_message);
     		if ('answer_result' in $$props) $$invalidate(6, answer_result = $$props.answer_result);
+    		if ('answer_result_color' in $$props) $$invalidate(7, answer_result_color = $$props.answer_result_color);
+    		if ('answer_comment' in $$props) $$invalidate(8, answer_comment = $$props.answer_comment);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -1410,6 +1447,8 @@ var app = (function () {
     		user_answer,
     		answer_message,
     		answer_result,
+    		answer_result_color,
+    		answer_comment,
     		answerClick,
     		switchNextDay,
     		input_input_handler
@@ -1496,9 +1535,9 @@ var app = (function () {
     			create_component(quizzbox.$$.fragment);
     			t1 = space();
     			create_component(map_1.$$.fragment);
-    			attr_dev(div0, "class", "container svelte-1bzjd37");
+    			attr_dev(div0, "class", "container svelte-gqjcva");
     			add_location(div0, file, 9, 1, 209);
-    			attr_dev(div1, "class", "app svelte-1bzjd37");
+    			attr_dev(div1, "class", "app svelte-gqjcva");
     			add_location(div1, file, 7, 0, 178);
     		},
     		l: function claim(nodes) {

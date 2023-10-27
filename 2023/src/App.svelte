@@ -16,6 +16,7 @@
 <style>
 .app {
   text-align: center;
+  /* font-family: "Lucida Grande",monospace; */
 }
 .container{
 	width:100%;
