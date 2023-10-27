@@ -8,7 +8,8 @@
     "question": "Name the city this place in.",
     "place_comment": "",
     "lat": 16.7983448688837,
-    "lon": 96.1496024717999
+    "lon": 96.1496024717999,
+    "zoom": 15
   },
   {
     "day": 2,
@@ -19,7 +20,8 @@
     "question": "Name this mountain.",
     "place_comment": "The top of the world!",
     "lat": 27.9881637480718,
-    "lon": 86.9250962194349
+    "lon": 86.9250962194349,
+    "zoom": 12
   },
   {
     "day": 3,
@@ -30,7 +32,8 @@
     "question": "Name this place.",
     "place_comment": "",
     "lat": 39.9167866278191,
-    "lon": 116.390744439148
+    "lon": 116.390744439148,
+    "zoom": 14
   },
   {
     "day": 4,
@@ -41,7 +44,8 @@
     "question": "Name this city or area.",
     "place_comment": "",
     "lat": 41.0159913479463,
-    "lon": 28.9819546694404
+    "lon": 28.9819546694404,
+    "zoom": 9
   },
   {
     "day": 5,
@@ -52,7 +56,8 @@
     "question": "Name the country at the right of this globe clay.",
     "place_comment": "",
     "lat": -44.4294876195838,
-    "lon": 170.344479360917
+    "lon": 170.344479360917,
+    "zoom": 4.5
   },
   {
     "day": 6,
@@ -63,7 +68,8 @@
     "question": "Name this city.",
     "place_comment": "",
     "lat": 13.0980761856293,
-    "lon": 103.194754783978
+    "lon": 103.194754783978,
+    "zoom": 11
   },
   {
     "day": 7,
@@ -74,7 +80,8 @@
     "question": "Name this city.",
     "place_comment": "",
     "lat": 45.4383286517221,
-    "lon": 12.3301945720289
+    "lon": 12.3301945720289,
+    "zoom": 13
   },
   {
     "day": 8,
@@ -85,7 +92,8 @@
     "question": "Name this remarkable river.",
     "place_comment": "",
     "lat": -19.8899073403724,
-    "lon": 23.4345716036357
+    "lon": 23.4345716036357,
+    "zoom": 10
   },
   {
     "day": 9,
@@ -96,7 +104,8 @@
     "question": "Name this city.",
     "place_comment": "",
     "lat": 37.2147327312971,
-    "lon": 14.6366290847497
+    "lon": 14.6366290847497,
+    "zoom": 14
   },
   {
     "day": 10,
@@ -107,7 +116,8 @@
     "question": "Name this city.",
     "place_comment": "",
     "lat": 49.2453883470166,
-    "lon": -123.103080322627
+    "lon": -123.103080322627,
+    "zoom": 7.5
   },
   {
     "day": 11,
@@ -118,7 +128,8 @@
     "question": "Guess the year when Paris absorbed surrounding towns.",
     "place_comment": "",
     "lat": 48.8587609371355,
-    "lon": 2.34534869481309
+    "lon": 2.34534869481309,
+    "zoom": 10
   },
   {
     "day": 12,
@@ -129,7 +140,8 @@
     "question": "Name this city.",
     "place_comment": "The End of the World!",
     "lat": -54.8079619333556,
-    "lon": -68.3102616271834
+    "lon": -68.3102616271834,
+    "zoom": 9
   },
   {
     "day": 13,
@@ -140,7 +152,8 @@
     "question": "Name this area hosting many polar bears.",
     "place_comment": "Digits shows the number of polar bear dens per square of 10km.",
     "lat": 78.6213595406461,
-    "lon": 16.9864786456367
+    "lon": 16.9864786456367,
+    "zoom": 5
   },
   {
     "day": 14,
@@ -151,7 +164,8 @@
     "question": "Name this mountain.  Surrounding town is also allowed.",
     "place_comment": "",
     "lat": 64.9402837389247,
-    "lon": -23.3064095046468
+    "lon": -23.3064095046468,
+    "zoom": 13
   },
   {
     "day": 15,
@@ -162,7 +176,8 @@
     "question": "Name this city.",
     "place_comment": "",
     "lat": 43.8495619143722,
-    "lon": 18.3897512177645
+    "lon": 18.3897512177645,
+    "zoom": 12
   },
   {
     "day": 16,
@@ -173,7 +188,8 @@
     "question": "Name this country.",
     "place_comment": "",
     "lat": 7.32732961883409,
-    "lon": 134.473854308072
+    "lon": 134.473854308072,
+    "zoom": 9
   },
   {
     "day": 17,
@@ -184,7 +200,8 @@
     "question": "Name the city of this subway network.",
     "place_comment": "",
     "lat": 31.2419141987077,
-    "lon": 121.495277245857
+    "lon": 121.495277245857,
+    "zoom": 9
   },
   {
     "day": 18,
@@ -195,7 +212,8 @@
     "question": "Name this city.",
     "place_comment": "",
     "lat": 4.17487902020437,
-    "lon": 73.5098633865418
+    "lon": 73.5098633865418,
+    "zoom": 11
   },
   {
     "day": 19,
@@ -206,7 +224,8 @@
     "question": "Name this place.",
     "place_comment": "5.55555E,5.55555N!",
     "lat": 5.55555,
-    "lon": 5.55555
+    "lon": 5.55555,
+    "zoom": 10
   },
   {
     "day": 20,
@@ -217,7 +236,8 @@
     "question": "Name this lake.",
     "place_comment": "",
     "lat": 41.8395934606049,
-    "lon": 75.1519719190007
+    "lon": 75.1519719190007,
+    "zoom": 9
   },
   {
     "day": 21,
@@ -228,7 +248,8 @@
     "question": "Name this place.",
     "place_comment": "",
     "lat": 47.808125132594,
-    "lon": 107.529844055325
+    "lon": 107.529844055325,
+    "zoom": 13
   },
   {
     "day": 22,
@@ -239,7 +260,8 @@
     "question": "Name this country.",
     "place_comment": "Sierra Leone is one of the most rounded country",
     "lat": 8.44519282736392,
-    "lon": -11.8629610237056
+    "lon": -11.8629610237056,
+    "zoom": 7
   },
   {
     "day": 23,
@@ -250,7 +272,8 @@
     "question": "Name this place.",
     "place_comment": "",
     "lat": -51.0029303875002,
-    "lon": -73.0972775304178
+    "lon": -73.0972775304178,
+    "zoom": 10
   },
   {
     "day": 24,
@@ -261,7 +284,8 @@
     "question": "Name this place.",
     "place_comment": "",
     "lat": 45.6190714828521,
-    "lon": 9.2844144011089
+    "lon": 9.2844144011089,
+    "zoom": 13
   },
   {
     "day": 25,
@@ -272,7 +296,8 @@
     "question": "Northern cities has been moved to the ice continent.  Name the city which fall to the south pole.",
     "place_comment": "",
     "lat": -84.99,
-    "lon": 0
+    "lon": 0,
+    "zoom": 3
   },
   {
     "day": 26,
@@ -283,7 +308,8 @@
     "question": "Name this island.",
     "place_comment": "Pitcairn is the dependency having the less population.",
     "lat": -25.0692396577367,
-    "lon": -130.105773008269
+    "lon": -130.105773008269,
+    "zoom": 14
   },
   {
     "day": 27,
@@ -294,7 +320,8 @@
     "question": "Name the sea where 300 bears has been tracked here.",
     "place_comment": "",
     "lat": 71.3597172198159,
-    "lon": -154.724482964392
+    "lon": -154.724482964392,
+    "zoom": 7
   },
   {
     "day": 28,
@@ -305,7 +332,8 @@
     "question": "Name the nation which represents this population chart.",
     "place_comment": "",
     "lat": 35.7996294218927,
-    "lon": 140.060331883228
+    "lon": 140.060331883228,
+    "zoom": 4
   },
   {
     "day": 29,
@@ -316,7 +344,8 @@
     "question": "Name the nation which represents this population density.",
     "place_comment": "",
     "lat": 42.5828007575422,
-    "lon": 20.7497467666328
+    "lon": 20.7497467666328,
+    "zoom": 8
   },
   {
     "day": 30,
@@ -327,6 +356,7 @@
     "question": "Name this beautiful place.",
     "place_comment": "",
     "lat": 11.721768706204,
-    "lon": -15.66774583044
+    "lon": -15.66774583044,
+    "zoom": 8.5
   }
 ]

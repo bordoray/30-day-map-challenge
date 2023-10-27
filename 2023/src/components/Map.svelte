@@ -3,8 +3,16 @@
   import { Map, NavigationControl, Marker } from 'maplibre-gl';
   import 'maplibre-gl/dist/maplibre-gl.css';
 
-  let map;
+  export let map;
   let mapContainer;
+
+  function flyToLocation(center, zoom, speed) {
+    map.flyTo({
+      center: center,
+      zoom: zoom,
+      speed: speed
+    });
+  }
 
   onMount(() => {
 
@@ -28,11 +36,13 @@
       .setLngLat([5.55555,5.55555])
       .addTo(map);
 
+
   });
 
   onDestroy(() => {
 		map.remove();
 	});
+
 </script>
 
 <div class="map-wrap">
@@ -50,7 +60,6 @@
 }
 
 .map {
-
   width: 100%;
   height: 100%;
   align-self: flex-start;

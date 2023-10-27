@@ -2,13 +2,14 @@
 	import Navbar from './components/Navbar.svelte';
 	import Map from './components/Map.svelte';
 	import Quizzbox from './components/Quizzbox.svelte';
+	let map;
 </script>
 
 <div class="app">
 	<Navbar />
 	<div class="container">
-		<Quizzbox />
-		<Map />
+		<Quizzbox bind:map/>
+		<Map bind:map/>
 	</div>
 </div>
 

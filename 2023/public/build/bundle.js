@@ -106,6 +106,9 @@ var app = (function () {
     function add_render_callback(fn) {
         render_callbacks.push(fn);
     }
+    function add_flush_callback(fn) {
+        flush_callbacks.push(fn);
+    }
     let flushing = false;
     const seen_callbacks = new Set();
     function flush() {
@@ -184,6 +187,14 @@ var app = (function () {
         : typeof globalThis !== 'undefined'
             ? globalThis
             : global);
+
+    function bind(component, name, callback) {
+        const index = component.$$.props[name];
+        if (index !== undefined) {
+            component.$$.bound[index] = callback;
+            callback(component.$$.ctx[index]);
+        }
+    }
     function create_component(block) {
         block && block.c();
     }
@@ -524,15 +535,15 @@ var app = (function () {
     			div0 = element("div");
     			if (!src_url_equal(img.src, img_src_value = "https://api.maptiler.com/resources/logo.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "MapTiler logo");
-    			add_location(img, file$2, 38, 55, 991);
+    			add_location(img, file$2, 48, 55, 1136);
     			attr_dev(a, "href", "https://www.maptiler.com");
-    			attr_dev(a, "class", "watermark svelte-1lrbqz5");
-    			add_location(a, file$2, 38, 2, 938);
-    			attr_dev(div0, "class", "map svelte-1lrbqz5");
+    			attr_dev(a, "class", "watermark svelte-ou34wz");
+    			add_location(a, file$2, 48, 2, 1083);
+    			attr_dev(div0, "class", "map svelte-ou34wz");
     			attr_dev(div0, "id", "map");
-    			add_location(div0, file$2, 40, 2, 1080);
-    			attr_dev(div1, "class", "map-wrap svelte-1lrbqz5");
-    			add_location(div1, file$2, 37, 0, 913);
+    			add_location(div0, file$2, 50, 2, 1225);
+    			attr_dev(div1, "class", "map-wrap svelte-ou34wz");
+    			add_location(div1, file$2, 47, 0, 1058);
     		},
     		l: function claim(nodes) {
     			throw new Error_1("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -543,14 +554,14 @@ var app = (function () {
     			append_dev(a, img);
     			append_dev(div1, t);
     			append_dev(div1, div0);
-    			/*div0_binding*/ ctx[1](div0);
+    			/*div0_binding*/ ctx[2](div0);
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
-    			/*div0_binding*/ ctx[1](null);
+    			/*div0_binding*/ ctx[2](null);
     		}
     	};
 
@@ -568,8 +579,12 @@ var app = (function () {
     function instance$2($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Map', slots, []);
-    	let map;
+    	let { map } = $$props;
     	let mapContainer;
+
+    	function flyToLocation(center, zoom, speed) {
+    		map.flyTo({ center, zoom, speed });
+    	}
 
     	onMount(() => {
     		const { env } = {
@@ -584,12 +599,12 @@ var app = (function () {
 
     		const initialState = { lng: 0, lat: 0, zoom: 1 };
 
-    		map = new maplibreGl.Map({
+    		$$invalidate(1, map = new maplibreGl.Map({
     				container: mapContainer,
     				style: `https://api.maptiler.com/maps/jp-mierune-streets/style.json?key=${apiKey}`,
     				center: [initialState.lng, initialState.lat],
     				zoom: initialState.zoom
-    			});
+    			}));
 
     		map.addControl(new maplibreGl.NavigationControl(), 'top-right');
     		new maplibreGl.Marker({ color: "#FF0000" }).setLngLat([5.55555, 5.55555]).addTo(map);
@@ -599,7 +614,7 @@ var app = (function () {
     		map.remove();
     	});
 
-    	const writable_props = [];
+    	const writable_props = ['map'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Map> was created with unknown prop '${key}'`);
@@ -612,6 +627,10 @@ var app = (function () {
     		});
     	}
 
+    	$$self.$$set = $$props => {
+    		if ('map' in $$props) $$invalidate(1, map = $$props.map);
+    	};
+
     	$$self.$capture_state = () => ({
     		onMount,
     		onDestroy,
@@ -619,11 +638,12 @@ var app = (function () {
     		NavigationControl: maplibreGl.NavigationControl,
     		Marker: maplibreGl.Marker,
     		map,
-    		mapContainer
+    		mapContainer,
+    		flyToLocation
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('map' in $$props) map = $$props.map;
+    		if ('map' in $$props) $$invalidate(1, map = $$props.map);
     		if ('mapContainer' in $$props) $$invalidate(0, mapContainer = $$props.mapContainer);
     	};
 
@@ -631,13 +651,13 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [mapContainer, div0_binding];
+    	return [mapContainer, map, div0_binding];
     }
 
     class Map_1 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$2, create_fragment$2, safe_not_equal, {});
+    		init(this, options, instance$2, create_fragment$2, safe_not_equal, { map: 1 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -645,6 +665,21 @@ var app = (function () {
     			options,
     			id: create_fragment$2.name
     		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*map*/ ctx[1] === undefined && !('map' in props)) {
+    			console.warn("<Map> was created without expected prop 'map'");
+    		}
+    	}
+
+    	get map() {
+    		throw new Error_1("<Map>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set map(value) {
+    		throw new Error_1("<Map>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
@@ -658,7 +693,8 @@ var app = (function () {
     		question: "Name the city this place in.",
     		place_comment: "",
     		lat: 16.7983448688837,
-    		lon: 96.1496024717999
+    		lon: 96.1496024717999,
+    		zoom: 15
     	},
     	{
     		day: 2,
@@ -669,7 +705,8 @@ var app = (function () {
     		question: "Name this mountain.",
     		place_comment: "The top of the world!",
     		lat: 27.9881637480718,
-    		lon: 86.9250962194349
+    		lon: 86.9250962194349,
+    		zoom: 12
     	},
     	{
     		day: 3,
@@ -680,7 +717,8 @@ var app = (function () {
     		question: "Name this place.",
     		place_comment: "",
     		lat: 39.9167866278191,
-    		lon: 116.390744439148
+    		lon: 116.390744439148,
+    		zoom: 14
     	},
     	{
     		day: 4,
@@ -691,7 +729,8 @@ var app = (function () {
     		question: "Name this city or area.",
     		place_comment: "",
     		lat: 41.0159913479463,
-    		lon: 28.9819546694404
+    		lon: 28.9819546694404,
+    		zoom: 9
     	},
     	{
     		day: 5,
@@ -702,7 +741,8 @@ var app = (function () {
     		question: "Name the country at the right of this globe clay.",
     		place_comment: "",
     		lat: -44.4294876195838,
-    		lon: 170.344479360917
+    		lon: 170.344479360917,
+    		zoom: 4.5
     	},
     	{
     		day: 6,
@@ -713,7 +753,8 @@ var app = (function () {
     		question: "Name this city.",
     		place_comment: "",
     		lat: 13.0980761856293,
-    		lon: 103.194754783978
+    		lon: 103.194754783978,
+    		zoom: 11
     	},
     	{
     		day: 7,
@@ -724,7 +765,8 @@ var app = (function () {
     		question: "Name this city.",
     		place_comment: "",
     		lat: 45.4383286517221,
-    		lon: 12.3301945720289
+    		lon: 12.3301945720289,
+    		zoom: 13
     	},
     	{
     		day: 8,
@@ -735,7 +777,8 @@ var app = (function () {
     		question: "Name this remarkable river.",
     		place_comment: "",
     		lat: -19.8899073403724,
-    		lon: 23.4345716036357
+    		lon: 23.4345716036357,
+    		zoom: 10
     	},
     	{
     		day: 9,
@@ -746,7 +789,8 @@ var app = (function () {
     		question: "Name this city.",
     		place_comment: "",
     		lat: 37.2147327312971,
-    		lon: 14.6366290847497
+    		lon: 14.6366290847497,
+    		zoom: 14
     	},
     	{
     		day: 10,
@@ -757,7 +801,8 @@ var app = (function () {
     		question: "Name this city.",
     		place_comment: "",
     		lat: 49.2453883470166,
-    		lon: -123.103080322627
+    		lon: -123.103080322627,
+    		zoom: 7.5
     	},
     	{
     		day: 11,
@@ -768,7 +813,8 @@ var app = (function () {
     		question: "Guess the year when Paris absorbed surrounding towns.",
     		place_comment: "",
     		lat: 48.8587609371355,
-    		lon: 2.34534869481309
+    		lon: 2.34534869481309,
+    		zoom: 10
     	},
     	{
     		day: 12,
@@ -779,7 +825,8 @@ var app = (function () {
     		question: "Name this city.",
     		place_comment: "The End of the World!",
     		lat: -54.8079619333556,
-    		lon: -68.3102616271834
+    		lon: -68.3102616271834,
+    		zoom: 9
     	},
     	{
     		day: 13,
@@ -790,7 +837,8 @@ var app = (function () {
     		question: "Name this area hosting many polar bears.",
     		place_comment: "Digits shows the number of polar bear dens per square of 10km.",
     		lat: 78.6213595406461,
-    		lon: 16.9864786456367
+    		lon: 16.9864786456367,
+    		zoom: 5
     	},
     	{
     		day: 14,
@@ -801,7 +849,8 @@ var app = (function () {
     		question: "Name this mountain.  Surrounding town is also allowed.",
     		place_comment: "",
     		lat: 64.9402837389247,
-    		lon: -23.3064095046468
+    		lon: -23.3064095046468,
+    		zoom: 13
     	},
     	{
     		day: 15,
@@ -812,7 +861,8 @@ var app = (function () {
     		question: "Name this city.",
     		place_comment: "",
     		lat: 43.8495619143722,
-    		lon: 18.3897512177645
+    		lon: 18.3897512177645,
+    		zoom: 12
     	},
     	{
     		day: 16,
@@ -823,7 +873,8 @@ var app = (function () {
     		question: "Name this country.",
     		place_comment: "",
     		lat: 7.32732961883409,
-    		lon: 134.473854308072
+    		lon: 134.473854308072,
+    		zoom: 9
     	},
     	{
     		day: 17,
@@ -834,7 +885,8 @@ var app = (function () {
     		question: "Name the city of this subway network.",
     		place_comment: "",
     		lat: 31.2419141987077,
-    		lon: 121.495277245857
+    		lon: 121.495277245857,
+    		zoom: 9
     	},
     	{
     		day: 18,
@@ -845,7 +897,8 @@ var app = (function () {
     		question: "Name this city.",
     		place_comment: "",
     		lat: 4.17487902020437,
-    		lon: 73.5098633865418
+    		lon: 73.5098633865418,
+    		zoom: 11
     	},
     	{
     		day: 19,
@@ -856,7 +909,8 @@ var app = (function () {
     		question: "Name this place.",
     		place_comment: "5.55555E,5.55555N!",
     		lat: 5.55555,
-    		lon: 5.55555
+    		lon: 5.55555,
+    		zoom: 10
     	},
     	{
     		day: 20,
@@ -867,7 +921,8 @@ var app = (function () {
     		question: "Name this lake.",
     		place_comment: "",
     		lat: 41.8395934606049,
-    		lon: 75.1519719190007
+    		lon: 75.1519719190007,
+    		zoom: 9
     	},
     	{
     		day: 21,
@@ -878,7 +933,8 @@ var app = (function () {
     		question: "Name this place.",
     		place_comment: "",
     		lat: 47.808125132594,
-    		lon: 107.529844055325
+    		lon: 107.529844055325,
+    		zoom: 13
     	},
     	{
     		day: 22,
@@ -889,7 +945,8 @@ var app = (function () {
     		question: "Name this country.",
     		place_comment: "Sierra Leone is one of the most rounded country",
     		lat: 8.44519282736392,
-    		lon: -11.8629610237056
+    		lon: -11.8629610237056,
+    		zoom: 7
     	},
     	{
     		day: 23,
@@ -900,7 +957,8 @@ var app = (function () {
     		question: "Name this place.",
     		place_comment: "",
     		lat: -51.0029303875002,
-    		lon: -73.0972775304178
+    		lon: -73.0972775304178,
+    		zoom: 10
     	},
     	{
     		day: 24,
@@ -911,7 +969,8 @@ var app = (function () {
     		question: "Name this place.",
     		place_comment: "",
     		lat: 45.6190714828521,
-    		lon: 9.2844144011089
+    		lon: 9.2844144011089,
+    		zoom: 13
     	},
     	{
     		day: 25,
@@ -922,7 +981,8 @@ var app = (function () {
     		question: "Northern cities has been moved to the ice continent.  Name the city which fall to the south pole.",
     		place_comment: "",
     		lat: -84.99,
-    		lon: 0
+    		lon: 0,
+    		zoom: 3
     	},
     	{
     		day: 26,
@@ -933,7 +993,8 @@ var app = (function () {
     		question: "Name this island.",
     		place_comment: "Pitcairn is the dependency having the less population.",
     		lat: -25.0692396577367,
-    		lon: -130.105773008269
+    		lon: -130.105773008269,
+    		zoom: 14
     	},
     	{
     		day: 27,
@@ -944,7 +1005,8 @@ var app = (function () {
     		question: "Name the sea where 300 bears has been tracked here.",
     		place_comment: "",
     		lat: 71.3597172198159,
-    		lon: -154.724482964392
+    		lon: -154.724482964392,
+    		zoom: 7
     	},
     	{
     		day: 28,
@@ -955,7 +1017,8 @@ var app = (function () {
     		question: "Name the nation which represents this population chart.",
     		place_comment: "",
     		lat: 35.7996294218927,
-    		lon: 140.060331883228
+    		lon: 140.060331883228,
+    		zoom: 4
     	},
     	{
     		day: 29,
@@ -966,7 +1029,8 @@ var app = (function () {
     		question: "Name the nation which represents this population density.",
     		place_comment: "",
     		lat: 42.5828007575422,
-    		lon: 20.7497467666328
+    		lon: 20.7497467666328,
+    		zoom: 8
     	},
     	{
     		day: 30,
@@ -977,7 +1041,8 @@ var app = (function () {
     		question: "Name this beautiful place.",
     		place_comment: "",
     		lat: 11.721768706204,
-    		lon: -15.66774583044
+    		lon: -15.66774583044,
+    		zoom: 8.5
     	}
     ];
 
@@ -985,7 +1050,7 @@ var app = (function () {
     const file$1 = "src/components/Quizzbox.svelte";
 
     function create_fragment$1(ctx) {
-    	let div5;
+    	let div6;
     	let div0;
     	let t0;
     	let t1;
@@ -995,19 +1060,20 @@ var app = (function () {
     	let div1;
     	let p0;
     	let t5;
-    	let t6_value = question[/*day*/ ctx[2]].day + "";
+    	let t6_value = question[/*day*/ ctx[3]].day + "";
     	let t6;
     	let t7;
-    	let t8_value = question[/*day*/ ctx[2]].theme + "";
+    	let t8_value = question[/*day*/ ctx[3]].theme + "";
     	let t8;
     	let t9;
     	let p1;
-    	let t10_value = question[/*day*/ ctx[2]].question + "";
+    	let t10_value = question[/*day*/ ctx[3]].question + "";
     	let t10;
     	let t11;
     	let a;
     	let img;
     	let img_src_value;
+    	let img_alt_value;
     	let a_href_value;
     	let t12;
     	let div2;
@@ -1024,17 +1090,20 @@ var app = (function () {
     	let t18;
     	let t19;
     	let button1;
+    	let t21;
+    	let div5;
+    	let t22;
     	let mounted;
     	let dispose;
 
     	const block = {
     		c: function create() {
-    			div5 = element("div");
+    			div6 = element("div");
     			div0 = element("div");
     			t0 = text("Score : ");
-    			t1 = text(/*score*/ ctx[0]);
+    			t1 = text(/*score*/ ctx[1]);
     			t2 = text(" / ");
-    			t3 = text(/*count*/ ctx[1]);
+    			t3 = text(/*count*/ ctx[2]);
     			t4 = space();
     			div1 = element("div");
     			p0 = element("p");
@@ -1057,54 +1126,59 @@ var app = (function () {
     			button0.textContent = "Submit!";
     			t15 = space();
     			div3 = element("div");
-    			t16 = text(/*answer_result*/ ctx[5]);
+    			t16 = text(/*answer_result*/ ctx[6]);
     			t17 = space();
     			div4 = element("div");
     			p3 = element("p");
-    			t18 = text(/*answer_message*/ ctx[4]);
+    			t18 = text(/*answer_message*/ ctx[5]);
     			t19 = space();
     			button1 = element("button");
     			button1.textContent = "Next";
+    			t21 = space();
+    			div5 = element("div");
+    			t22 = text(/*map*/ ctx[0]);
     			attr_dev(div0, "class", "scorebox svelte-f81k69");
-    			add_location(div0, file$1, 36, 4, 671);
-    			add_location(p0, file$1, 38, 6, 755);
-    			add_location(p1, file$1, 39, 9, 818);
+    			add_location(div0, file$1, 45, 4, 829);
+    			add_location(p0, file$1, 47, 6, 913);
+    			add_location(p1, file$1, 48, 9, 976);
     			attr_dev(img, "class", "quizz-img svelte-f81k69");
-    			if (!src_url_equal(img.src, img_src_value = "./img/" + question[/*day*/ ctx[2]].day + ".png")) attr_dev(img, "src", img_src_value);
-    			add_location(img, file$1, 41, 12, 928);
-    			attr_dev(a, "href", a_href_value = "./img/" + question[/*day*/ ctx[2]].day + ".png");
+    			if (!src_url_equal(img.src, img_src_value = "./img/" + question[/*day*/ ctx[3]].day + ".png")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", img_alt_value = "map_" + question[/*day*/ ctx[3]].day);
+    			add_location(img, file$1, 50, 12, 1086);
+    			attr_dev(a, "href", a_href_value = "./img/" + question[/*day*/ ctx[3]].day + ".png");
     			attr_dev(a, "target", "_blank");
-    			add_location(a, file$1, 40, 9, 859);
+    			add_location(a, file$1, 49, 9, 1017);
     			attr_dev(div1, "class", "quizz");
-    			add_location(div1, file$1, 37, 4, 729);
+    			add_location(div1, file$1, 46, 4, 887);
     			attr_dev(input, "placeholder", "Your answer");
-    			add_location(input, file$1, 53, 9, 1338);
+    			add_location(input, file$1, 62, 9, 1526);
     			attr_dev(button0, "id", "submitBtn");
-    			add_location(button0, file$1, 54, 8, 1407);
-    			add_location(p2, file$1, 53, 6, 1335);
+    			add_location(button0, file$1, 63, 8, 1595);
+    			add_location(p2, file$1, 62, 6, 1523);
     			attr_dev(div2, "class", "submit");
-    			add_location(div2, file$1, 52, 4, 1308);
+    			add_location(div2, file$1, 61, 4, 1496);
     			attr_dev(div3, "class", "result");
-    			add_location(div3, file$1, 56, 4, 1489);
-    			add_location(p3, file$1, 58, 6, 1565);
-    			add_location(button1, file$1, 59, 6, 1595);
+    			add_location(div3, file$1, 65, 4, 1677);
+    			add_location(p3, file$1, 67, 6, 1753);
+    			add_location(button1, file$1, 68, 6, 1783);
     			attr_dev(div4, "class", "answerbox svelte-f81k69");
-    			add_location(div4, file$1, 57, 4, 1535);
-    			attr_dev(div5, "class", "Quizzbox svelte-f81k69");
-    			add_location(div5, file$1, 35, 0, 643);
+    			add_location(div4, file$1, 66, 4, 1723);
+    			add_location(div5, file$1, 70, 4, 1845);
+    			attr_dev(div6, "class", "Quizzbox svelte-f81k69");
+    			add_location(div6, file$1, 44, 0, 801);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div5, anchor);
-    			append_dev(div5, div0);
+    			insert_dev(target, div6, anchor);
+    			append_dev(div6, div0);
     			append_dev(div0, t0);
     			append_dev(div0, t1);
     			append_dev(div0, t2);
     			append_dev(div0, t3);
-    			append_dev(div5, t4);
-    			append_dev(div5, div1);
+    			append_dev(div6, t4);
+    			append_dev(div6, div1);
     			append_dev(div1, p0);
     			append_dev(p0, t5);
     			append_dev(p0, t6);
@@ -1116,59 +1190,67 @@ var app = (function () {
     			append_dev(div1, t11);
     			append_dev(div1, a);
     			append_dev(a, img);
-    			append_dev(div5, t12);
-    			append_dev(div5, div2);
+    			append_dev(div6, t12);
+    			append_dev(div6, div2);
     			append_dev(div2, p2);
     			append_dev(p2, input);
-    			set_input_value(input, /*user_answer*/ ctx[3]);
+    			set_input_value(input, /*user_answer*/ ctx[4]);
     			append_dev(p2, t13);
     			append_dev(p2, button0);
-    			append_dev(div5, t15);
-    			append_dev(div5, div3);
+    			append_dev(div6, t15);
+    			append_dev(div6, div3);
     			append_dev(div3, t16);
-    			append_dev(div5, t17);
-    			append_dev(div5, div4);
+    			append_dev(div6, t17);
+    			append_dev(div6, div4);
     			append_dev(div4, p3);
     			append_dev(p3, t18);
     			append_dev(div4, t19);
     			append_dev(div4, button1);
+    			append_dev(div6, t21);
+    			append_dev(div6, div5);
+    			append_dev(div5, t22);
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input, "input", /*input_input_handler*/ ctx[8]),
-    					listen_dev(button0, "click", /*answerClick*/ ctx[6], false, false, false),
-    					listen_dev(button1, "click", /*switchNextDay*/ ctx[7], false, false, false)
+    					listen_dev(input, "input", /*input_input_handler*/ ctx[9]),
+    					listen_dev(button0, "click", /*answerClick*/ ctx[7], false, false, false),
+    					listen_dev(button1, "click", /*switchNextDay*/ ctx[8], false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*score*/ 1) set_data_dev(t1, /*score*/ ctx[0]);
-    			if (dirty & /*count*/ 2) set_data_dev(t3, /*count*/ ctx[1]);
-    			if (dirty & /*day*/ 4 && t6_value !== (t6_value = question[/*day*/ ctx[2]].day + "")) set_data_dev(t6, t6_value);
-    			if (dirty & /*day*/ 4 && t8_value !== (t8_value = question[/*day*/ ctx[2]].theme + "")) set_data_dev(t8, t8_value);
-    			if (dirty & /*day*/ 4 && t10_value !== (t10_value = question[/*day*/ ctx[2]].question + "")) set_data_dev(t10, t10_value);
+    			if (dirty & /*score*/ 2) set_data_dev(t1, /*score*/ ctx[1]);
+    			if (dirty & /*count*/ 4) set_data_dev(t3, /*count*/ ctx[2]);
+    			if (dirty & /*day*/ 8 && t6_value !== (t6_value = question[/*day*/ ctx[3]].day + "")) set_data_dev(t6, t6_value);
+    			if (dirty & /*day*/ 8 && t8_value !== (t8_value = question[/*day*/ ctx[3]].theme + "")) set_data_dev(t8, t8_value);
+    			if (dirty & /*day*/ 8 && t10_value !== (t10_value = question[/*day*/ ctx[3]].question + "")) set_data_dev(t10, t10_value);
 
-    			if (dirty & /*day*/ 4 && !src_url_equal(img.src, img_src_value = "./img/" + question[/*day*/ ctx[2]].day + ".png")) {
+    			if (dirty & /*day*/ 8 && !src_url_equal(img.src, img_src_value = "./img/" + question[/*day*/ ctx[3]].day + ".png")) {
     				attr_dev(img, "src", img_src_value);
     			}
 
-    			if (dirty & /*day*/ 4 && a_href_value !== (a_href_value = "./img/" + question[/*day*/ ctx[2]].day + ".png")) {
+    			if (dirty & /*day*/ 8 && img_alt_value !== (img_alt_value = "map_" + question[/*day*/ ctx[3]].day)) {
+    				attr_dev(img, "alt", img_alt_value);
+    			}
+
+    			if (dirty & /*day*/ 8 && a_href_value !== (a_href_value = "./img/" + question[/*day*/ ctx[3]].day + ".png")) {
     				attr_dev(a, "href", a_href_value);
     			}
 
-    			if (dirty & /*user_answer*/ 8 && input.value !== /*user_answer*/ ctx[3]) {
-    				set_input_value(input, /*user_answer*/ ctx[3]);
+    			if (dirty & /*user_answer*/ 16 && input.value !== /*user_answer*/ ctx[4]) {
+    				set_input_value(input, /*user_answer*/ ctx[4]);
     			}
 
-    			if (dirty & /*answer_result*/ 32) set_data_dev(t16, /*answer_result*/ ctx[5]);
-    			if (dirty & /*answer_message*/ 16) set_data_dev(t18, /*answer_message*/ ctx[4]);
+    			if (dirty & /*answer_result*/ 64) set_data_dev(t16, /*answer_result*/ ctx[6]);
+    			if (dirty & /*answer_message*/ 32) set_data_dev(t18, /*answer_message*/ ctx[5]);
+    			if (dirty & /*map*/ 1) set_data_dev(t22, /*map*/ ctx[0]);
     		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div5);
+    			if (detaching) detach_dev(div6);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -1188,6 +1270,7 @@ var app = (function () {
     function instance$1($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Quizzbox', slots, []);
+    	let { map } = $$props;
     	let score = 0;
     	let count = 0;
     	let day = 0;
@@ -1196,28 +1279,35 @@ var app = (function () {
     	let answer_result = '';
 
     	function answerClick() {
-    		$$invalidate(1, count += 1);
+    		$$invalidate(2, count += 1);
     		submitBtn.disabled = true;
-    		$$invalidate(4, answer_message = "The answer is " + question[day].place);
+    		$$invalidate(5, answer_message = "The answer is " + question[day].place);
 
     		if (user_answer == question[day].place) {
-    			$$invalidate(5, answer_result = 'Correct!');
-    			$$invalidate(0, score += 1);
+    			$$invalidate(6, answer_result = 'Correct!');
+    			$$invalidate(1, score += 1);
     		} else {
-    			$$invalidate(5, answer_result = 'Oh no!');
+    			$$invalidate(6, answer_result = 'Oh no!');
     		}
+
+    		// map
+    		map.flyTo({
+    			center: [question[day].lon, question[day].lat],
+    			zoom: question[day].zoom,
+    			speed: 2
+    		});
     	}
 
     	function switchNextDay() {
-    		$$invalidate(3, user_answer = '');
-    		$$invalidate(4, answer_message = '');
-    		$$invalidate(5, answer_result = '');
-    		$$invalidate(2, day += 1);
-    		$$invalidate(1, count = day);
+    		$$invalidate(4, user_answer = '');
+    		$$invalidate(5, answer_message = '');
+    		$$invalidate(6, answer_result = '');
+    		$$invalidate(3, day += 1);
+    		$$invalidate(2, count = day);
     		submitBtn.disabled = false;
     	}
 
-    	const writable_props = [];
+    	const writable_props = ['map'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Quizzbox> was created with unknown prop '${key}'`);
@@ -1225,11 +1315,16 @@ var app = (function () {
 
     	function input_input_handler() {
     		user_answer = this.value;
-    		$$invalidate(3, user_answer);
+    		$$invalidate(4, user_answer);
     	}
+
+    	$$self.$$set = $$props => {
+    		if ('map' in $$props) $$invalidate(0, map = $$props.map);
+    	};
 
     	$$self.$capture_state = () => ({
     		question,
+    		map,
     		score,
     		count,
     		day,
@@ -1241,12 +1336,13 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('score' in $$props) $$invalidate(0, score = $$props.score);
-    		if ('count' in $$props) $$invalidate(1, count = $$props.count);
-    		if ('day' in $$props) $$invalidate(2, day = $$props.day);
-    		if ('user_answer' in $$props) $$invalidate(3, user_answer = $$props.user_answer);
-    		if ('answer_message' in $$props) $$invalidate(4, answer_message = $$props.answer_message);
-    		if ('answer_result' in $$props) $$invalidate(5, answer_result = $$props.answer_result);
+    		if ('map' in $$props) $$invalidate(0, map = $$props.map);
+    		if ('score' in $$props) $$invalidate(1, score = $$props.score);
+    		if ('count' in $$props) $$invalidate(2, count = $$props.count);
+    		if ('day' in $$props) $$invalidate(3, day = $$props.day);
+    		if ('user_answer' in $$props) $$invalidate(4, user_answer = $$props.user_answer);
+    		if ('answer_message' in $$props) $$invalidate(5, answer_message = $$props.answer_message);
+    		if ('answer_result' in $$props) $$invalidate(6, answer_result = $$props.answer_result);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -1254,6 +1350,7 @@ var app = (function () {
     	}
 
     	return [
+    		map,
     		score,
     		count,
     		day,
@@ -1269,7 +1366,7 @@ var app = (function () {
     class Quizzbox extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$1, create_fragment$1, safe_not_equal, {});
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, { map: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -1277,6 +1374,21 @@ var app = (function () {
     			options,
     			id: create_fragment$1.name
     		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*map*/ ctx[0] === undefined && !('map' in props)) {
+    			console.warn("<Quizzbox> was created without expected prop 'map'");
+    		}
+    	}
+
+    	get map() {
+    		throw new Error("<Quizzbox>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set map(value) {
+    		throw new Error("<Quizzbox>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
@@ -1289,12 +1401,38 @@ var app = (function () {
     	let t0;
     	let div0;
     	let quizzbox;
+    	let updating_map;
     	let t1;
-    	let map;
+    	let map_1;
+    	let updating_map_1;
     	let current;
     	navbar = new Navbar({ $$inline: true });
-    	quizzbox = new Quizzbox({ $$inline: true });
-    	map = new Map_1({ $$inline: true });
+
+    	function quizzbox_map_binding(value) {
+    		/*quizzbox_map_binding*/ ctx[1](value);
+    	}
+
+    	let quizzbox_props = {};
+
+    	if (/*map*/ ctx[0] !== void 0) {
+    		quizzbox_props.map = /*map*/ ctx[0];
+    	}
+
+    	quizzbox = new Quizzbox({ props: quizzbox_props, $$inline: true });
+    	binding_callbacks.push(() => bind(quizzbox, 'map', quizzbox_map_binding));
+
+    	function map_1_map_binding(value) {
+    		/*map_1_map_binding*/ ctx[2](value);
+    	}
+
+    	let map_1_props = {};
+
+    	if (/*map*/ ctx[0] !== void 0) {
+    		map_1_props.map = /*map*/ ctx[0];
+    	}
+
+    	map_1 = new Map_1({ props: map_1_props, $$inline: true });
+    	binding_callbacks.push(() => bind(map_1, 'map', map_1_map_binding));
 
     	const block = {
     		c: function create() {
@@ -1304,11 +1442,11 @@ var app = (function () {
     			div0 = element("div");
     			create_component(quizzbox.$$.fragment);
     			t1 = space();
-    			create_component(map.$$.fragment);
+    			create_component(map_1.$$.fragment);
     			attr_dev(div0, "class", "container svelte-1bzjd37");
-    			add_location(div0, file, 8, 1, 199);
+    			add_location(div0, file, 9, 1, 209);
     			attr_dev(div1, "class", "app svelte-1bzjd37");
-    			add_location(div1, file, 6, 0, 168);
+    			add_location(div1, file, 7, 0, 178);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1320,28 +1458,47 @@ var app = (function () {
     			append_dev(div1, div0);
     			mount_component(quizzbox, div0, null);
     			append_dev(div0, t1);
-    			mount_component(map, div0, null);
+    			mount_component(map_1, div0, null);
     			current = true;
     		},
-    		p: noop,
+    		p: function update(ctx, [dirty]) {
+    			const quizzbox_changes = {};
+
+    			if (!updating_map && dirty & /*map*/ 1) {
+    				updating_map = true;
+    				quizzbox_changes.map = /*map*/ ctx[0];
+    				add_flush_callback(() => updating_map = false);
+    			}
+
+    			quizzbox.$set(quizzbox_changes);
+    			const map_1_changes = {};
+
+    			if (!updating_map_1 && dirty & /*map*/ 1) {
+    				updating_map_1 = true;
+    				map_1_changes.map = /*map*/ ctx[0];
+    				add_flush_callback(() => updating_map_1 = false);
+    			}
+
+    			map_1.$set(map_1_changes);
+    		},
     		i: function intro(local) {
     			if (current) return;
     			transition_in(navbar.$$.fragment, local);
     			transition_in(quizzbox.$$.fragment, local);
-    			transition_in(map.$$.fragment, local);
+    			transition_in(map_1.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(navbar.$$.fragment, local);
     			transition_out(quizzbox.$$.fragment, local);
-    			transition_out(map.$$.fragment, local);
+    			transition_out(map_1.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
     			destroy_component(navbar);
     			destroy_component(quizzbox);
-    			destroy_component(map);
+    			destroy_component(map_1);
     		}
     	};
 
@@ -1359,14 +1516,34 @@ var app = (function () {
     function instance($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('App', slots, []);
+    	let map;
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<App> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ Navbar, Map: Map_1, Quizzbox });
-    	return [];
+    	function quizzbox_map_binding(value) {
+    		map = value;
+    		$$invalidate(0, map);
+    	}
+
+    	function map_1_map_binding(value) {
+    		map = value;
+    		$$invalidate(0, map);
+    	}
+
+    	$$self.$capture_state = () => ({ Navbar, Map: Map_1, Quizzbox, map });
+
+    	$$self.$inject_state = $$props => {
+    		if ('map' in $$props) $$invalidate(0, map = $$props.map);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [map, quizzbox_map_binding, map_1_map_binding];
     }
 
     class App extends SvelteComponentDev {

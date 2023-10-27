@@ -1,12 +1,14 @@
 <script>
   import question from '../data/places.json';
-
+  
+  export let map;
   let score = 0;
   let count = 0;
   let day = 0;
   let user_answer = '';
   let answer_message = '';
   let answer_result = '';
+
 
 	function answerClick() {
     count += 1
@@ -19,6 +21,13 @@
     else{
       answer_result = 'Oh no!'
     }
+
+    // map
+    map.flyTo({
+      center: [question[day].lon,question[day].lat], 
+      zoom: question[day].zoom,
+      speed: 2
+    });
 		
 	}
   function switchNextDay(){
@@ -39,7 +48,7 @@
       <p>Day {question[day].day}: {question[day].theme}</p>
          <p>{question[day].question}</p>
          <a href="./img/{question[day].day}.png" target="_blank">
-            <img class="quizz-img" src="./img/{question[day].day}.png" />
+            <img class="quizz-img" src="./img/{question[day].day}.png" alt="map_{question[day].day}" />
          </a>
       <!-- {#each question as mapday}
          <p>Day {mapday.day}: {mapday.theme}</p>
@@ -59,6 +68,7 @@
       <p>{answer_message}</p>
       <button on:click={switchNextDay}>Next</button>
     </div>
+    <div>{map}</div>
   </div>
 
 <style>
