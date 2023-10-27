@@ -985,7 +985,7 @@ var app = (function () {
     const file$1 = "src/components/Quizzbox.svelte";
 
     function create_fragment$1(ctx) {
-    	let div4;
+    	let div5;
     	let div0;
     	let t0;
     	let t1;
@@ -995,14 +995,14 @@ var app = (function () {
     	let div1;
     	let p0;
     	let t5;
-    	let t6_value = question[/*day*/ ctx[0]].day + "";
+    	let t6_value = question[/*day*/ ctx[2]].day + "";
     	let t6;
     	let t7;
-    	let t8_value = question[/*day*/ ctx[0]].theme + "";
+    	let t8_value = question[/*day*/ ctx[2]].theme + "";
     	let t8;
     	let t9;
     	let p1;
-    	let t10_value = question[/*day*/ ctx[0]].question + "";
+    	let t10_value = question[/*day*/ ctx[2]].question + "";
     	let t10;
     	let t11;
     	let a;
@@ -1014,24 +1014,27 @@ var app = (function () {
     	let p2;
     	let input;
     	let t13;
-    	let button;
+    	let button0;
     	let t15;
     	let div3;
-    	let p3;
     	let t16;
-    	let t17_value = question[/*day*/ ctx[0]].place + "";
     	let t17;
+    	let div4;
+    	let p3;
+    	let t18;
+    	let t19;
+    	let button1;
     	let mounted;
     	let dispose;
 
     	const block = {
     		c: function create() {
-    			div4 = element("div");
+    			div5 = element("div");
     			div0 = element("div");
     			t0 = text("Score : ");
-    			t1 = text(/*score*/ ctx[2]);
+    			t1 = text(/*score*/ ctx[0]);
     			t2 = text(" / ");
-    			t3 = text(/*day*/ ctx[0]);
+    			t3 = text(/*count*/ ctx[1]);
     			t4 = space();
     			div1 = element("div");
     			p0 = element("p");
@@ -1050,49 +1053,58 @@ var app = (function () {
     			p2 = element("p");
     			input = element("input");
     			t13 = space();
-    			button = element("button");
-    			button.textContent = "Submit!";
+    			button0 = element("button");
+    			button0.textContent = "Submit!";
     			t15 = space();
     			div3 = element("div");
+    			t16 = text(/*answer_result*/ ctx[5]);
+    			t17 = space();
+    			div4 = element("div");
     			p3 = element("p");
-    			t16 = text("Answer: ");
-    			t17 = text(t17_value);
-    			attr_dev(div0, "class", "scorebox svelte-1gf96eo");
-    			add_location(div0, file$1, 14, 4, 212);
-    			add_location(p0, file$1, 16, 6, 294);
-    			add_location(p1, file$1, 17, 9, 357);
-    			attr_dev(img, "class", "quizz-img svelte-1gf96eo");
-    			if (!src_url_equal(img.src, img_src_value = "./img/" + question[/*day*/ ctx[0]].day + ".png")) attr_dev(img, "src", img_src_value);
-    			add_location(img, file$1, 19, 12, 467);
-    			attr_dev(a, "href", a_href_value = "./img/" + question[/*day*/ ctx[0]].day + ".png");
+    			t18 = text(/*answer_message*/ ctx[4]);
+    			t19 = space();
+    			button1 = element("button");
+    			button1.textContent = "Next";
+    			attr_dev(div0, "class", "scorebox svelte-f81k69");
+    			add_location(div0, file$1, 36, 4, 671);
+    			add_location(p0, file$1, 38, 6, 755);
+    			add_location(p1, file$1, 39, 9, 818);
+    			attr_dev(img, "class", "quizz-img svelte-f81k69");
+    			if (!src_url_equal(img.src, img_src_value = "./img/" + question[/*day*/ ctx[2]].day + ".png")) attr_dev(img, "src", img_src_value);
+    			add_location(img, file$1, 41, 12, 928);
+    			attr_dev(a, "href", a_href_value = "./img/" + question[/*day*/ ctx[2]].day + ".png");
     			attr_dev(a, "target", "_blank");
-    			add_location(a, file$1, 18, 9, 398);
+    			add_location(a, file$1, 40, 9, 859);
     			attr_dev(div1, "class", "quizz");
-    			add_location(div1, file$1, 15, 4, 268);
+    			add_location(div1, file$1, 37, 4, 729);
     			attr_dev(input, "placeholder", "Your answer");
-    			add_location(input, file$1, 31, 9, 877);
-    			add_location(button, file$1, 32, 8, 946);
-    			add_location(p2, file$1, 31, 6, 874);
+    			add_location(input, file$1, 53, 9, 1338);
+    			attr_dev(button0, "id", "submitBtn");
+    			add_location(button0, file$1, 54, 8, 1407);
+    			add_location(p2, file$1, 53, 6, 1335);
     			attr_dev(div2, "class", "submit");
-    			add_location(div2, file$1, 30, 4, 847);
-    			add_location(p3, file$1, 36, 6, 1053);
-    			attr_dev(div3, "class", "answerbox");
-    			add_location(div3, file$1, 35, 4, 1023);
-    			attr_dev(div4, "class", "Quizzbox svelte-1gf96eo");
-    			add_location(div4, file$1, 13, 0, 184);
+    			add_location(div2, file$1, 52, 4, 1308);
+    			attr_dev(div3, "class", "result");
+    			add_location(div3, file$1, 56, 4, 1489);
+    			add_location(p3, file$1, 58, 6, 1565);
+    			add_location(button1, file$1, 59, 6, 1595);
+    			attr_dev(div4, "class", "answerbox svelte-f81k69");
+    			add_location(div4, file$1, 57, 4, 1535);
+    			attr_dev(div5, "class", "Quizzbox svelte-f81k69");
+    			add_location(div5, file$1, 35, 0, 643);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div4, anchor);
-    			append_dev(div4, div0);
+    			insert_dev(target, div5, anchor);
+    			append_dev(div5, div0);
     			append_dev(div0, t0);
     			append_dev(div0, t1);
     			append_dev(div0, t2);
     			append_dev(div0, t3);
-    			append_dev(div4, t4);
-    			append_dev(div4, div1);
+    			append_dev(div5, t4);
+    			append_dev(div5, div1);
     			append_dev(div1, p0);
     			append_dev(p0, t5);
     			append_dev(p0, t6);
@@ -1104,52 +1116,59 @@ var app = (function () {
     			append_dev(div1, t11);
     			append_dev(div1, a);
     			append_dev(a, img);
-    			append_dev(div4, t12);
-    			append_dev(div4, div2);
+    			append_dev(div5, t12);
+    			append_dev(div5, div2);
     			append_dev(div2, p2);
     			append_dev(p2, input);
-    			set_input_value(input, /*user_answer*/ ctx[1]);
+    			set_input_value(input, /*user_answer*/ ctx[3]);
     			append_dev(p2, t13);
-    			append_dev(p2, button);
-    			append_dev(div4, t15);
-    			append_dev(div4, div3);
-    			append_dev(div3, p3);
-    			append_dev(p3, t16);
-    			append_dev(p3, t17);
+    			append_dev(p2, button0);
+    			append_dev(div5, t15);
+    			append_dev(div5, div3);
+    			append_dev(div3, t16);
+    			append_dev(div5, t17);
+    			append_dev(div5, div4);
+    			append_dev(div4, p3);
+    			append_dev(p3, t18);
+    			append_dev(div4, t19);
+    			append_dev(div4, button1);
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input, "input", /*input_input_handler*/ ctx[4]),
-    					listen_dev(button, "click", /*answerClick*/ ctx[3], false, false, false)
+    					listen_dev(input, "input", /*input_input_handler*/ ctx[8]),
+    					listen_dev(button0, "click", /*answerClick*/ ctx[6], false, false, false),
+    					listen_dev(button1, "click", /*switchNextDay*/ ctx[7], false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*day*/ 1) set_data_dev(t3, /*day*/ ctx[0]);
-    			if (dirty & /*day*/ 1 && t6_value !== (t6_value = question[/*day*/ ctx[0]].day + "")) set_data_dev(t6, t6_value);
-    			if (dirty & /*day*/ 1 && t8_value !== (t8_value = question[/*day*/ ctx[0]].theme + "")) set_data_dev(t8, t8_value);
-    			if (dirty & /*day*/ 1 && t10_value !== (t10_value = question[/*day*/ ctx[0]].question + "")) set_data_dev(t10, t10_value);
+    			if (dirty & /*score*/ 1) set_data_dev(t1, /*score*/ ctx[0]);
+    			if (dirty & /*count*/ 2) set_data_dev(t3, /*count*/ ctx[1]);
+    			if (dirty & /*day*/ 4 && t6_value !== (t6_value = question[/*day*/ ctx[2]].day + "")) set_data_dev(t6, t6_value);
+    			if (dirty & /*day*/ 4 && t8_value !== (t8_value = question[/*day*/ ctx[2]].theme + "")) set_data_dev(t8, t8_value);
+    			if (dirty & /*day*/ 4 && t10_value !== (t10_value = question[/*day*/ ctx[2]].question + "")) set_data_dev(t10, t10_value);
 
-    			if (dirty & /*day*/ 1 && !src_url_equal(img.src, img_src_value = "./img/" + question[/*day*/ ctx[0]].day + ".png")) {
+    			if (dirty & /*day*/ 4 && !src_url_equal(img.src, img_src_value = "./img/" + question[/*day*/ ctx[2]].day + ".png")) {
     				attr_dev(img, "src", img_src_value);
     			}
 
-    			if (dirty & /*day*/ 1 && a_href_value !== (a_href_value = "./img/" + question[/*day*/ ctx[0]].day + ".png")) {
+    			if (dirty & /*day*/ 4 && a_href_value !== (a_href_value = "./img/" + question[/*day*/ ctx[2]].day + ".png")) {
     				attr_dev(a, "href", a_href_value);
     			}
 
-    			if (dirty & /*user_answer*/ 2 && input.value !== /*user_answer*/ ctx[1]) {
-    				set_input_value(input, /*user_answer*/ ctx[1]);
+    			if (dirty & /*user_answer*/ 8 && input.value !== /*user_answer*/ ctx[3]) {
+    				set_input_value(input, /*user_answer*/ ctx[3]);
     			}
 
-    			if (dirty & /*day*/ 1 && t17_value !== (t17_value = question[/*day*/ ctx[0]].place + "")) set_data_dev(t17, t17_value);
+    			if (dirty & /*answer_result*/ 32) set_data_dev(t16, /*answer_result*/ ctx[5]);
+    			if (dirty & /*answer_message*/ 16) set_data_dev(t18, /*answer_message*/ ctx[4]);
     		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div4);
+    			if (detaching) detach_dev(div5);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -1170,12 +1189,32 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Quizzbox', slots, []);
     	let score = 0;
+    	let count = 0;
     	let day = 0;
     	let user_answer = '';
-    	let response = '';
+    	let answer_message = '';
+    	let answer_result = '';
 
     	function answerClick() {
-    		$$invalidate(0, day += 1);
+    		$$invalidate(1, count += 1);
+    		submitBtn.disabled = true;
+    		$$invalidate(4, answer_message = "The answer is " + question[day].place);
+
+    		if (user_answer == question[day].place) {
+    			$$invalidate(5, answer_result = 'Correct!');
+    			$$invalidate(0, score += 1);
+    		} else {
+    			$$invalidate(5, answer_result = 'Oh no!');
+    		}
+    	}
+
+    	function switchNextDay() {
+    		$$invalidate(3, user_answer = '');
+    		$$invalidate(4, answer_message = '');
+    		$$invalidate(5, answer_result = '');
+    		$$invalidate(2, day += 1);
+    		$$invalidate(1, count = day);
+    		submitBtn.disabled = false;
     	}
 
     	const writable_props = [];
@@ -1186,30 +1225,45 @@ var app = (function () {
 
     	function input_input_handler() {
     		user_answer = this.value;
-    		$$invalidate(1, user_answer);
+    		$$invalidate(3, user_answer);
     	}
 
     	$$self.$capture_state = () => ({
     		question,
     		score,
+    		count,
     		day,
     		user_answer,
-    		response,
-    		answerClick
+    		answer_message,
+    		answer_result,
+    		answerClick,
+    		switchNextDay
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('score' in $$props) $$invalidate(2, score = $$props.score);
-    		if ('day' in $$props) $$invalidate(0, day = $$props.day);
-    		if ('user_answer' in $$props) $$invalidate(1, user_answer = $$props.user_answer);
-    		if ('response' in $$props) response = $$props.response;
+    		if ('score' in $$props) $$invalidate(0, score = $$props.score);
+    		if ('count' in $$props) $$invalidate(1, count = $$props.count);
+    		if ('day' in $$props) $$invalidate(2, day = $$props.day);
+    		if ('user_answer' in $$props) $$invalidate(3, user_answer = $$props.user_answer);
+    		if ('answer_message' in $$props) $$invalidate(4, answer_message = $$props.answer_message);
+    		if ('answer_result' in $$props) $$invalidate(5, answer_result = $$props.answer_result);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [day, user_answer, score, answerClick, input_input_handler];
+    	return [
+    		score,
+    		count,
+    		day,
+    		user_answer,
+    		answer_message,
+    		answer_result,
+    		answerClick,
+    		switchNextDay,
+    		input_input_handler
+    	];
     }
 
     class Quizzbox extends SvelteComponentDev {

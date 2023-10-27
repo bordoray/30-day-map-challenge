@@ -2,17 +2,39 @@
   import question from '../data/places.json';
 
   let score = 0;
-  let day = 0
-  let user_answer = ''
-  let response = ''
+  let count = 0;
+  let day = 0;
+  let user_answer = '';
+  let answer_message = '';
+  let answer_result = '';
 
 	function answerClick() {
-		day += 1;
+    count += 1
+    submitBtn.disabled = true
+    answer_message = "The answer is " + question[day].place
+    if (user_answer == question[day].place){
+      answer_result = 'Correct!'
+      score += 1
+    }
+    else{
+      answer_result = 'Oh no!'
+    }
+		
 	}
+  function switchNextDay(){
+    user_answer = ''
+    answer_message = ''
+    answer_result = ''
+    day += 1;
+    count = day
+    submitBtn.disabled = false
+
+
+  }
 </script>
  
 <div class="Quizzbox"> 
-    <div class="scorebox">Score : {score} / {day}</div>
+    <div class="scorebox">Score : {score} / {count}</div>
     <div class="quizz">
       <p>Day {question[day].day}: {question[day].theme}</p>
          <p>{question[day].question}</p>
@@ -30,11 +52,12 @@
     </div>
     <div class="submit">
       <p><input bind:value={user_answer} placeholder="Your answer" />
-        <button on:click={answerClick}>Submit!
-         </button></p>
+        <button id="submitBtn" on:click={answerClick}>Submit!</button></p>
     </div>
+    <div class="result">{answer_result}</div>
     <div class="answerbox">
-      <p>Answer: {question[day].place}</p>
+      <p>{answer_message}</p>
+      <button on:click={switchNextDay}>Next</button>
     </div>
   </div>
 
@@ -51,5 +74,8 @@
 
 .scorebox{
   padding : 10px
+}
+.answerbox{
+  padding: 20px;
 }
 </style>
