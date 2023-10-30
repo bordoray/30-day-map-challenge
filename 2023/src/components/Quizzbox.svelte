@@ -1,6 +1,7 @@
 <script>
   import { Button, Input, Col, Row} from 'sveltestrap';
   import question from '../data/places.json';
+  import Modal from './Modal.svelte';
   
   export let map;
   let score = 0;
@@ -13,6 +14,7 @@
   let answer_comment = ''
   let image_status = 'q'
   let next_button_text = 'Give up'
+  let showModal = false
 
 
 	function answerClick() {
@@ -112,18 +114,14 @@
     return
   }
 
-  function switchNextDay(){
-    image_status = 'q'
-    next_button_text = 'Give up'
-    user_answer = ''
-    answer_message = ''
-    answer_result = ''
-    answer_comment = ''
-    day += 1;
-    count = day
-    submitBtn.disabled = false
-    inputBox.disabled = false
+  function game_over(){
+    submitBtn.disabled = true
+    inputBox.disabled = true
+    nextBtn.disabled = true
+    showModal = true
+  }
 
+  function switchNextDay(){
     // map
     map.flyTo({
       center: [0,0], 
@@ -131,11 +129,31 @@
       speed: 10
     });
 
-
+    if (count >= 3){
+      game_over()
+    } else {
+      image_status = 'q'
+      next_button_text = 'Give up'
+      user_answer = ''
+      answer_message = ''
+      answer_result = ''
+      answer_comment = ''
+      day += 1;
+      count = day
+      submitBtn.disabled = false
+      inputBox.disabled = false
+    } 
   }
 </script>
  
 <div class="Quizzbox"> 
+  <Modal bind:showModal>
+    <h2 slot="header">
+      GAME OVER!
+    </h2>
+    <div>Your score</div>
+    <div class="scorebox">{score}/{count}</div>
+  </Modal>
   <div class="quizz">
   <Row>
     <Col xs="3">Score</Col>
@@ -146,9 +164,9 @@
     <Col xs="auto">{question[day].question}</Col>
   </Row>
      
-         <a href="./img/{image_status}/{question[day].day}.png" target="_blank">
-            <img class="quizz-img" src="./img/{image_status}/{question[day].day}.png" alt="map_{question[day].day}" />
-         </a>
+  <a href="./img/{image_status}/{question[day].day}.png" target="_blank">
+    <img class="quizz-img" src="./img/{image_status}/{question[day].day}.png" alt="map_{question[day].day}" />
+  </a>
       <!-- {#each question as mapday}
          <p>Day {mapday.day}: {mapday.theme}</p>
          <p>{mapday.question}</p>
@@ -180,6 +198,7 @@
         </Col>
       </Row>
     </div>
+    <Button id="submitBtndev" color="dark" on:click={switchNextDay}>Next for dev use</Button>
   </div>
 
 <style>

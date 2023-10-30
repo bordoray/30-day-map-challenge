@@ -11,7 +11,7 @@
   }
 
   .heading > h1 {
-    padding: 20px;
+    padding: 15px;
     margin: 0;
   }
 </style>
