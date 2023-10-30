@@ -1,4 +1,5 @@
 <script>
+  import { Button, Input, Col, Row} from 'sveltestrap';
   import question from '../data/places.json';
   
   export let map;
@@ -11,21 +12,23 @@
   let answer_result_color = '#99140b'
   let answer_comment = ''
   let image_status = 'q'
+  let next_button_text = 'Give up'
 
 
 	function answerClick() {
     count += 1
     submitBtn.disabled = true
     inputBox.disabled = true
-    answer_message = "The answer is " + question[day].place
+    next_button_text = 'Next'
+    answer_message = "The answer is " + question[day].place + "."
     answer_comment = question[day].place_comment
     if (user_answer == question[day].place){
-      answer_result = 'Correct'
+      answer_result = 'Correct!'
       score += 1
       answer_result_color = '#0b9917'
     }
     else{
-      answer_result = 'Wrong'
+      answer_result = 'Oh No!'
       answer_result_color = '#99140b'
     }
 
@@ -99,8 +102,19 @@
     });
 		
 	}
+
+  function nextClick(){
+    if(next_button_text == 'Next'){
+      switchNextDay()
+    } else {
+      answerClick()
+    }
+    return
+  }
+
   function switchNextDay(){
     image_status = 'q'
+    next_button_text = 'Give up'
     user_answer = ''
     answer_message = ''
     answer_result = ''
@@ -122,10 +136,16 @@
 </script>
  
 <div class="Quizzbox"> 
-    <div class="scorebox">Score : {score} / {count}</div>
-    <div class="quizz">
-      <p>Day {question[day].day}: {question[day].theme}</p>
-         <p>{question[day].question}</p>
+  <div class="quizz">
+  <Row>
+    <Col xs="3">Score</Col>
+    <Col xs="auto">Day {question[day].day}: {question[day].theme}</Col>
+  </Row>
+  <Row>
+    <Col xs="3"><div class="scorebox">{score}/{count}</div></Col>
+    <Col xs="auto">{question[day].question}</Col>
+  </Row>
+     
          <a href="./img/{image_status}/{question[day].day}.png" target="_blank">
             <img class="quizz-img" src="./img/{image_status}/{question[day].day}.png" alt="map_{question[day].day}" />
          </a>
@@ -139,16 +159,27 @@
       {/each} -->
     </div>
     <div class="submit">
-      <p><input id="inputBox" bind:value={user_answer} placeholder="Your answer" />
-        <button id="submitBtn" on:click={answerClick}>Submit!</button></p>
+      <Row>
+        <Col xs="8">
+          <Input id="inputBox" bind:value={user_answer} placeholder="Your answer" />
+        </Col>
+        <Col xs="2">
+          <Button id="submitBtn" color="dark" on:click={answerClick}>Submit!</Button>
+        </Col>
+        <Col xs="2"><Button id="nextBtn" color="dark" outline on:click={nextClick} >{next_button_text}</Button>
+        </Col>
+      </Row>
     </div>
-    <div id="resultText" class="result" style="--theme-color: {answer_result_color}">{answer_result}</div>
     <div class="answerbox">
-      <p>{answer_message}</p>
-      <p><i>{answer_comment}</i></p>
-      <button on:click={switchNextDay}>Next</button>
+      <Row>
+        <Col xs="3">
+          <div id="resultText" class="result" style="--theme-color: {answer_result_color}">{answer_result}</div>
+        </Col>
+        <Col xs="auto"><div class="answermsg">{answer_message}</div>
+          <div><i>{answer_comment}</i></div>
+        </Col>
+      </Row>
     </div>
-    <div>{map}</div>
   </div>
 
 <style>
@@ -163,16 +194,26 @@
   }
 
 .scorebox{
-  padding : 10px
+  padding-bottom : 10px;
+  font-size: 20pt;
+  font-weight: bold;
 }
 
 .answerbox{
   padding: 5px;
 }
 
+.submit{
+  padding-top: 10px;
+}
+
 .result{
   color: var(--theme-color);
   font-size: 20pt;
   font-weight: bold;
+}
+
+.answermsg{
+  font-size: 20pt;
 }
 </style>
