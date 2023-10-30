@@ -108,6 +108,8 @@
   function nextClick(){
     if(next_button_text == 'Next'){
       switchNextDay()
+    } else if (next_button_text == 'Result'){
+      game_over()
     } else {
       answerClick()
     }
@@ -117,8 +119,9 @@
   function game_over(){
     submitBtn.disabled = true
     inputBox.disabled = true
-    nextBtn.disabled = true
+    // nextBtn.disabled = true
     showModal = true
+    next_button_text = 'Result'
   }
 
   function switchNextDay(){
