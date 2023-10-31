@@ -24,13 +24,13 @@
     next_button_text = 'Next'
     answer_message = "The answer is " + question[day].place + "."
     answer_comment = question[day].place_comment
-    if (user_answer == question[day].place){
+    if (question[day].accepted_places.split(",").includes(user_answer.toLowerCase())){
       answer_result = 'Correct!'
       score += 1
       answer_result_color = '#0b9917'
     }
     else{
-      answer_result = 'Oh No!'
+      answer_result = 'Oh no!'
       answer_result_color = '#99140b'
     }
 
@@ -65,7 +65,7 @@
     });
 
     let color = "#660c06" // red for bad  
-    if(answer_result == 'Correct'){
+    if(answer_result == 'Correct!'){
       color = "#066616";
     }
 
@@ -132,7 +132,7 @@
       speed: 10
     });
 
-    if (count >= 3){
+    if (count >= 30){
       game_over()
     } else {
       image_status = 'q'
@@ -159,12 +159,12 @@
   </Modal>
   <div class="quizz">
   <Row>
-    <Col xs="3">Score</Col>
-    <Col xs="auto">Day {question[day].day}: {question[day].theme}</Col>
+    <Col xs="8">Day {question[day].day}: {question[day].theme}</Col>
+    <Col xs="4">Score</Col>
   </Row>
   <Row>
-    <Col xs="3"><div class="scorebox">{score}/{count}</div></Col>
-    <Col xs="auto">{question[day].question}</Col>
+    <Col xs="8">{question[day].question}</Col>
+    <Col xs="4"><div class="scorebox">{score}/{count}</div></Col>
   </Row>
      
   <a href="./img/{image_status}/{question[day].day}.png" target="_blank">

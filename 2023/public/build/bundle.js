@@ -7361,10 +7361,10 @@ var app = (function () {
     		day: 1,
     		theme: "Points",
     		place: "Yangon",
-    		alt_place: "Rangoun,Rangoon,Yangoon",
+    		accepted_places: "yangon,rangoun,rangoon,yangoon",
     		sub_place: "Myanmar,Birmanie",
-    		question: "Name the city this place in.",
-    		place_comment: "",
+    		question: "This place is full of pagodas, portrayed with red points. In which city it is located?",
+    		place_comment: "Shwedagon shrine, the most sacred Buddhist pagoda in Myanmar.",
     		lat: 16.7983448688837,
     		lon: 96.1496024717999,
     		zoom: 15
@@ -7373,9 +7373,9 @@ var app = (function () {
     		day: 2,
     		theme: "Lines",
     		place: "Everest",
-    		alt_place: "Qomolangma",
+    		accepted_places: "qomolangma,everest",
     		sub_place: "Himalaya,Nepal,Tibet",
-    		question: "Name this mountain.",
+    		question: "Name the peak at the center of this map.",
     		place_comment: "The top of the world!",
     		lat: 27.9881637480718,
     		lon: 86.9250962194349,
@@ -7384,11 +7384,11 @@ var app = (function () {
     	{
     		day: 3,
     		theme: "Polygons",
-    		place: "Forbidden city",
-    		alt_place: "The forbidden city, La cité interdite",
+    		place: "the Forbidden City",
+    		accepted_places: "the forbidden city,la cité interdite,forbidden city",
     		sub_place: "Beijing,Pékin,China",
-    		question: "Name this place.",
-    		place_comment: "",
+    		question: "Name this place full of polygons.",
+    		place_comment: "Let's Get Lost.",
     		lat: 39.9167866278191,
     		lon: 116.390744439148,
     		zoom: 14
@@ -7397,10 +7397,10 @@ var app = (function () {
     		day: 4,
     		theme: "A bad map",
     		place: "Istanbul",
-    		alt_place: "Bosphore",
+    		accepted_places: "istanbul",
     		sub_place: "Turkey",
-    		question: "Name this city or area.",
-    		place_comment: "",
+    		question: "Name the major city of this weird coloured map.",
+    		place_comment: "The unique city covering two continents.",
     		lat: 41.0159913479463,
     		lon: 28.9819546694404,
     		zoom: 9
@@ -7409,10 +7409,10 @@ var app = (function () {
     		day: 5,
     		theme: "Analog",
     		place: "New Zealand",
-    		alt_place: "Nouvelle Zélande",
+    		accepted_places: "new zealand,nouvelle zélande",
     		sub_place: "",
     		question: "Name the country at the bottom right of this globe clay.",
-    		place_comment: "",
+    		place_comment: "Never forget to place it.",
     		lat: -44.4294876195838,
     		lon: 170.344479360917,
     		zoom: 4.5
@@ -7421,10 +7421,10 @@ var app = (function () {
     		day: 6,
     		theme: "Asia",
     		place: "Battambang",
-    		alt_place: "",
+    		accepted_places: "battambang",
     		sub_place: "Cambodia",
     		question: "Name this city.",
-    		place_comment: "",
+    		place_comment: "The land of my Khmer roots.",
     		lat: 13.0980761856293,
     		lon: 103.194754783978,
     		zoom: 11
@@ -7432,11 +7432,11 @@ var app = (function () {
     	{
     		day: 7,
     		theme: "Navigation",
-    		place: "Venezia",
-    		alt_place: "Venise",
+    		place: "Venizia",
+    		accepted_places: "venezia,venice,venise,venesia,venexia",
     		sub_place: "Italia,Italie,Italy",
     		question: "Name this city.",
-    		place_comment: "",
+    		place_comment: "“Paris is an ideal place to become informed, while Venice is a place to think and write” - Pontus Hulten",
     		lat: 45.4383286517221,
     		lon: 12.3301945720289,
     		zoom: 13
@@ -7445,10 +7445,10 @@ var app = (function () {
     		day: 8,
     		theme: "Africa",
     		place: "Okavango",
-    		alt_place: "",
+    		accepted_places: "okavango,okawango,cubango,kubango",
     		sub_place: "Botswana",
     		question: "Name this remarkable river.",
-    		place_comment: "",
+    		place_comment: "This river does not end to the sea but in this inland delta located at Botswana.",
     		lat: -19.8899073403724,
     		lon: 23.4345716036357,
     		zoom: 10
@@ -7457,10 +7457,10 @@ var app = (function () {
     		day: 9,
     		theme: "Hexagons",
     		place: "Grammichele",
-    		alt_place: "Gramichele",
+    		accepted_places: "grammichele",
     		sub_place: "Sicilia",
-    		question: "Name this city.",
-    		place_comment: "",
+    		question: "Name this town.",
+    		place_comment: "A well layout built town in Sicily.",
     		lat: 37.2147327312971,
     		lon: 14.6366290847497,
     		zoom: 15
@@ -7469,10 +7469,10 @@ var app = (function () {
     		day: 10,
     		theme: "North America",
     		place: "Vancouver",
-    		alt_place: "",
+    		accepted_places: "vancouver",
     		sub_place: "",
-    		question: "Name this city.",
-    		place_comment: "",
+    		question: "Name the major city of this area.",
+    		place_comment: "Nice to peak you",
     		lat: 49.2453883470166,
     		lon: -123.103080322627,
     		zoom: 7.5
@@ -7481,10 +7481,10 @@ var app = (function () {
     		day: 11,
     		theme: "Retro",
     		place: "1860",
-    		alt_place: "",
+    		accepted_places: "1860",
     		sub_place: "",
     		question: "Guess the year when Paris absorbed surrounding towns.",
-    		place_comment: "",
+    		place_comment: "On January 1st, beautiful towns like Montmartre became a small district of Paris.",
     		lat: 48.8587609371355,
     		lon: 2.34534869481309,
     		zoom: 10
@@ -7493,7 +7493,7 @@ var app = (function () {
     		day: 12,
     		theme: "South America",
     		place: "Ushuaia",
-    		alt_place: "Ushuaïa",
+    		accepted_places: "ushuaia,ushuaïa",
     		sub_place: "Terra del Fuego",
     		question: "Name this city.",
     		place_comment: "The End of the World!",
@@ -7505,7 +7505,7 @@ var app = (function () {
     		day: 13,
     		theme: "Choropleth",
     		place: "Svalbard",
-    		alt_place: "",
+    		accepted_places: "svalbard",
     		sub_place: "Norway",
     		question: "Name this area hosting many polar bears.",
     		place_comment: "Digits shows the number of polar bear dens per square of 10km.",
@@ -7517,10 +7517,10 @@ var app = (function () {
     		day: 14,
     		theme: "Europe",
     		place: "Kirkjufell",
-    		alt_place: "Grundarfjörður,Grundarfjördur,Grundarfjordur",
+    		accepted_places: "kirkjufell,grundarfjörður,grundarfjördur,grundarfjordur",
     		sub_place: "Iceland,Snaefellsness",
-    		question: "Name this mountain.  Surrounding town is also allowed.",
-    		place_comment: "",
+    		question: "Name this mountain. Surrounding town is also allowed.",
+    		place_comment: "An iconic Icelandic mountain located in Snæfellsnes peninsula.",
     		lat: 64.9402837389247,
     		lon: -23.3064095046468,
     		zoom: 12
@@ -7529,10 +7529,10 @@ var app = (function () {
     		day: 15,
     		theme: "Openstreetmap",
     		place: "Sarajevo",
-    		alt_place: "",
+    		accepted_places: "sarajevo",
     		sub_place: "Bosnia,Bosnia Herzegovina",
-    		question: "Name this city.",
-    		place_comment: "",
+    		question: "Name this city which hosts a mix of christian (purple points) and muslim (green points) places.",
+    		place_comment: "Where church bells and mosque call can live together.",
     		lat: 43.8495619143722,
     		lon: 18.3897512177645,
     		zoom: 12
@@ -7540,11 +7540,11 @@ var app = (function () {
     	{
     		day: 16,
     		theme: "Oceania",
-    		place: "Palaos",
-    		alt_place: "Palau",
+    		place: "Palau",
+    		accepted_places: "palaos,palau,belau,pelew",
     		sub_place: "",
     		question: "Name this country.",
-    		place_comment: "",
+    		place_comment: "The pristine islands",
     		lat: 7.32732961883409,
     		lon: 134.473854308072,
     		zoom: 9
@@ -7553,10 +7553,10 @@ var app = (function () {
     		day: 17,
     		theme: "Flow",
     		place: "Shanghai",
-    		alt_place: "",
+    		accepted_places: "shanghai,shanghaï",
     		sub_place: "China",
     		question: "Name the city of this subway network.",
-    		place_comment: "",
+    		place_comment: "Network is growing so fast it may be already out of date.",
     		lat: 31.2419141987077,
     		lon: 121.495277245857,
     		zoom: 9
@@ -7565,10 +7565,10 @@ var app = (function () {
     		day: 18,
     		theme: "Atmosphere",
     		place: "Male",
-    		alt_place: "Malé",
+    		accepted_places: "male,malé",
     		sub_place: "Maldives",
-    		question: "Name this city.",
-    		place_comment: "",
+    		question: "Name this city threaten by the ocean rising.",
+    		place_comment: "Time is counted to visit Maldives.",
     		lat: 4.17487902020437,
     		lon: 73.5098633865418,
     		zoom: 11
@@ -7576,10 +7576,10 @@ var app = (function () {
     	{
     		day: 19,
     		theme: "5 minutes map",
-    		place: "Olague",
-    		alt_place: "Nigeria",
+    		place: "Nigeria",
+    		accepted_places: "nigeria",
     		sub_place: "",
-    		question: "Name this place.",
+    		question: "Name the country where this place is located. (Hint: read well the theme.)",
     		place_comment: "5.55555E,5.55555N!",
     		lat: 5.55555,
     		lon: 5.55555,
@@ -7588,11 +7588,11 @@ var app = (function () {
     	{
     		day: 20,
     		theme: "Outdoor",
-    		place: "Son Kol",
-    		alt_place: "Son Kol Lake, Sonkul Lake, Sonkul,Sonkol,Son Kul Lake",
+    		place: "Son Kol Lake",
+    		accepted_places: "son kol lake,sonkul lake,sonkul,sonkol,son kul lake,sonkol lake",
     		sub_place: "Kyrgyzstan,Kirghizstan",
     		question: "Name this lake.",
-    		place_comment: "",
+    		place_comment: "The Kyrgyz pearl.",
     		lat: 41.8395934606049,
     		lon: 75.1519719190007,
     		zoom: 9
@@ -7600,11 +7600,11 @@ var app = (function () {
     	{
     		day: 21,
     		theme: "Raster",
-    		place: "Genghis Khaan Statue Complex",
-    		alt_place: "Ginghis Khaan Statue,Genghis Khan Statue,Ginghis Khan Statue",
+    		place: "Ulaanbaatar",
+    		accepted_places: "oulan-bator,ulaanbaatar,ulanbaatar,ulaanbatar,ulanbatar,ulanbataar,ulaanbataar,ulan bator,ulanbator,ulan-bator",
     		sub_place: "Mongolia,Mongolie",
-    		question: "Name this place.",
-    		place_comment: "",
+    		question: "In which city is located this place?",
+    		place_comment: "Ginghis Khaan Statue Complex in Ulaanbaatar country side.",
     		lat: 47.808125132594,
     		lon: 107.529844055325,
     		zoom: 15
@@ -7613,7 +7613,7 @@ var app = (function () {
     		day: 22,
     		theme: "North is not always up",
     		place: "Sierra Leone",
-    		alt_place: "",
+    		accepted_places: "sierra leone",
     		sub_place: "",
     		question: "Name this country.",
     		place_comment: "Sierra Leone is one of the most rounded country",
@@ -7625,10 +7625,10 @@ var app = (function () {
     		day: 23,
     		theme: "3D",
     		place: "Torres del Paine",
-    		alt_place: "",
+    		accepted_places: "torres del paine",
     		sub_place: "Chile",
     		question: "Name this place.",
-    		place_comment: "",
+    		place_comment: "Patagonia mi amor",
     		lat: -51.0029303875002,
     		lon: -73.0972775304178,
     		zoom: 10
@@ -7636,11 +7636,11 @@ var app = (function () {
     	{
     		day: 24,
     		theme: "Black and White",
-    		place: "Monza",
-    		alt_place: "",
+    		place: "Monza Circuit",
+    		accepted_places: "monza,monza circuit,autodromo nazionale di monza",
     		sub_place: "",
     		question: "Name this place.",
-    		place_comment: "",
+    		place_comment: "The Temple of Speed.",
     		lat: 45.6190714828521,
     		lon: 9.2844144011089,
     		zoom: 13
@@ -7649,10 +7649,10 @@ var app = (function () {
     		day: 25,
     		theme: "Antarctica",
     		place: "Ljubljana",
-    		alt_place: "",
+    		accepted_places: "ljubljana,ljubjana",
     		sub_place: "",
-    		question: "Northern cities has been moved to the ice continent.  Name the city which fall to the south pole.",
-    		place_comment: "",
+    		question: "Northern cities has been moved to the ice continent. Name the city which fall to the south pole.",
+    		place_comment: "White dragons guards South Pole.",
     		lat: -84.99,
     		lon: 0,
     		zoom: 3
@@ -7661,10 +7661,10 @@ var app = (function () {
     		day: 26,
     		theme: "Minimal",
     		place: "Pitcairn",
-    		alt_place: "",
+    		accepted_places: "pitcairn",
     		sub_place: "",
     		question: "Name this island.",
-    		place_comment: "Pitcairn is the dependency having the less population.",
+    		place_comment: "Pitcairn is the dependency having the minimal population.",
     		lat: -25.0692396577367,
     		lon: -130.105773008269,
     		zoom: 13.5
@@ -7672,11 +7672,11 @@ var app = (function () {
     	{
     		day: 27,
     		theme: "Dot",
-    		place: "Beaufort",
-    		alt_place: "",
+    		place: "Beaufort Sea",
+    		accepted_places: "beaufort,beaufort sea,sea of beaufort,mer de beaufort",
     		sub_place: "",
-    		question: "Name the sea where 300 bears has been tracked here.",
-    		place_comment: "",
+    		question: "Name the sea where polar bears has been tracked here.",
+    		place_comment: "A track of up to 300 polar bears.",
     		lat: 71.3597172198159,
     		lon: -154.724482964392,
     		zoom: 4
@@ -7685,10 +7685,10 @@ var app = (function () {
     		day: 28,
     		theme: "Is it a chart or map?",
     		place: "Japan",
-    		alt_place: "Japon",
+    		accepted_places: "japan,japon,日本",
     		sub_place: "",
     		question: "Name the nation which represents this population chart.",
-    		place_comment: "",
+    		place_comment: "A full of rising sun!",
     		lat: 35.7996294218927,
     		lon: 140.060331883228,
     		zoom: 4
@@ -7696,11 +7696,11 @@ var app = (function () {
     	{
     		day: 29,
     		theme: "Population",
-    		place: "Kosovo",
-    		alt_place: "Kosova,Kosovë",
+    		place: "Kosova",
+    		accepted_places: "kosova,kosovo,kosovë",
     		sub_place: "",
     		question: "Name the nation which represents this population density.",
-    		place_comment: "",
+    		place_comment: "A friendly nation who hosted FOSS4G 2023.",
     		lat: 42.5828007575422,
     		lon: 20.7497467666328,
     		zoom: 8
@@ -7709,10 +7709,10 @@ var app = (function () {
     		day: 30,
     		theme: "My favorite...",
     		place: "Bissau",
-    		alt_place: "Guinea-Bissau,Guinée-Bissau,Guinee Bissau",
+    		accepted_places: "bissau,guinea-bissau,guinea bissau,guinée-bissau,guinée bissau,guinee bissau,guinee-bissau",
     		sub_place: "",
     		question: "Name this beautiful place.",
-    		place_comment: "",
+    		place_comment: "The astronaut Thomas Pesquet took a pic from space which makes me fall in love to this area.",
     		lat: 11.721768706204,
     		lon: -15.66774583044,
     		zoom: 8.5
@@ -8008,9 +8008,9 @@ var app = (function () {
     			t2 = text(/*score*/ ctx[0]);
     			t3 = text("/");
     			t4 = text(/*count*/ ctx[1]);
-    			add_location(div0, file$1, 156, 4, 3532);
+    			add_location(div0, file$1, 156, 4, 3576);
     			attr_dev(div1, "class", "scorebox svelte-h94mup");
-    			add_location(div1, file$1, 157, 4, 3558);
+    			add_location(div1, file$1, 157, 4, 3602);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -8051,7 +8051,7 @@ var app = (function () {
     			h2 = element("h2");
     			h2.textContent = "GAME OVER!";
     			attr_dev(h2, "slot", "header");
-    			add_location(h2, file$1, 153, 4, 3482);
+    			add_location(h2, file$1, 153, 4, 3526);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -8073,35 +8073,8 @@ var app = (function () {
     	return block;
     }
 
-    // (162:4) <Col xs="3">
+    // (162:4) <Col xs="8">
     function create_default_slot_15(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text("Score");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_15.name,
-    		type: "slot",
-    		source: "(162:4) <Col xs=\\\"3\\\">",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (163:4) <Col xs="auto">
-    function create_default_slot_14(ctx) {
     	let t0;
     	let t1_value = question[/*day*/ ctx[2]].day + "";
     	let t1;
@@ -8136,9 +8109,36 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
+    		id: create_default_slot_15.name,
+    		type: "slot",
+    		source: "(162:4) <Col xs=\\\"8\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (163:4) <Col xs="4">
+    function create_default_slot_14(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Score");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
     		id: create_default_slot_14.name,
     		type: "slot",
-    		source: "(163:4) <Col xs=\\\"auto\\\">",
+    		source: "(163:4) <Col xs=\\\"4\\\">",
     		ctx
     	});
 
@@ -8154,7 +8154,7 @@ var app = (function () {
 
     	col0 = new Col({
     			props: {
-    				xs: "3",
+    				xs: "8",
     				$$slots: { default: [create_default_slot_15] },
     				$$scope: { ctx }
     			},
@@ -8163,7 +8163,7 @@ var app = (function () {
 
     	col1 = new Col({
     			props: {
-    				xs: "auto",
+    				xs: "4",
     				$$slots: { default: [create_default_slot_14] },
     				$$scope: { ctx }
     			},
@@ -8185,14 +8185,14 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const col0_changes = {};
 
-    			if (dirty & /*$$scope*/ 262144) {
+    			if (dirty & /*$$scope, day*/ 262148) {
     				col0_changes.$$scope = { dirty, ctx };
     			}
 
     			col0.$set(col0_changes);
     			const col1_changes = {};
 
-    			if (dirty & /*$$scope, day*/ 262148) {
+    			if (dirty & /*$$scope*/ 262144) {
     				col1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -8227,50 +8227,8 @@ var app = (function () {
     	return block;
     }
 
-    // (166:4) <Col xs="3">
+    // (166:4) <Col xs="8">
     function create_default_slot_12(ctx) {
-    	let div;
-    	let t0;
-    	let t1;
-    	let t2;
-
-    	const block = {
-    		c: function create() {
-    			div = element("div");
-    			t0 = text(/*score*/ ctx[0]);
-    			t1 = text("/");
-    			t2 = text(/*count*/ ctx[1]);
-    			attr_dev(div, "class", "scorebox svelte-h94mup");
-    			add_location(div, file$1, 165, 16, 3776);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			append_dev(div, t0);
-    			append_dev(div, t1);
-    			append_dev(div, t2);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*score*/ 1) set_data_dev(t0, /*score*/ ctx[0]);
-    			if (dirty & /*count*/ 2) set_data_dev(t2, /*count*/ ctx[1]);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_12.name,
-    		type: "slot",
-    		source: "(166:4) <Col xs=\\\"3\\\">",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (167:4) <Col xs="auto">
-    function create_default_slot_11(ctx) {
     	let t_value = question[/*day*/ ctx[2]].question + "";
     	let t;
 
@@ -8291,9 +8249,51 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
+    		id: create_default_slot_12.name,
+    		type: "slot",
+    		source: "(166:4) <Col xs=\\\"8\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (167:4) <Col xs="4">
+    function create_default_slot_11(ctx) {
+    	let div;
+    	let t0;
+    	let t1;
+    	let t2;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			t0 = text(/*score*/ ctx[0]);
+    			t1 = text("/");
+    			t2 = text(/*count*/ ctx[1]);
+    			attr_dev(div, "class", "scorebox svelte-h94mup");
+    			add_location(div, file$1, 166, 16, 3864);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, t0);
+    			append_dev(div, t1);
+    			append_dev(div, t2);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*score*/ 1) set_data_dev(t0, /*score*/ ctx[0]);
+    			if (dirty & /*count*/ 2) set_data_dev(t2, /*count*/ ctx[1]);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
     		id: create_default_slot_11.name,
     		type: "slot",
-    		source: "(167:4) <Col xs=\\\"auto\\\">",
+    		source: "(167:4) <Col xs=\\\"4\\\">",
     		ctx
     	});
 
@@ -8309,7 +8309,7 @@ var app = (function () {
 
     	col0 = new Col({
     			props: {
-    				xs: "3",
+    				xs: "8",
     				$$slots: { default: [create_default_slot_12] },
     				$$scope: { ctx }
     			},
@@ -8318,7 +8318,7 @@ var app = (function () {
 
     	col1 = new Col({
     			props: {
-    				xs: "auto",
+    				xs: "4",
     				$$slots: { default: [create_default_slot_11] },
     				$$scope: { ctx }
     			},
@@ -8340,14 +8340,14 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const col0_changes = {};
 
-    			if (dirty & /*$$scope, count, score*/ 262147) {
+    			if (dirty & /*$$scope, day*/ 262148) {
     				col0_changes.$$scope = { dirty, ctx };
     			}
 
     			col0.$set(col0_changes);
     			const col1_changes = {};
 
-    			if (dirty & /*$$scope, day*/ 262148) {
+    			if (dirty & /*$$scope, count, score*/ 262147) {
     				col1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -8744,7 +8744,7 @@ var app = (function () {
     			attr_dev(div, "id", "resultText");
     			attr_dev(div, "class", "result svelte-h94mup");
     			set_style(div, "--theme-color", /*answer_result_color*/ ctx[6]);
-    			add_location(div, file$1, 196, 10, 4885);
+    			add_location(div, file$1, 196, 10, 4923);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -8791,9 +8791,9 @@ var app = (function () {
     			i = element("i");
     			t2 = text(/*answer_comment*/ ctx[7]);
     			attr_dev(div0, "class", "answermsg svelte-h94mup");
-    			add_location(div0, file$1, 198, 23, 5026);
-    			add_location(i, file$1, 199, 15, 5087);
-    			add_location(div1, file$1, 199, 10, 5082);
+    			add_location(div0, file$1, 198, 23, 5064);
+    			add_location(i, file$1, 199, 15, 5125);
+    			add_location(div1, file$1, 199, 10, 5120);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -9045,18 +9045,18 @@ var app = (function () {
     			attr_dev(img, "class", "quizz-img svelte-h94mup");
     			if (!src_url_equal(img.src, img_src_value = "./img/" + /*image_status*/ ctx[8] + "/" + question[/*day*/ ctx[2]].day + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = "map_" + question[/*day*/ ctx[2]].day);
-    			add_location(img, file$1, 170, 4, 3969);
+    			add_location(img, file$1, 170, 4, 4007);
     			attr_dev(a, "href", a_href_value = "./img/" + /*image_status*/ ctx[8] + "/" + question[/*day*/ ctx[2]].day + ".png");
     			attr_dev(a, "target", "_blank");
-    			add_location(a, file$1, 169, 2, 3893);
+    			add_location(a, file$1, 169, 2, 3931);
     			attr_dev(div0, "class", "quizz");
-    			add_location(div0, file$1, 159, 2, 3615);
+    			add_location(div0, file$1, 159, 2, 3659);
     			attr_dev(div1, "class", "submit svelte-h94mup");
-    			add_location(div1, file$1, 181, 4, 4387);
+    			add_location(div1, file$1, 181, 4, 4425);
     			attr_dev(div2, "class", "answerbox svelte-h94mup");
-    			add_location(div2, file$1, 193, 4, 4818);
+    			add_location(div2, file$1, 193, 4, 4856);
     			attr_dev(div3, "class", "Quizzbox svelte-h94mup");
-    			add_location(div3, file$1, 151, 0, 3429);
+    			add_location(div3, file$1, 151, 0, 3473);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9105,7 +9105,7 @@ var app = (function () {
     			row0.$set(row0_changes);
     			const row1_changes = {};
 
-    			if (dirty & /*$$scope, day, count, score*/ 262151) {
+    			if (dirty & /*$$scope, count, score, day*/ 262151) {
     				row1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9210,12 +9210,12 @@ var app = (function () {
     		$$invalidate(4, answer_message = "The answer is " + question[day].place + ".");
     		$$invalidate(7, answer_comment = question[day].place_comment);
 
-    		if (user_answer == question[day].place) {
+    		if (question[day].accepted_places.split(",").includes(user_answer.toLowerCase())) {
     			$$invalidate(5, answer_result = 'Correct!');
     			$$invalidate(0, score += 1);
     			$$invalidate(6, answer_result_color = '#0b9917');
     		} else {
-    			$$invalidate(5, answer_result = 'Oh No!');
+    			$$invalidate(5, answer_result = 'Oh no!');
     			$$invalidate(6, answer_result_color = '#99140b');
     		}
 
@@ -9247,7 +9247,7 @@ var app = (function () {
     		map.addSource(place_source, { type: 'geojson', data: placedata });
     		let color = "#660c06"; // red for bad  
 
-    		if (answer_result == 'Correct') {
+    		if (answer_result == 'Correct!') {
     			color = "#066616";
     		}
 
@@ -9306,7 +9306,7 @@ var app = (function () {
     		// map
     		map.flyTo({ center: [0, 0], zoom: 1, speed: 10 });
 
-    		if (count >= 3) {
+    		if (count >= 30) {
     			game_over();
     		} else {
     			$$invalidate(8, image_status = 'q');
