@@ -1,10 +1,13 @@
 <script>
+	import { Styles } from 'sveltestrap';
+
 	import Navbar from './components/Navbar.svelte';
 	import Map from './components/Map.svelte';
 	import Quizzbox from './components/Quizzbox.svelte';
 	let map;
+	let theme = 'dark';
 </script>
-
+<Styles {theme} />
 <div class="app">
 	<Navbar />
 	<div class="container">

@@ -6,8 +6,8 @@
   .heading {
     margin: 0;
     padding: 0px;
-    background-color: white;
-    color: black;
+    /* background-color: white; */
+    /* color: black; */
   }
 
   .heading > h1 {

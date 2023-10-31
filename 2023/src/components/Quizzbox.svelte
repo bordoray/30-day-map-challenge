@@ -185,9 +185,9 @@
           <Input id="inputBox" bind:value={user_answer} placeholder="Your answer" />
         </Col>
         <Col xs="2">
-          <Button id="submitBtn" color="dark" on:click={answerClick}>Submit!</Button>
+          <Button id="submitBtn" color="light" on:click={answerClick}>Submit!</Button>
         </Col>
-        <Col xs="2"><Button id="nextBtn" color="dark" outline on:click={nextClick} >{next_button_text}</Button>
+        <Col xs="2"><Button id="nextBtn" color="light" outline on:click={nextClick} >{next_button_text}</Button>
         </Col>
       </Row>
     </div>
@@ -201,7 +201,7 @@
         </Col>
       </Row>
     </div>
-    <Button id="submitBtndev" color="dark" on:click={switchNextDay}>Next for dev use</Button>
+    <Button id="submitBtndev" color="light" on:click={switchNextDay}>Next for dev use</Button>
   </div>
 
 <style>
