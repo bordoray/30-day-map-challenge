@@ -16,6 +16,7 @@
   let image_status = 'q'
   let next_button_text = 'Give up'
   let showModal = false
+  let score_comment = ''
 
 
 	function answerClick() {
@@ -116,6 +117,23 @@
     submitBtn.disabled = true
     inputBox.disabled = true
     // nextBtn.disabled = true
+    if (score == 30) {
+      score_comment = 'You are my Master. Unfortunately, I cannot offer you a trip to those places, but a peaceful tatami room is waiting for you in our home at Mashiko in Japan'
+    } else if (score == 29) {
+      score_comment = 'Almost perfect! Does a typing error makes you miss the last point?'
+    } else if (score >= 26) {
+      score_comment = 'Great! You know the world like the back of your hand.'
+    } else if (score >= 20) {
+      score_comment = 'Nice! I guess you are a confirmed geographer.'
+    } else if (score >= 15) {
+      score_comment = 'Good! You are an initiated geographer.'
+    } else if (score >= 10) {
+      score_comment = 'Many corners of the world still unexplored.'
+    } else if (score >= 5) {
+      score_comment = 'Take your bag and go explore the world. Or simply take a map and read it for a while.'
+    } else {
+      score_comment = 'Either you do not know how to read maps, or I cannot make readable maps.'
+    }
     showModal = true
     next_button_text = 'Result'
   }
@@ -152,6 +170,7 @@
     </h2>
     <div>Your score</div>
     <div class="scorebox">{score}/{count}</div>
+    <div class="scorecomment">{score_comment}</div>
   </Modal>
   <div class="quizz">
   <Row>
@@ -233,5 +252,9 @@
 
 .answermsg{
   font-size: 20pt;
+}
+
+.scorecomment{
+  padding: 10px;
 }
 </style>
