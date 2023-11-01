@@ -2,6 +2,7 @@
   import { Button, Input, Col, Row} from 'sveltestrap';
   import question from '../data/places.json';
   import Modal from './Modal.svelte';
+  import 'maplibre-gl/dist/maplibre-gl.css';
   
   export let map;
   let score = 0;
@@ -69,8 +70,9 @@
       color = "#066616";
     }
 
+    let place_layer = 'place_'+question[day].day.toString()
     map.addLayer({
-      id: 'place_'+question[day].day.toString(),
+      id: place_layer,
       source: place_source,
       type: 'circle',
       paint: {
@@ -85,9 +87,7 @@
     });
 
     map.addLayer({
-      id: 'place_label_'+question[day].day.toString(),
-      // References the GeoJSON source defined above
-      // and does not require a `source-layer`
+      id: place_layer + "_label",
       source: place_source,
       type: 'symbol',
       paint: {
@@ -95,11 +95,7 @@
       },
       layout: {
         'text-field': ['get', 'day'],
-        'text-size': 14
-        // 'text-color': "#FFF"
-        // Set the label content to the
-        // feature's `name` property
-        
+        'text-size': 14 
       }
     });
 		

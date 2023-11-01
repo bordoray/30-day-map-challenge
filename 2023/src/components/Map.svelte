@@ -1,18 +1,11 @@
 <script>
   import { onMount, onDestroy } from 'svelte'
-  import { Map, NavigationControl, Marker } from 'maplibre-gl';
+  import { Map, NavigationControl} from 'maplibre-gl';
   import 'maplibre-gl/dist/maplibre-gl.css';
 
   export let map;
   let mapContainer;
 
-  function flyToLocation(center, zoom, speed) {
-    map.flyTo({
-      center: center,
-      zoom: zoom,
-      speed: speed
-    });
-  }
 
   onMount(() => {
 
