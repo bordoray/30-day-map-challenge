@@ -62,14 +62,14 @@
   {
     "day": 6,
     "theme": "Asia",
-    "place": "Battambang",
-    "accepted_places": "battambang",
+    "place": "Tonlé sap, Cambodia",
+    "accepted_places": "tonle sap,tonlé sap,tonlésap lake,tonlé sap lake,tonlesap lake,tonle sap lake,tonlésap,tonlesap",
     "sub_place": "Cambodia",
-    "question": "Name this city.",
+    "question": "Name this lake.",
     "place_comment": "The land of my Khmer roots.",
-    "lat": 13.0980761856293,
-    "lon": 103.194754783978,
-    "zoom": 11
+    "lat": 12.7317,
+    "lon": 104.0493,
+    "zoom": 8
   },
   {
     "day": 7,
