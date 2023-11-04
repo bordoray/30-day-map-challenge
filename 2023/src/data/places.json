@@ -5,11 +5,12 @@
     "place": "Yangon",
     "accepted_places": "yangon,rangoun,rangoon,yangoon",
     "sub_place": "Myanmar,Birmanie",
-    "question": "This place is full of pagodas, portrayed with red points. In which city it is located?",
+    "question": "This place is full of pagodas, here in red points. In which city it is located?",
     "place_comment": "Shwedagon shrine, the most sacred Buddhist pagoda in Myanmar.",
     "lat": 16.7983448688837,
     "lon": 96.1496024717999,
-    "zoom": 15
+    "zoom": 15,
+    "photo_source": "© bordoray"
   },
   {
     "day": 2,
@@ -21,7 +22,8 @@
     "place_comment": "The top of the world!",
     "lat": 27.9881637480718,
     "lon": 86.9250962194349,
-    "zoom": 13
+    "zoom": 13,
+    "photo_source": "© bordoray"
   },
   {
     "day": 3,
@@ -33,7 +35,8 @@
     "place_comment": "Let's Get Lost.",
     "lat": 39.9167866278191,
     "lon": 116.390744439148,
-    "zoom": 14
+    "zoom": 14,
+    "photo_source": "© bordoray"
   },
   {
     "day": 4,
@@ -45,7 +48,8 @@
     "place_comment": "The unique city covering two continents.",
     "lat": 41.0159913479463,
     "lon": 28.9819546694404,
-    "zoom": 9
+    "zoom": 9,
+    "photo_source": "© bordoray"
   },
   {
     "day": 5,
@@ -57,7 +61,8 @@
     "place_comment": "Never forget to place it.",
     "lat": -44.4294876195838,
     "lon": 170.344479360917,
-    "zoom": 4.5
+    "zoom": 4.5,
+    "photo_source": "© bordoray"
   },
   {
     "day": 6,
@@ -69,7 +74,8 @@
     "place_comment": "The land of my Khmer roots.",
     "lat": 12.7317,
     "lon": 104.0493,
-    "zoom": 8
+    "zoom": 8,
+    "photo_source": "© bordoray"
   },
   {
     "day": 7,
@@ -81,7 +87,8 @@
     "place_comment": "“Paris is an ideal place to become informed, while Venice is a place to think and write” - Pontus Hulten",
     "lat": 45.4383286517221,
     "lon": 12.3301945720289,
-    "zoom": 13
+    "zoom": 13,
+    "photo_source": "© T.Pesquet ESA/NASA"
   },
   {
     "day": 8,
@@ -93,7 +100,8 @@
     "place_comment": "This river does not end to the sea but in this inland delta located at Botswana.",
     "lat": -19.8899073403724,
     "lon": 23.4345716036357,
-    "zoom": 10
+    "zoom": 10,
+    "photo_source": "© T.Pesquet ESA/NASA"
   },
   {
     "day": 9,
@@ -105,7 +113,8 @@
     "place_comment": "A well layout built town in Sicily.",
     "lat": 37.2147327312971,
     "lon": 14.6366290847497,
-    "zoom": 15
+    "zoom": 15,
+    "photo_source": "© Maptiler Satellite"
   },
   {
     "day": 10,
@@ -117,7 +126,8 @@
     "place_comment": "Nice to peak you",
     "lat": 49.2453883470166,
     "lon": -123.103080322627,
-    "zoom": 7.5
+    "zoom": 7.5,
+    "photo_source": "© bordoray"
   },
   {
     "day": 11,
@@ -129,7 +139,8 @@
     "place_comment": "On January 1st, beautiful towns like Montmartre became a small district of Paris.",
     "lat": 48.8587609371355,
     "lon": 2.34534869481309,
-    "zoom": 10
+    "zoom": 10,
+    "photo_source": "© bordoray"
   },
   {
     "day": 12,
@@ -141,7 +152,8 @@
     "place_comment": "The End of the World!",
     "lat": -54.8079619333556,
     "lon": -68.3102616271834,
-    "zoom": 9
+    "zoom": 9,
+    "photo_source": "© bordoray"
   },
   {
     "day": 13,
@@ -153,7 +165,8 @@
     "place_comment": "Digits shows the number of polar bear dens per square of 10km.",
     "lat": 78.6213595406461,
     "lon": 16.9864786456367,
-    "zoom": 4
+    "zoom": 4,
+    "photo_source": "Unsplash"
   },
   {
     "day": 14,
@@ -165,7 +178,8 @@
     "place_comment": "An iconic Icelandic mountain located in Snæfellsnes peninsula.",
     "lat": 64.9402837389247,
     "lon": -23.3064095046468,
-    "zoom": 12
+    "zoom": 12,
+    "photo_source": "© bordoray"
   },
   {
     "day": 15,
@@ -177,7 +191,8 @@
     "place_comment": "Where church bells and mosque call can live together.",
     "lat": 43.8495619143722,
     "lon": 18.3897512177645,
-    "zoom": 12
+    "zoom": 12,
+    "photo_source": "Unsplash"
   },
   {
     "day": 16,
@@ -189,7 +204,8 @@
     "place_comment": "The pristine islands",
     "lat": 7.32732961883409,
     "lon": 134.473854308072,
-    "zoom": 9
+    "zoom": 9,
+    "photo_source": "© Maptiler Satellite"
   },
   {
     "day": 17,
@@ -201,7 +217,8 @@
     "place_comment": "Network is growing so fast it may be already out of date.",
     "lat": 31.2419141987077,
     "lon": 121.495277245857,
-    "zoom": 9
+    "zoom": 9,
+    "photo_source": "© bordoray"
   },
   {
     "day": 18,
@@ -213,7 +230,8 @@
     "place_comment": "Time is counted to visit Maldives.",
     "lat": 4.17487902020437,
     "lon": 73.5098633865418,
-    "zoom": 11
+    "zoom": 11,
+    "photo_source": "© bordoray"
   },
   {
     "day": 19,
@@ -225,7 +243,8 @@
     "place_comment": "5.55555E,5.55555N!",
     "lat": 5.55555,
     "lon": 5.55555,
-    "zoom": 10
+    "zoom": 10,
+    "photo_source": "© Maptiler Satellite"
   },
   {
     "day": 20,
@@ -237,7 +256,8 @@
     "place_comment": "The Kyrgyz pearl.",
     "lat": 41.8395934606049,
     "lon": 75.1519719190007,
-    "zoom": 9
+    "zoom": 9,
+    "photo_source": "© bordoray"
   },
   {
     "day": 21,
@@ -249,7 +269,8 @@
     "place_comment": "Ginghis Khaan Statue Complex in Ulaanbaatar country side.",
     "lat": 47.808125132594,
     "lon": 107.529844055325,
-    "zoom": 15
+    "zoom": 15,
+    "photo_source": "© bordoray"
   },
   {
     "day": 22,
@@ -261,7 +282,8 @@
     "place_comment": "Sierra Leone is one of the most rounded country",
     "lat": 8.44519282736392,
     "lon": -11.8629610237056,
-    "zoom": 7
+    "zoom": 7,
+    "photo_source": "© T.Pesquet ESA/NASA"
   },
   {
     "day": 23,
@@ -273,7 +295,8 @@
     "place_comment": "Patagonia mi amor",
     "lat": -51.0029303875002,
     "lon": -73.0972775304178,
-    "zoom": 10
+    "zoom": 10,
+    "photo_source": "© bordoray"
   },
   {
     "day": 24,
@@ -285,7 +308,8 @@
     "place_comment": "The Temple of Speed.",
     "lat": 45.6190714828521,
     "lon": 9.2844144011089,
-    "zoom": 13
+    "zoom": 13,
+    "photo_source": "Unsplash"
   },
   {
     "day": 25,
@@ -297,7 +321,8 @@
     "place_comment": "White dragons guards South Pole.",
     "lat": -84.99,
     "lon": 0,
-    "zoom": 3
+    "zoom": 3,
+    "photo_source": "© bordoray"
   },
   {
     "day": 26,
@@ -309,7 +334,8 @@
     "place_comment": "Pitcairn is the dependency having the minimal population.",
     "lat": -25.0692396577367,
     "lon": -130.105773008269,
-    "zoom": 13.5
+    "zoom": 13.5,
+    "photo_source": "© Maptiler Satellite"
   },
   {
     "day": 27,
@@ -321,7 +347,8 @@
     "place_comment": "A track of up to 300 polar bears.",
     "lat": 71.3597172198159,
     "lon": -154.724482964392,
-    "zoom": 4
+    "zoom": 4,
+    "photo_source": "Unsplash"
   },
   {
     "day": 28,
@@ -333,7 +360,8 @@
     "place_comment": "A full of rising sun!",
     "lat": 35.7996294218927,
     "lon": 140.060331883228,
-    "zoom": 4
+    "zoom": 4,
+    "photo_source": "© bordoray"
   },
   {
     "day": 29,
@@ -345,7 +373,8 @@
     "place_comment": "A friendly nation who hosted FOSS4G 2023.",
     "lat": 42.5828007575422,
     "lon": 20.7497467666328,
-    "zoom": 8
+    "zoom": 8,
+    "photo_source": "© bordoray"
   },
   {
     "day": 30,
@@ -357,6 +386,7 @@
     "place_comment": "The astronaut Thomas Pesquet took a pic from space which makes me fall in love to this area.",
     "lat": 11.721768706204,
     "lon": -15.66774583044,
-    "zoom": 8.5
+    "zoom": 8.5,
+    "photo_source": "© T.Pesquet ESA/NASA"
   }
 ]

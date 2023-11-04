@@ -17,12 +17,14 @@
   let next_button_text = 'Give up'
   let showModal = false
   let score_comment = ''
+  let display_image = 'none';
 
 
 	function answerClick() {
     count += 1
     submitBtn.disabled = true
     inputBox.disabled = true
+    display_image = 'block'
     next_button_text = 'Next'
     answer_message = "The answer is " + question[day].place + "."
     answer_comment = question[day].place_comment
@@ -159,6 +161,7 @@
       count = day
       submitBtn.disabled = false
       inputBox.disabled = false
+      display_image = 'none'
     } 
   }
 </script>
@@ -208,10 +211,18 @@
     </div>
     <div class="answerbox">
       <Row>
+        <div id="resultText" class="result" style="--theme-color: {answer_result_color}">{answer_result}</div>
+      </Row>
+      <Row>
         <Col xs="3">
-          <div id="resultText" class="result" style="--theme-color: {answer_result_color}">{answer_result}</div>
+          <div style="display: {display_image}">
+            <div id="resultText" class="result"><a href="./img/i/{question[day].day}.jpeg" target="_blank">
+              <img class="quizz-img" src="./img/i/{question[day].day}.jpeg" alt="illus_{question[day].day}" />
+            </a></div>
+            <div class="caption">{question[day].photo_source}</div>
+          </div>
         </Col>
-        <Col xs="auto"><div class="answermsg">{answer_message}</div>
+        <Col xs="9"><div class="answermsg">{answer_message}</div>
           <div><i>{answer_comment}</i></div>
         </Col>
       </Row>
@@ -256,5 +267,10 @@
 
 .scorecomment{
   padding: 10px;
+}
+
+.caption{
+  font-size: 7pt;
+  text-align: left;
 }
 </style>

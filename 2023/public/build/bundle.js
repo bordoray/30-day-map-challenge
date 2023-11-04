@@ -7518,23 +7518,25 @@ var app = (function () {
     		place: "Yangon",
     		accepted_places: "yangon,rangoun,rangoon,yangoon",
     		sub_place: "Myanmar,Birmanie",
-    		question: "This place is full of pagodas, portrayed with red points. In which city it is located?",
+    		question: "This place is full of pagodas, here in red points. In which city it is located?",
     		place_comment: "Shwedagon shrine, the most sacred Buddhist pagoda in Myanmar.",
     		lat: 16.7983448688837,
     		lon: 96.1496024717999,
-    		zoom: 15
+    		zoom: 15,
+    		photo_source: "© bordoray"
     	},
     	{
     		day: 2,
     		theme: "Lines",
     		place: "Everest",
-    		accepted_places: "qomolangma,everest",
+    		accepted_places: "qomolangma,everest,mt. everest,mt.everest,mont everest, mount everest",
     		sub_place: "Himalaya,Nepal,Tibet",
     		question: "Name the peak at the center of this map.",
     		place_comment: "The top of the world!",
     		lat: 27.9881637480718,
     		lon: 86.9250962194349,
-    		zoom: 13
+    		zoom: 13,
+    		photo_source: "© bordoray"
     	},
     	{
     		day: 3,
@@ -7546,7 +7548,8 @@ var app = (function () {
     		place_comment: "Let's Get Lost.",
     		lat: 39.9167866278191,
     		lon: 116.390744439148,
-    		zoom: 14
+    		zoom: 14,
+    		photo_source: "© bordoray"
     	},
     	{
     		day: 4,
@@ -7558,7 +7561,8 @@ var app = (function () {
     		place_comment: "The unique city covering two continents.",
     		lat: 41.0159913479463,
     		lon: 28.9819546694404,
-    		zoom: 9
+    		zoom: 9,
+    		photo_source: "© bordoray"
     	},
     	{
     		day: 5,
@@ -7570,19 +7574,21 @@ var app = (function () {
     		place_comment: "Never forget to place it.",
     		lat: -44.4294876195838,
     		lon: 170.344479360917,
-    		zoom: 4.5
+    		zoom: 4.5,
+    		photo_source: "© bordoray"
     	},
     	{
     		day: 6,
     		theme: "Asia",
-    		place: "Battambang",
-    		accepted_places: "battambang",
+    		place: "Tonlé sap, Cambodia",
+    		accepted_places: "tonle sap,tonlé sap,tonlésap lake,tonlé sap lake,tonlesap lake,tonle sap lake,tonlésap,tonlesap",
     		sub_place: "Cambodia",
-    		question: "Name this city.",
+    		question: "Name this lake.",
     		place_comment: "The land of my Khmer roots.",
-    		lat: 13.0980761856293,
-    		lon: 103.194754783978,
-    		zoom: 11
+    		lat: 12.7317,
+    		lon: 104.0493,
+    		zoom: 8,
+    		photo_source: "© bordoray"
     	},
     	{
     		day: 7,
@@ -7594,7 +7600,8 @@ var app = (function () {
     		place_comment: "“Paris is an ideal place to become informed, while Venice is a place to think and write” - Pontus Hulten",
     		lat: 45.4383286517221,
     		lon: 12.3301945720289,
-    		zoom: 13
+    		zoom: 13,
+    		photo_source: "© T.Pesquet ESA/NASA"
     	},
     	{
     		day: 8,
@@ -7606,7 +7613,8 @@ var app = (function () {
     		place_comment: "This river does not end to the sea but in this inland delta located at Botswana.",
     		lat: -19.8899073403724,
     		lon: 23.4345716036357,
-    		zoom: 10
+    		zoom: 10,
+    		photo_source: "© T.Pesquet ESA/NASA"
     	},
     	{
     		day: 9,
@@ -7618,7 +7626,8 @@ var app = (function () {
     		place_comment: "A well layout built town in Sicily.",
     		lat: 37.2147327312971,
     		lon: 14.6366290847497,
-    		zoom: 15
+    		zoom: 15,
+    		photo_source: "© Maptiler Satellite"
     	},
     	{
     		day: 10,
@@ -7630,7 +7639,8 @@ var app = (function () {
     		place_comment: "Nice to peak you",
     		lat: 49.2453883470166,
     		lon: -123.103080322627,
-    		zoom: 7.5
+    		zoom: 7.5,
+    		photo_source: "© bordoray"
     	},
     	{
     		day: 11,
@@ -7642,7 +7652,8 @@ var app = (function () {
     		place_comment: "On January 1st, beautiful towns like Montmartre became a small district of Paris.",
     		lat: 48.8587609371355,
     		lon: 2.34534869481309,
-    		zoom: 10
+    		zoom: 10,
+    		photo_source: "© bordoray"
     	},
     	{
     		day: 12,
@@ -7654,7 +7665,8 @@ var app = (function () {
     		place_comment: "The End of the World!",
     		lat: -54.8079619333556,
     		lon: -68.3102616271834,
-    		zoom: 9
+    		zoom: 9,
+    		photo_source: "© bordoray"
     	},
     	{
     		day: 13,
@@ -7666,7 +7678,8 @@ var app = (function () {
     		place_comment: "Digits shows the number of polar bear dens per square of 10km.",
     		lat: 78.6213595406461,
     		lon: 16.9864786456367,
-    		zoom: 4
+    		zoom: 4,
+    		photo_source: "Unsplash"
     	},
     	{
     		day: 14,
@@ -7678,7 +7691,8 @@ var app = (function () {
     		place_comment: "An iconic Icelandic mountain located in Snæfellsnes peninsula.",
     		lat: 64.9402837389247,
     		lon: -23.3064095046468,
-    		zoom: 12
+    		zoom: 12,
+    		photo_source: "© bordoray"
     	},
     	{
     		day: 15,
@@ -7690,7 +7704,8 @@ var app = (function () {
     		place_comment: "Where church bells and mosque call can live together.",
     		lat: 43.8495619143722,
     		lon: 18.3897512177645,
-    		zoom: 12
+    		zoom: 12,
+    		photo_source: "Unsplash"
     	},
     	{
     		day: 16,
@@ -7702,7 +7717,8 @@ var app = (function () {
     		place_comment: "The pristine islands",
     		lat: 7.32732961883409,
     		lon: 134.473854308072,
-    		zoom: 9
+    		zoom: 9,
+    		photo_source: "© Maptiler Satellite"
     	},
     	{
     		day: 17,
@@ -7714,7 +7730,8 @@ var app = (function () {
     		place_comment: "Network is growing so fast it may be already out of date.",
     		lat: 31.2419141987077,
     		lon: 121.495277245857,
-    		zoom: 9
+    		zoom: 9,
+    		photo_source: "© bordoray"
     	},
     	{
     		day: 18,
@@ -7726,7 +7743,8 @@ var app = (function () {
     		place_comment: "Time is counted to visit Maldives.",
     		lat: 4.17487902020437,
     		lon: 73.5098633865418,
-    		zoom: 11
+    		zoom: 11,
+    		photo_source: "© bordoray"
     	},
     	{
     		day: 19,
@@ -7738,7 +7756,8 @@ var app = (function () {
     		place_comment: "5.55555E,5.55555N!",
     		lat: 5.55555,
     		lon: 5.55555,
-    		zoom: 10
+    		zoom: 10,
+    		photo_source: "© Maptiler Satellite"
     	},
     	{
     		day: 20,
@@ -7750,7 +7769,8 @@ var app = (function () {
     		place_comment: "The Kyrgyz pearl.",
     		lat: 41.8395934606049,
     		lon: 75.1519719190007,
-    		zoom: 9
+    		zoom: 9,
+    		photo_source: "© bordoray"
     	},
     	{
     		day: 21,
@@ -7762,7 +7782,8 @@ var app = (function () {
     		place_comment: "Ginghis Khaan Statue Complex in Ulaanbaatar country side.",
     		lat: 47.808125132594,
     		lon: 107.529844055325,
-    		zoom: 15
+    		zoom: 15,
+    		photo_source: "© bordoray"
     	},
     	{
     		day: 22,
@@ -7774,7 +7795,8 @@ var app = (function () {
     		place_comment: "Sierra Leone is one of the most rounded country",
     		lat: 8.44519282736392,
     		lon: -11.8629610237056,
-    		zoom: 7
+    		zoom: 7,
+    		photo_source: "© T.Pesquet ESA/NASA"
     	},
     	{
     		day: 23,
@@ -7786,7 +7808,8 @@ var app = (function () {
     		place_comment: "Patagonia mi amor",
     		lat: -51.0029303875002,
     		lon: -73.0972775304178,
-    		zoom: 10
+    		zoom: 10,
+    		photo_source: "© bordoray"
     	},
     	{
     		day: 24,
@@ -7798,7 +7821,8 @@ var app = (function () {
     		place_comment: "The Temple of Speed.",
     		lat: 45.6190714828521,
     		lon: 9.2844144011089,
-    		zoom: 13
+    		zoom: 13,
+    		photo_source: "Unsplash"
     	},
     	{
     		day: 25,
@@ -7810,7 +7834,8 @@ var app = (function () {
     		place_comment: "White dragons guards South Pole.",
     		lat: -84.99,
     		lon: 0,
-    		zoom: 3
+    		zoom: 3,
+    		photo_source: "© bordoray"
     	},
     	{
     		day: 26,
@@ -7822,7 +7847,8 @@ var app = (function () {
     		place_comment: "Pitcairn is the dependency having the minimal population.",
     		lat: -25.0692396577367,
     		lon: -130.105773008269,
-    		zoom: 13.5
+    		zoom: 13.5,
+    		photo_source: "© Maptiler Satellite"
     	},
     	{
     		day: 27,
@@ -7834,7 +7860,8 @@ var app = (function () {
     		place_comment: "A track of up to 300 polar bears.",
     		lat: 71.3597172198159,
     		lon: -154.724482964392,
-    		zoom: 4
+    		zoom: 4,
+    		photo_source: "Unsplash"
     	},
     	{
     		day: 28,
@@ -7846,7 +7873,8 @@ var app = (function () {
     		place_comment: "A full of rising sun!",
     		lat: 35.7996294218927,
     		lon: 140.060331883228,
-    		zoom: 4
+    		zoom: 4,
+    		photo_source: "© bordoray"
     	},
     	{
     		day: 29,
@@ -7858,7 +7886,8 @@ var app = (function () {
     		place_comment: "A friendly nation who hosted FOSS4G 2023.",
     		lat: 42.5828007575422,
     		lon: 20.7497467666328,
-    		zoom: 8
+    		zoom: 8,
+    		photo_source: "© bordoray"
     	},
     	{
     		day: 30,
@@ -7870,7 +7899,8 @@ var app = (function () {
     		place_comment: "The astronaut Thomas Pesquet took a pic from space which makes me fall in love to this area.",
     		lat: 11.721768706204,
     		lon: -15.66774583044,
-    		zoom: 8.5
+    		zoom: 8.5,
+    		photo_source: "© T.Pesquet ESA/NASA"
     	}
     ];
 
@@ -8145,8 +8175,8 @@ var app = (function () {
     /* src/components/Quizzbox.svelte generated by Svelte v3.59.2 */
     const file$1 = "src/components/Quizzbox.svelte";
 
-    // (167:2) <Modal bind:showModal>
-    function create_default_slot_16(ctx) {
+    // (170:2) <Modal bind:showModal>
+    function create_default_slot_17(ctx) {
     	let div0;
     	let t1;
     	let div1;
@@ -8169,11 +8199,11 @@ var app = (function () {
     			t5 = space();
     			div2 = element("div");
     			t6 = text(/*score_comment*/ ctx[11]);
-    			add_location(div0, file$1, 170, 4, 4419);
-    			attr_dev(div1, "class", "scorebox svelte-1usmcgh");
-    			add_location(div1, file$1, 171, 4, 4445);
-    			attr_dev(div2, "class", "scorecomment svelte-1usmcgh");
-    			add_location(div2, file$1, 172, 4, 4493);
+    			add_location(div0, file$1, 173, 4, 4506);
+    			attr_dev(div1, "class", "scorebox svelte-g89wyn");
+    			add_location(div1, file$1, 174, 4, 4532);
+    			attr_dev(div2, "class", "scorecomment svelte-g89wyn");
+    			add_location(div2, file$1, 175, 4, 4580);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -8202,16 +8232,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_16.name,
+    		id: create_default_slot_17.name,
     		type: "slot",
-    		source: "(167:2) <Modal bind:showModal>",
+    		source: "(170:2) <Modal bind:showModal>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (168:4) 
+    // (171:4) 
     function create_header_slot(ctx) {
     	let h2;
 
@@ -8220,7 +8250,7 @@ var app = (function () {
     			h2 = element("h2");
     			h2.textContent = "GAME OVER!";
     			attr_dev(h2, "slot", "header");
-    			add_location(h2, file$1, 167, 4, 4369);
+    			add_location(h2, file$1, 170, 4, 4456);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -8235,15 +8265,15 @@ var app = (function () {
     		block,
     		id: create_header_slot.name,
     		type: "slot",
-    		source: "(168:4) ",
+    		source: "(171:4) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (177:4) <Col xs="8">
-    function create_default_slot_15(ctx) {
+    // (180:4) <Col xs="8">
+    function create_default_slot_16(ctx) {
     	let t0;
     	let t1_value = question[/*day*/ ctx[2]].day + "";
     	let t1;
@@ -8278,17 +8308,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_15.name,
+    		id: create_default_slot_16.name,
     		type: "slot",
-    		source: "(177:4) <Col xs=\\\"8\\\">",
+    		source: "(180:4) <Col xs=\\\"8\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (178:4) <Col xs="4">
-    function create_default_slot_14(ctx) {
+    // (181:4) <Col xs="4">
+    function create_default_slot_15(ctx) {
     	let t;
 
     	const block = {
@@ -8305,17 +8335,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_14.name,
+    		id: create_default_slot_15.name,
     		type: "slot",
-    		source: "(178:4) <Col xs=\\\"4\\\">",
+    		source: "(181:4) <Col xs=\\\"4\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (176:2) <Row>
-    function create_default_slot_13(ctx) {
+    // (179:2) <Row>
+    function create_default_slot_14(ctx) {
     	let col0;
     	let t;
     	let col1;
@@ -8324,7 +8354,7 @@ var app = (function () {
     	col0 = new Col({
     			props: {
     				xs: "8",
-    				$$slots: { default: [create_default_slot_15] },
+    				$$slots: { default: [create_default_slot_16] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -8333,7 +8363,7 @@ var app = (function () {
     	col1 = new Col({
     			props: {
     				xs: "4",
-    				$$slots: { default: [create_default_slot_14] },
+    				$$slots: { default: [create_default_slot_15] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -8354,14 +8384,14 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const col0_changes = {};
 
-    			if (dirty & /*$$scope, day*/ 524292) {
+    			if (dirty & /*$$scope, day*/ 1048580) {
     				col0_changes.$$scope = { dirty, ctx };
     			}
 
     			col0.$set(col0_changes);
     			const col1_changes = {};
 
-    			if (dirty & /*$$scope*/ 524288) {
+    			if (dirty & /*$$scope*/ 1048576) {
     				col1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -8387,17 +8417,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_13.name,
+    		id: create_default_slot_14.name,
     		type: "slot",
-    		source: "(176:2) <Row>",
+    		source: "(179:2) <Row>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (181:4) <Col xs="8">
-    function create_default_slot_12(ctx) {
+    // (184:4) <Col xs="8">
+    function create_default_slot_13(ctx) {
     	let t_value = question[/*day*/ ctx[2]].question + "";
     	let t;
 
@@ -8418,17 +8448,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_12.name,
+    		id: create_default_slot_13.name,
     		type: "slot",
-    		source: "(181:4) <Col xs=\\\"8\\\">",
+    		source: "(184:4) <Col xs=\\\"8\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (182:4) <Col xs="4">
-    function create_default_slot_11(ctx) {
+    // (185:4) <Col xs="4">
+    function create_default_slot_12(ctx) {
     	let div;
     	let t0;
     	let t1;
@@ -8440,8 +8470,8 @@ var app = (function () {
     			t0 = text(/*score*/ ctx[0]);
     			t1 = text("/");
     			t2 = text(/*count*/ ctx[1]);
-    			attr_dev(div, "class", "scorebox svelte-1usmcgh");
-    			add_location(div, file$1, 181, 16, 4759);
+    			attr_dev(div, "class", "scorebox svelte-g89wyn");
+    			add_location(div, file$1, 184, 16, 4846);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -8460,17 +8490,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_11.name,
+    		id: create_default_slot_12.name,
     		type: "slot",
-    		source: "(182:4) <Col xs=\\\"4\\\">",
+    		source: "(185:4) <Col xs=\\\"4\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (180:2) <Row>
-    function create_default_slot_10(ctx) {
+    // (183:2) <Row>
+    function create_default_slot_11(ctx) {
     	let col0;
     	let t;
     	let col1;
@@ -8479,7 +8509,7 @@ var app = (function () {
     	col0 = new Col({
     			props: {
     				xs: "8",
-    				$$slots: { default: [create_default_slot_12] },
+    				$$slots: { default: [create_default_slot_13] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -8488,7 +8518,7 @@ var app = (function () {
     	col1 = new Col({
     			props: {
     				xs: "4",
-    				$$slots: { default: [create_default_slot_11] },
+    				$$slots: { default: [create_default_slot_12] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -8509,14 +8539,14 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const col0_changes = {};
 
-    			if (dirty & /*$$scope, day*/ 524292) {
+    			if (dirty & /*$$scope, day*/ 1048580) {
     				col0_changes.$$scope = { dirty, ctx };
     			}
 
     			col0.$set(col0_changes);
     			const col1_changes = {};
 
-    			if (dirty & /*$$scope, count, score*/ 524291) {
+    			if (dirty & /*$$scope, count, score*/ 1048579) {
     				col1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -8542,23 +8572,23 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_10.name,
+    		id: create_default_slot_11.name,
     		type: "slot",
-    		source: "(180:2) <Row>",
+    		source: "(183:2) <Row>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (199:8) <Col xs="8">
-    function create_default_slot_9(ctx) {
+    // (202:8) <Col xs="8">
+    function create_default_slot_10(ctx) {
     	let input;
     	let updating_value;
     	let current;
 
     	function input_value_binding(value) {
-    		/*input_value_binding*/ ctx[17](value);
+    		/*input_value_binding*/ ctx[18](value);
     	}
 
     	let input_props = {
@@ -8608,17 +8638,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_9.name,
+    		id: create_default_slot_10.name,
     		type: "slot",
-    		source: "(199:8) <Col xs=\\\"8\\\">",
+    		source: "(202:8) <Col xs=\\\"8\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (203:10) <Button id="submitBtn" color="light" on:click={answerClick}>
-    function create_default_slot_8(ctx) {
+    // (206:10) <Button id="submitBtn" color="light" on:click={answerClick}>
+    function create_default_slot_9(ctx) {
     	let t;
 
     	const block = {
@@ -8635,17 +8665,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_8.name,
+    		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(203:10) <Button id=\\\"submitBtn\\\" color=\\\"light\\\" on:click={answerClick}>",
+    		source: "(206:10) <Button id=\\\"submitBtn\\\" color=\\\"light\\\" on:click={answerClick}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (202:8) <Col xs="2">
-    function create_default_slot_7(ctx) {
+    // (205:8) <Col xs="2">
+    function create_default_slot_8(ctx) {
     	let button;
     	let current;
 
@@ -8653,13 +8683,13 @@ var app = (function () {
     			props: {
     				id: "submitBtn",
     				color: "light",
-    				$$slots: { default: [create_default_slot_8] },
+    				$$slots: { default: [create_default_slot_9] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
-    	button.$on("click", /*answerClick*/ ctx[12]);
+    	button.$on("click", /*answerClick*/ ctx[13]);
 
     	const block = {
     		c: function create() {
@@ -8672,7 +8702,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 524288) {
+    			if (dirty & /*$$scope*/ 1048576) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -8694,17 +8724,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_7.name,
+    		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(202:8) <Col xs=\\\"2\\\">",
+    		source: "(205:8) <Col xs=\\\"2\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (205:20) <Button id="nextBtn" color="light" outline on:click={nextClick} >
-    function create_default_slot_6(ctx) {
+    // (208:20) <Button id="nextBtn" color="light" outline on:click={nextClick} >
+    function create_default_slot_7(ctx) {
     	let t;
 
     	const block = {
@@ -8724,17 +8754,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_6.name,
+    		id: create_default_slot_7.name,
     		type: "slot",
-    		source: "(205:20) <Button id=\\\"nextBtn\\\" color=\\\"light\\\" outline on:click={nextClick} >",
+    		source: "(208:20) <Button id=\\\"nextBtn\\\" color=\\\"light\\\" outline on:click={nextClick} >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (205:8) <Col xs="2">
-    function create_default_slot_5(ctx) {
+    // (208:8) <Col xs="2">
+    function create_default_slot_6(ctx) {
     	let button;
     	let current;
 
@@ -8743,13 +8773,13 @@ var app = (function () {
     				id: "nextBtn",
     				color: "light",
     				outline: true,
-    				$$slots: { default: [create_default_slot_6] },
+    				$$slots: { default: [create_default_slot_7] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
-    	button.$on("click", /*nextClick*/ ctx[13]);
+    	button.$on("click", /*nextClick*/ ctx[14]);
 
     	const block = {
     		c: function create() {
@@ -8762,7 +8792,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const button_changes = {};
 
-    			if (dirty & /*$$scope, next_button_text*/ 524800) {
+    			if (dirty & /*$$scope, next_button_text*/ 1049088) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -8784,17 +8814,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_5.name,
+    		id: create_default_slot_6.name,
     		type: "slot",
-    		source: "(205:8) <Col xs=\\\"2\\\">",
+    		source: "(208:8) <Col xs=\\\"2\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (198:6) <Row>
-    function create_default_slot_4(ctx) {
+    // (201:6) <Row>
+    function create_default_slot_5(ctx) {
     	let col0;
     	let t0;
     	let col1;
@@ -8805,7 +8835,7 @@ var app = (function () {
     	col0 = new Col({
     			props: {
     				xs: "8",
-    				$$slots: { default: [create_default_slot_9] },
+    				$$slots: { default: [create_default_slot_10] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -8814,7 +8844,7 @@ var app = (function () {
     	col1 = new Col({
     			props: {
     				xs: "2",
-    				$$slots: { default: [create_default_slot_7] },
+    				$$slots: { default: [create_default_slot_8] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -8823,7 +8853,7 @@ var app = (function () {
     	col2 = new Col({
     			props: {
     				xs: "2",
-    				$$slots: { default: [create_default_slot_5] },
+    				$$slots: { default: [create_default_slot_6] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -8848,21 +8878,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const col0_changes = {};
 
-    			if (dirty & /*$$scope, user_answer*/ 524296) {
+    			if (dirty & /*$$scope, user_answer*/ 1048584) {
     				col0_changes.$$scope = { dirty, ctx };
     			}
 
     			col0.$set(col0_changes);
     			const col1_changes = {};
 
-    			if (dirty & /*$$scope*/ 524288) {
+    			if (dirty & /*$$scope*/ 1048576) {
     				col1_changes.$$scope = { dirty, ctx };
     			}
 
     			col1.$set(col1_changes);
     			const col2_changes = {};
 
-    			if (dirty & /*$$scope, next_button_text*/ 524800) {
+    			if (dirty & /*$$scope, next_button_text*/ 1049088) {
     				col2_changes.$$scope = { dirty, ctx };
     			}
 
@@ -8892,17 +8922,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_4.name,
+    		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(198:6) <Row>",
+    		source: "(201:6) <Row>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (211:8) <Col xs="3">
-    function create_default_slot_3(ctx) {
+    // (213:6) <Row>
+    function create_default_slot_4(ctx) {
     	let div;
     	let t;
 
@@ -8911,9 +8941,9 @@ var app = (function () {
     			div = element("div");
     			t = text(/*answer_result*/ ctx[5]);
     			attr_dev(div, "id", "resultText");
-    			attr_dev(div, "class", "result svelte-1usmcgh");
+    			attr_dev(div, "class", "result svelte-g89wyn");
     			set_style(div, "--theme-color", /*answer_result_color*/ ctx[6]);
-    			add_location(div, file$1, 211, 10, 5820);
+    			add_location(div, file$1, 213, 8, 5884);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -8933,16 +8963,98 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_3.name,
+    		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(211:8) <Col xs=\\\"3\\\">",
+    		source: "(213:6) <Row>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (214:8) <Col xs="auto">
+    // (217:8) <Col xs="3">
+    function create_default_slot_3(ctx) {
+    	let div2;
+    	let div0;
+    	let a;
+    	let img;
+    	let img_src_value;
+    	let img_alt_value;
+    	let a_href_value;
+    	let t0;
+    	let div1;
+    	let t1_value = question[/*day*/ ctx[2]].photo_source + "";
+    	let t1;
+
+    	const block = {
+    		c: function create() {
+    			div2 = element("div");
+    			div0 = element("div");
+    			a = element("a");
+    			img = element("img");
+    			t0 = space();
+    			div1 = element("div");
+    			t1 = text(t1_value);
+    			attr_dev(img, "class", "quizz-img svelte-g89wyn");
+    			if (!src_url_equal(img.src, img_src_value = "./img/i/" + question[/*day*/ ctx[2]].day + ".jpeg")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", img_alt_value = "illus_" + question[/*day*/ ctx[2]].day);
+    			add_location(img, file$1, 219, 14, 6204);
+    			attr_dev(a, "href", a_href_value = "./img/i/" + question[/*day*/ ctx[2]].day + ".jpeg");
+    			attr_dev(a, "target", "_blank");
+    			add_location(a, file$1, 218, 48, 6130);
+    			attr_dev(div0, "id", "resultText");
+    			attr_dev(div0, "class", "result svelte-g89wyn");
+    			add_location(div0, file$1, 218, 12, 6094);
+    			attr_dev(div1, "class", "caption svelte-g89wyn");
+    			add_location(div1, file$1, 221, 12, 6336);
+    			set_style(div2, "display", /*display_image*/ ctx[12]);
+    			add_location(div2, file$1, 217, 10, 6043);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, div0);
+    			append_dev(div0, a);
+    			append_dev(a, img);
+    			append_dev(div2, t0);
+    			append_dev(div2, div1);
+    			append_dev(div1, t1);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*day*/ 4 && !src_url_equal(img.src, img_src_value = "./img/i/" + question[/*day*/ ctx[2]].day + ".jpeg")) {
+    				attr_dev(img, "src", img_src_value);
+    			}
+
+    			if (dirty & /*day*/ 4 && img_alt_value !== (img_alt_value = "illus_" + question[/*day*/ ctx[2]].day)) {
+    				attr_dev(img, "alt", img_alt_value);
+    			}
+
+    			if (dirty & /*day*/ 4 && a_href_value !== (a_href_value = "./img/i/" + question[/*day*/ ctx[2]].day + ".jpeg")) {
+    				attr_dev(a, "href", a_href_value);
+    			}
+
+    			if (dirty & /*day*/ 4 && t1_value !== (t1_value = question[/*day*/ ctx[2]].photo_source + "")) set_data_dev(t1, t1_value);
+
+    			if (dirty & /*display_image*/ 4096) {
+    				set_style(div2, "display", /*display_image*/ ctx[12]);
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div2);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_3.name,
+    		type: "slot",
+    		source: "(217:8) <Col xs=\\\"3\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (225:8) <Col xs="9">
     function create_default_slot_2(ctx) {
     	let div0;
     	let t0;
@@ -8959,10 +9071,10 @@ var app = (function () {
     			div1 = element("div");
     			i = element("i");
     			t2 = text(/*answer_comment*/ ctx[7]);
-    			attr_dev(div0, "class", "answermsg svelte-1usmcgh");
-    			add_location(div0, file$1, 213, 23, 5961);
-    			add_location(i, file$1, 214, 15, 6022);
-    			add_location(div1, file$1, 214, 10, 6017);
+    			attr_dev(div0, "class", "answermsg svelte-g89wyn");
+    			add_location(div0, file$1, 224, 20, 6444);
+    			add_location(i, file$1, 225, 15, 6505);
+    			add_location(div1, file$1, 225, 10, 6500);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -8987,14 +9099,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(214:8) <Col xs=\\\"auto\\\">",
+    		source: "(225:8) <Col xs=\\\"9\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (210:6) <Row>
+    // (216:6) <Row>
     function create_default_slot_1(ctx) {
     	let col0;
     	let t;
@@ -9012,7 +9124,7 @@ var app = (function () {
 
     	col1 = new Col({
     			props: {
-    				xs: "auto",
+    				xs: "9",
     				$$slots: { default: [create_default_slot_2] },
     				$$scope: { ctx }
     			},
@@ -9034,14 +9146,14 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const col0_changes = {};
 
-    			if (dirty & /*$$scope, answer_result_color, answer_result*/ 524384) {
+    			if (dirty & /*$$scope, display_image, day*/ 1052676) {
     				col0_changes.$$scope = { dirty, ctx };
     			}
 
     			col0.$set(col0_changes);
     			const col1_changes = {};
 
-    			if (dirty & /*$$scope, answer_comment, answer_message*/ 524432) {
+    			if (dirty & /*$$scope, answer_comment, answer_message*/ 1048720) {
     				col1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9069,14 +9181,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(210:6) <Row>",
+    		source: "(216:6) <Row>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (219:4) <Button id="submitBtndev" color="light" on:click={switchNextDay}>
+    // (230:4) <Button id="submitBtndev" color="light" on:click={switchNextDay}>
     function create_default_slot(ctx) {
     	let t;
 
@@ -9096,7 +9208,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(219:4) <Button id=\\\"submitBtndev\\\" color=\\\"light\\\" on:click={switchNextDay}>",
+    		source: "(230:4) <Button id=\\\"submitBtndev\\\" color=\\\"light\\\" on:click={switchNextDay}>",
     		ctx
     	});
 
@@ -9125,17 +9237,19 @@ var app = (function () {
     	let div2;
     	let row3;
     	let t5;
+    	let row4;
+    	let t6;
     	let button;
     	let current;
 
     	function modal_showModal_binding(value) {
-    		/*modal_showModal_binding*/ ctx[16](value);
+    		/*modal_showModal_binding*/ ctx[17](value);
     	}
 
     	let modal_props = {
     		$$slots: {
     			header: [create_header_slot],
-    			default: [create_default_slot_16]
+    			default: [create_default_slot_17]
     		},
     		$$scope: { ctx }
     	};
@@ -9149,7 +9263,7 @@ var app = (function () {
 
     	row0 = new Row({
     			props: {
-    				$$slots: { default: [create_default_slot_13] },
+    				$$slots: { default: [create_default_slot_14] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -9157,7 +9271,7 @@ var app = (function () {
 
     	row1 = new Row({
     			props: {
-    				$$slots: { default: [create_default_slot_10] },
+    				$$slots: { default: [create_default_slot_11] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -9165,13 +9279,21 @@ var app = (function () {
 
     	row2 = new Row({
     			props: {
-    				$$slots: { default: [create_default_slot_4] },
+    				$$slots: { default: [create_default_slot_5] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
     	row3 = new Row({
+    			props: {
+    				$$slots: { default: [create_default_slot_4] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	row4 = new Row({
     			props: {
     				$$slots: { default: [create_default_slot_1] },
     				$$scope: { ctx }
@@ -9189,7 +9311,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	button.$on("click", /*switchNextDay*/ ctx[14]);
+    	button.$on("click", /*switchNextDay*/ ctx[15]);
 
     	const block = {
     		c: function create() {
@@ -9210,22 +9332,24 @@ var app = (function () {
     			div2 = element("div");
     			create_component(row3.$$.fragment);
     			t5 = space();
+    			create_component(row4.$$.fragment);
+    			t6 = space();
     			create_component(button.$$.fragment);
-    			attr_dev(img, "class", "quizz-img svelte-1usmcgh");
+    			attr_dev(img, "class", "quizz-img svelte-g89wyn");
     			if (!src_url_equal(img.src, img_src_value = "./img/" + /*image_status*/ ctx[8] + "/" + question[/*day*/ ctx[2]].day + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = "map_" + question[/*day*/ ctx[2]].day);
-    			add_location(img, file$1, 185, 4, 4902);
+    			add_location(img, file$1, 188, 4, 4989);
     			attr_dev(a, "href", a_href_value = "./img/" + /*image_status*/ ctx[8] + "/" + question[/*day*/ ctx[2]].day + ".png");
     			attr_dev(a, "target", "_blank");
-    			add_location(a, file$1, 184, 2, 4826);
+    			add_location(a, file$1, 187, 2, 4913);
     			attr_dev(div0, "class", "quizz");
-    			add_location(div0, file$1, 174, 2, 4554);
-    			attr_dev(div1, "class", "submit svelte-1usmcgh");
-    			add_location(div1, file$1, 196, 4, 5320);
-    			attr_dev(div2, "class", "answerbox svelte-1usmcgh");
-    			add_location(div2, file$1, 208, 4, 5753);
-    			attr_dev(div3, "class", "Quizzbox svelte-1usmcgh");
-    			add_location(div3, file$1, 165, 0, 4316);
+    			add_location(div0, file$1, 177, 2, 4641);
+    			attr_dev(div1, "class", "submit svelte-g89wyn");
+    			add_location(div1, file$1, 199, 4, 5407);
+    			attr_dev(div2, "class", "answerbox svelte-g89wyn");
+    			add_location(div2, file$1, 211, 4, 5840);
+    			attr_dev(div3, "class", "Quizzbox svelte-g89wyn");
+    			add_location(div3, file$1, 168, 0, 4403);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9247,14 +9371,16 @@ var app = (function () {
     			append_dev(div3, t4);
     			append_dev(div3, div2);
     			mount_component(row3, div2, null);
-    			append_dev(div3, t5);
+    			append_dev(div2, t5);
+    			mount_component(row4, div2, null);
+    			append_dev(div3, t6);
     			mount_component(button, div3, null);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
     			const modal_changes = {};
 
-    			if (dirty & /*$$scope, score_comment, count, score*/ 526339) {
+    			if (dirty & /*$$scope, score_comment, count, score*/ 1050627) {
     				modal_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9267,14 +9393,14 @@ var app = (function () {
     			modal.$set(modal_changes);
     			const row0_changes = {};
 
-    			if (dirty & /*$$scope, day*/ 524292) {
+    			if (dirty & /*$$scope, day*/ 1048580) {
     				row0_changes.$$scope = { dirty, ctx };
     			}
 
     			row0.$set(row0_changes);
     			const row1_changes = {};
 
-    			if (dirty & /*$$scope, count, score, day*/ 524295) {
+    			if (dirty & /*$$scope, count, score, day*/ 1048583) {
     				row1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9294,21 +9420,28 @@ var app = (function () {
 
     			const row2_changes = {};
 
-    			if (dirty & /*$$scope, next_button_text, user_answer*/ 524808) {
+    			if (dirty & /*$$scope, next_button_text, user_answer*/ 1049096) {
     				row2_changes.$$scope = { dirty, ctx };
     			}
 
     			row2.$set(row2_changes);
     			const row3_changes = {};
 
-    			if (dirty & /*$$scope, answer_comment, answer_message, answer_result_color, answer_result*/ 524528) {
+    			if (dirty & /*$$scope, answer_result_color, answer_result*/ 1048672) {
     				row3_changes.$$scope = { dirty, ctx };
     			}
 
     			row3.$set(row3_changes);
+    			const row4_changes = {};
+
+    			if (dirty & /*$$scope, answer_comment, answer_message, display_image, day*/ 1052820) {
+    				row4_changes.$$scope = { dirty, ctx };
+    			}
+
+    			row4.$set(row4_changes);
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 524288) {
+    			if (dirty & /*$$scope*/ 1048576) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -9321,6 +9454,7 @@ var app = (function () {
     			transition_in(row1.$$.fragment, local);
     			transition_in(row2.$$.fragment, local);
     			transition_in(row3.$$.fragment, local);
+    			transition_in(row4.$$.fragment, local);
     			transition_in(button.$$.fragment, local);
     			current = true;
     		},
@@ -9330,6 +9464,7 @@ var app = (function () {
     			transition_out(row1.$$.fragment, local);
     			transition_out(row2.$$.fragment, local);
     			transition_out(row3.$$.fragment, local);
+    			transition_out(row4.$$.fragment, local);
     			transition_out(button.$$.fragment, local);
     			current = false;
     		},
@@ -9340,6 +9475,7 @@ var app = (function () {
     			destroy_component(row1);
     			destroy_component(row2);
     			destroy_component(row3);
+    			destroy_component(row4);
     			destroy_component(button);
     		}
     	};
@@ -9371,11 +9507,13 @@ var app = (function () {
     	let next_button_text = 'Give up';
     	let showModal = false;
     	let score_comment = '';
+    	let display_image = 'none';
 
     	function answerClick() {
     		$$invalidate(1, count += 1);
     		submitBtn.disabled = true;
     		inputBox.disabled = true;
+    		$$invalidate(12, display_image = 'block');
     		$$invalidate(9, next_button_text = 'Next');
     		$$invalidate(4, answer_message = "The answer is " + question[day].place + ".");
     		$$invalidate(7, answer_comment = question[day].place_comment);
@@ -9504,6 +9642,7 @@ var app = (function () {
     			$$invalidate(1, count = day);
     			submitBtn.disabled = false;
     			inputBox.disabled = false;
+    			$$invalidate(12, display_image = 'none');
     		}
     	}
 
@@ -9530,7 +9669,7 @@ var app = (function () {
     	}
 
     	$$self.$$set = $$props => {
-    		if ('map' in $$props) $$invalidate(15, map = $$props.map);
+    		if ('map' in $$props) $$invalidate(16, map = $$props.map);
     	};
 
     	$$self.$capture_state = () => ({
@@ -9553,6 +9692,7 @@ var app = (function () {
     		next_button_text,
     		showModal,
     		score_comment,
+    		display_image,
     		answerClick,
     		nextClick,
     		game_over,
@@ -9560,7 +9700,7 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('map' in $$props) $$invalidate(15, map = $$props.map);
+    		if ('map' in $$props) $$invalidate(16, map = $$props.map);
     		if ('score' in $$props) $$invalidate(0, score = $$props.score);
     		if ('count' in $$props) $$invalidate(1, count = $$props.count);
     		if ('day' in $$props) $$invalidate(2, day = $$props.day);
@@ -9573,6 +9713,7 @@ var app = (function () {
     		if ('next_button_text' in $$props) $$invalidate(9, next_button_text = $$props.next_button_text);
     		if ('showModal' in $$props) $$invalidate(10, showModal = $$props.showModal);
     		if ('score_comment' in $$props) $$invalidate(11, score_comment = $$props.score_comment);
+    		if ('display_image' in $$props) $$invalidate(12, display_image = $$props.display_image);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -9592,6 +9733,7 @@ var app = (function () {
     		next_button_text,
     		showModal,
     		score_comment,
+    		display_image,
     		answerClick,
     		nextClick,
     		switchNextDay,
@@ -9604,7 +9746,7 @@ var app = (function () {
     class Quizzbox extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$1, create_fragment$1, safe_not_equal, { map: 15 });
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, { map: 16 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
