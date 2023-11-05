@@ -7,14 +7,15 @@
     Card,
     CardBody,
     CardFooter,
-    CardHeader,
-    CardTitle
+    CardHeader
   } from 'sveltestrap';
   import question from '../data/places.json';
   import Modal from './Modal.svelte';
   import 'maplibre-gl/dist/maplibre-gl.css';
   
   export let map;
+  export let mapresult;
+
   let score = 0;
   let count = 0;
   let day = 0;
@@ -78,6 +79,11 @@
       data: placedata
     });
 
+    mapresult.addSource(place_source, {
+      type: 'geojson',
+      data: placedata
+    });
+
     let color = "#660c06" // red for bad  
     if(answer_result == 'Correct!'){
       color = "#066616";
@@ -92,10 +98,8 @@
         'circle-color': color,
         'circle-opacity': 0.8,
         'circle-radius': 8
-        // MapLibre Style Specification paint properties
       },
       layout: {
-        // MapLibre Style Specification layout properties
       }
     });
 
@@ -108,7 +112,34 @@
       },
       layout: {
         'text-field': ['get', 'day'],
-        'text-size': 14 
+        'text-size': 12 
+      }
+    });
+
+    // for mapresult map
+    mapresult.addLayer({
+      id: place_layer,
+      source: place_source,
+      type: 'circle',
+      paint: {
+        'circle-color': color,
+        'circle-opacity': 0.8,
+        'circle-radius': 6
+      },
+      layout: {
+      }
+    });
+
+    mapresult.addLayer({
+      id: place_layer + "_label",
+      source: place_source,
+      type: 'symbol',
+      paint: {
+        'text-color': "#FFF"
+      },
+      layout: {
+        'text-field': ['get', 'day'],
+        'text-size': 10 
       }
     });
 		
@@ -177,15 +208,13 @@
 </script>
  
 <div class="Quizzbox"> 
-  <Modal bind:showModal>
-    <Card>
-      <CardTitle>
+  <Modal bind:showModal bind:mapresult>
+      <h4>
         GAME OVER!
-      </CardTitle>
+      </h4>
       <div>Your score</div>
       <div class="scorebox">{score}/{count}</div>
       <div class="scorecomment">{score_comment}</div>
-    </Card>
   </Modal>
   <div class="quizz">
     <Card class="mb-3">
@@ -221,9 +250,6 @@
       <CardFooter>
         <div class="answerbox">
           <Row>
-            <div id="resultText" class="result" style="--theme-color: {answer_result_color}">{answer_result}</div>
-          </Row>
-          <Row>
             <Col xs="3">
               <div style="display: {display_image}">
                 <div id="resultText" class="result"><a href="./img/i/{question[day].day}.jpeg" target="_blank">
@@ -232,7 +258,9 @@
                 <div class="caption">{question[day].photo_source}</div>
               </div>
             </Col>
-            <Col xs="9"><div class="answermsg">{answer_message}</div>
+            <Col xs="9">
+              <div id="resultText" class="result" style="--theme-color: {answer_result_color}">{answer_result}</div>
+              <div class="answermsg">{answer_message}</div>
               <div><i>{answer_comment}</i></div>
             </Col>
           </Row>
@@ -248,7 +276,7 @@
          </a>
          
       {/each} -->
-    <Button id="submitBtndev" color="secondary" on:click={switchNextDay}>Next for dev use</Button>
+    <!-- <Button id="submitBtndev" color="secondary" on:click={switchNextDay}>Next for dev use</Button> -->
   </div>
 
 <style>
@@ -294,4 +322,5 @@
   font-size: 7pt;
   text-align: left;
 }
+
 </style>
