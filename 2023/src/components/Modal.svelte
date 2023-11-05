@@ -17,8 +17,10 @@
 	<div on:click|stopPropagation>
 		<slot name="header" />
 		<slot />
+		<div class="close-modal-button">
 		<!-- svelte-ignore a11y-autofocus -->
-		<Button autofocus on:click={() => dialog.close()}>close</Button>
+			<Button autofocus on:click={() => dialog.close()}>close</Button>
+		</div>
 	</div>
 </dialog>
 
@@ -59,5 +61,8 @@
 	}
 	button {
 		display: block;
+	}
+	.close-modal-button{
+		margin-top: 10px;
 	}
 </style>

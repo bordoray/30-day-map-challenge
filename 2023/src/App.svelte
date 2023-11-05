@@ -5,7 +5,7 @@
 	import Map from './components/Map.svelte';
 	import Quizzbox from './components/Quizzbox.svelte';
 	let map;
-	let theme = 'dark';
+	let theme = 'auto';
 </script>
 <Styles {theme} />
 <div class="app">

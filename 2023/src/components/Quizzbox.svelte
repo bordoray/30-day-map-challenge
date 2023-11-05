@@ -7,7 +7,8 @@
     Card,
     CardBody,
     CardFooter,
-    CardHeader
+    CardHeader,
+    CardTitle
   } from 'sveltestrap';
   import question from '../data/places.json';
   import Modal from './Modal.svelte';
@@ -178,9 +179,9 @@
 <div class="Quizzbox"> 
   <Modal bind:showModal>
     <Card>
-      <h2 slot="header">
+      <CardTitle>
         GAME OVER!
-      </h2>
+      </CardTitle>
       <div>Your score</div>
       <div class="scorebox">{score}/{count}</div>
       <div class="scorecomment">{score_comment}</div>
@@ -210,9 +211,9 @@
               <Input id="inputBox" bind:value={user_answer} placeholder="Your answer" />
             </Col>
             <Col xs="2">
-              <Button id="submitBtn" color="light" on:click={answerClick}>Submit!</Button>
+              <Button id="submitBtn" color="secondary" on:click={answerClick}>Submit!</Button>
             </Col>
-            <Col xs="2"><Button id="nextBtn" color="light" outline on:click={nextClick} >{next_button_text}</Button>
+            <Col xs="2"><Button id="nextBtn" color="secondary" outline on:click={nextClick} >{next_button_text}</Button>
             </Col>
           </Row>
         </div>
@@ -238,8 +239,7 @@
         </div>
       </CardFooter>
     </Card>
-
-     
+  </div>
       <!-- {#each question as mapday}
          <p>Day {mapday.day}: {mapday.theme}</p>
          <p>{mapday.question}</p>
@@ -248,10 +248,7 @@
          </a>
          
       {/each} -->
-    </div>
-
-
-    <Button id="submitBtndev" color="light" on:click={switchNextDay}>Next for dev use</Button>
+    <Button id="submitBtndev" color="secondary" on:click={switchNextDay}>Next for dev use</Button>
   </div>
 
 <style>
@@ -286,7 +283,7 @@
 }
 
 .answermsg{
-  font-size: 20pt;
+  font-size: 15pt;
 }
 
 .scorecomment{

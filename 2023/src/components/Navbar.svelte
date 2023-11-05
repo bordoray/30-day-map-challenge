@@ -1,5 +1,5 @@
 <div class="heading">
-  <h1>#30DayMapChallenge Game 2023</h1>
+  <h2>#30DayMapChallenge Game 2023</h2>
 </div>
 
 <style>
@@ -10,7 +10,7 @@
     /* color: black; */
   }
 
-  .heading > h1 {
+  .heading > h2 {
     padding: 15px;
     margin: 0;
   }
