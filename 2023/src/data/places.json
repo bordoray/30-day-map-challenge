@@ -5,7 +5,7 @@
     "place": "Yangon",
     "accepted_places": "yangon,rangoun,rangoon,yangoon",
     "sub_place": "Myanmar,Birmanie",
-    "question": "This place is full of pagodas, here in red points. In which city it is located?",
+    "question": "In which city this place full of pagodas is located?",
     "place_comment": "Shwedagon shrine, the most sacred Buddhist pagoda in Myanmar.",
     "lat": 16.7983448688837,
     "lon": 96.1496024717999,
@@ -15,8 +15,8 @@
   {
     "day": 2,
     "theme": "Lines",
-    "place": "Everest",
-    "accepted_places": "qomolangma,everest,mt. everest,mt.everest,mont everest, mount everest",
+    "place": "the Mount Everest",
+    "accepted_places": "qomolangma,everest,mt. everest,mt.everest,mt everest,mont everest, mount everest",
     "sub_place": "Himalaya,Nepal,Tibet",
     "question": "Name the peak at the center of this map.",
     "place_comment": "The top of the world!",
@@ -61,7 +61,7 @@
     "place_comment": "Never forget to place it.",
     "lat": -44.4294876195838,
     "lon": 170.344479360917,
-    "zoom": 4.5,
+    "zoom": 4,
     "photo_source": "© bordoray"
   },
   {

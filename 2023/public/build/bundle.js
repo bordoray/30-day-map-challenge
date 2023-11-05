@@ -8493,7 +8493,7 @@ var app = (function () {
     		place: "Yangon",
     		accepted_places: "yangon,rangoun,rangoon,yangoon",
     		sub_place: "Myanmar,Birmanie",
-    		question: "This place is full of pagodas, here in red points. In which city it is located?",
+    		question: "In which city this place full of pagodas is located?",
     		place_comment: "Shwedagon shrine, the most sacred Buddhist pagoda in Myanmar.",
     		lat: 16.7983448688837,
     		lon: 96.1496024717999,
@@ -8503,8 +8503,8 @@ var app = (function () {
     	{
     		day: 2,
     		theme: "Lines",
-    		place: "Everest",
-    		accepted_places: "qomolangma,everest,mt. everest,mt.everest,mont everest, mount everest",
+    		place: "the Mount Everest",
+    		accepted_places: "qomolangma,everest,mt. everest,mt.everest,mt everest,mont everest, mount everest",
     		sub_place: "Himalaya,Nepal,Tibet",
     		question: "Name the peak at the center of this map.",
     		place_comment: "The top of the world!",
@@ -8549,7 +8549,7 @@ var app = (function () {
     		place_comment: "Never forget to place it.",
     		lat: -44.4294876195838,
     		lon: 170.344479360917,
-    		zoom: 4.5,
+    		zoom: 4,
     		photo_source: "© bordoray"
     	},
     	{
@@ -9220,9 +9220,9 @@ var app = (function () {
     			div2 = element("div");
     			t7 = text(/*score_comment*/ ctx[11]);
     			add_location(div0, file$1, 184, 6, 4613);
-    			attr_dev(div1, "class", "scorebox svelte-1xop1n");
+    			attr_dev(div1, "class", "scorebox svelte-1raca48");
     			add_location(div1, file$1, 185, 6, 4641);
-    			attr_dev(div2, "class", "scorecomment svelte-1xop1n");
+    			attr_dev(div2, "class", "scorecomment svelte-1raca48");
     			add_location(div2, file$1, 186, 6, 4691);
     		},
     		m: function mount(target, anchor) {
@@ -9339,6 +9339,7 @@ var app = (function () {
 
     // (194:10) <Col xs="8">
     function create_default_slot_20(ctx) {
+    	let b;
     	let t0;
     	let t1_value = question[/*day*/ ctx[2]].day + "";
     	let t1;
@@ -9348,26 +9349,26 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			b = element("b");
     			t0 = text("Day ");
     			t1 = text(t1_value);
     			t2 = text(": ");
     			t3 = text(t3_value);
+    			add_location(b, file$1, 193, 22, 4863);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, t0, anchor);
-    			insert_dev(target, t1, anchor);
-    			insert_dev(target, t2, anchor);
-    			insert_dev(target, t3, anchor);
+    			insert_dev(target, b, anchor);
+    			append_dev(b, t0);
+    			append_dev(b, t1);
+    			append_dev(b, t2);
+    			append_dev(b, t3);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*day*/ 4 && t1_value !== (t1_value = question[/*day*/ ctx[2]].day + "")) set_data_dev(t1, t1_value);
     			if (dirty & /*day*/ 4 && t3_value !== (t3_value = question[/*day*/ ctx[2]].theme + "")) set_data_dev(t3, t3_value);
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t0);
-    			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(t2);
-    			if (detaching) detach_dev(t3);
+    			if (detaching) detach_dev(b);
     		}
     	};
 
@@ -9535,8 +9536,8 @@ var app = (function () {
     			t0 = text(/*score*/ ctx[0]);
     			t1 = text("/");
     			t2 = text(/*count*/ ctx[1]);
-    			attr_dev(div, "class", "scorebox svelte-1xop1n");
-    			add_location(div, file$1, 198, 22, 5054);
+    			attr_dev(div, "class", "scorebox svelte-1raca48");
+    			add_location(div, file$1, 198, 22, 5061);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -10105,16 +10106,16 @@ var app = (function () {
     			t = space();
     			div1 = element("div");
     			create_component(row.$$.fragment);
-    			attr_dev(img, "class", "quizz-img svelte-1xop1n");
+    			attr_dev(img, "class", "quizz-img svelte-1raca48");
     			if (!src_url_equal(img.src, img_src_value = "./img/" + /*image_status*/ ctx[8] + "/" + question[/*day*/ ctx[2]].day + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = "map_" + question[/*day*/ ctx[2]].day);
-    			add_location(img, file$1, 204, 12, 5264);
+    			add_location(img, file$1, 204, 12, 5271);
     			attr_dev(a, "href", a_href_value = "./img/" + /*image_status*/ ctx[8] + "/" + question[/*day*/ ctx[2]].day + ".png");
     			attr_dev(a, "target", "_blank");
-    			add_location(a, file$1, 203, 10, 5180);
-    			add_location(div0, file$1, 202, 8, 5164);
-    			attr_dev(div1, "class", "submit svelte-1xop1n");
-    			add_location(div1, file$1, 207, 8, 5409);
+    			add_location(a, file$1, 203, 10, 5187);
+    			add_location(div0, file$1, 202, 8, 5171);
+    			attr_dev(div1, "class", "submit svelte-1raca48");
+    			add_location(div1, file$1, 207, 8, 5416);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -10184,9 +10185,9 @@ var app = (function () {
     			div = element("div");
     			t = text(/*answer_result*/ ctx[5]);
     			attr_dev(div, "id", "resultText");
-    			attr_dev(div, "class", "result svelte-1xop1n");
+    			attr_dev(div, "class", "result svelte-1raca48");
     			set_style(div, "--theme-color", /*answer_result_color*/ ctx[6]);
-    			add_location(div, file$1, 223, 12, 5987);
+    			add_location(div, file$1, 223, 12, 5994);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -10238,20 +10239,20 @@ var app = (function () {
     			t0 = space();
     			div1 = element("div");
     			t1 = text(t1_value);
-    			attr_dev(img, "class", "quizz-img svelte-1xop1n");
+    			attr_dev(img, "class", "quizz-img svelte-1raca48");
     			if (!src_url_equal(img.src, img_src_value = "./img/i/" + question[/*day*/ ctx[2]].day + ".jpeg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = "illus_" + question[/*day*/ ctx[2]].day);
-    			add_location(img, file$1, 229, 18, 6331);
+    			add_location(img, file$1, 229, 18, 6338);
     			attr_dev(a, "href", a_href_value = "./img/i/" + question[/*day*/ ctx[2]].day + ".jpeg");
     			attr_dev(a, "target", "_blank");
-    			add_location(a, file$1, 228, 52, 6253);
+    			add_location(a, file$1, 228, 52, 6260);
     			attr_dev(div0, "id", "resultText");
-    			attr_dev(div0, "class", "result svelte-1xop1n");
-    			add_location(div0, file$1, 228, 16, 6217);
-    			attr_dev(div1, "class", "caption svelte-1xop1n");
-    			add_location(div1, file$1, 231, 16, 6471);
+    			attr_dev(div0, "class", "result svelte-1raca48");
+    			add_location(div0, file$1, 228, 16, 6224);
+    			attr_dev(div1, "class", "caption svelte-1raca48");
+    			add_location(div1, file$1, 231, 16, 6478);
     			set_style(div2, "display", /*display_image*/ ctx[12]);
-    			add_location(div2, file$1, 227, 14, 6162);
+    			add_location(div2, file$1, 227, 14, 6169);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -10314,10 +10315,10 @@ var app = (function () {
     			div1 = element("div");
     			i = element("i");
     			t2 = text(/*answer_comment*/ ctx[7]);
-    			attr_dev(div0, "class", "answermsg svelte-1xop1n");
-    			add_location(div0, file$1, 234, 24, 6591);
-    			add_location(i, file$1, 235, 19, 6656);
-    			add_location(div1, file$1, 235, 14, 6651);
+    			attr_dev(div0, "class", "answermsg svelte-1raca48");
+    			add_location(div0, file$1, 234, 24, 6598);
+    			add_location(i, file$1, 235, 19, 6663);
+    			add_location(div1, file$1, 235, 14, 6658);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -10461,8 +10462,8 @@ var app = (function () {
     			create_component(row0.$$.fragment);
     			t = space();
     			create_component(row1.$$.fragment);
-    			attr_dev(div, "class", "answerbox svelte-1xop1n");
-    			add_location(div, file$1, 221, 8, 5935);
+    			attr_dev(div, "class", "answerbox svelte-1raca48");
+    			add_location(div, file$1, 221, 8, 5942);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -10707,7 +10708,7 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			attr_dev(div0, "class", "quizz");
     			add_location(div0, file$1, 189, 2, 4764);
-    			attr_dev(div1, "class", "Quizzbox svelte-1xop1n");
+    			attr_dev(div1, "class", "Quizzbox svelte-1raca48");
     			add_location(div1, file$1, 178, 0, 4491);
     		},
     		l: function claim(nodes) {

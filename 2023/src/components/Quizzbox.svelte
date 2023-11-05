@@ -191,7 +191,7 @@
     <Card class="mb-3">
       <CardHeader>
         <Row>
-          <Col xs="8">Day {question[day].day}: {question[day].theme}</Col>
+          <Col xs="8"><b>Day {question[day].day}: {question[day].theme}</b></Col>
           <Col xs="4">Score</Col>
         </Row>
         <Row>
@@ -269,7 +269,7 @@
 }
 
 .answerbox{
-  padding: 5px;
+  padding: 0px;
 }
 
 .submit{
