@@ -240,7 +240,7 @@
     "accepted_places": "nigeria",
     "sub_place": "",
     "question": "Name the country where this place is located. (Hint: read well the theme.)",
-    "place_comment": "5.55555E,5.55555N!",
+    "place_comment": "5.55555N, 5.55555E!",
     "lat": 5.55555,
     "lon": 5.55555,
     "zoom": 10,
