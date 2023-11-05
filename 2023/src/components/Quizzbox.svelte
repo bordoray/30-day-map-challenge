@@ -1,5 +1,14 @@
 <script>
-  import { Button, Input, Col, Row} from 'sveltestrap';
+  import { 
+    Button, 
+    Input, 
+    Col, 
+    Row,
+    Card,
+    CardBody,
+    CardFooter,
+    CardHeader
+  } from 'sveltestrap';
   import question from '../data/places.json';
   import Modal from './Modal.svelte';
   import 'maplibre-gl/dist/maplibre-gl.css';
@@ -14,7 +23,7 @@
   let answer_result_color = '#99140b'
   let answer_comment = ''
   let image_status = 'q'
-  let next_button_text = 'Give up'
+  let next_button_text = 'Pass'
   let showModal = false
   let score_comment = ''
   let display_image = 'none';
@@ -152,7 +161,7 @@
       game_over()
     } else {
       image_status = 'q'
-      next_button_text = 'Give up'
+      next_button_text = 'Pass'
       user_answer = ''
       answer_message = ''
       answer_result = ''
@@ -168,26 +177,69 @@
  
 <div class="Quizzbox"> 
   <Modal bind:showModal>
-    <h2 slot="header">
-      GAME OVER!
-    </h2>
-    <div>Your score</div>
-    <div class="scorebox">{score}/{count}</div>
-    <div class="scorecomment">{score_comment}</div>
+    <Card>
+      <h2 slot="header">
+        GAME OVER!
+      </h2>
+      <div>Your score</div>
+      <div class="scorebox">{score}/{count}</div>
+      <div class="scorecomment">{score_comment}</div>
+    </Card>
   </Modal>
   <div class="quizz">
-  <Row>
-    <Col xs="8">Day {question[day].day}: {question[day].theme}</Col>
-    <Col xs="4">Score</Col>
-  </Row>
-  <Row>
-    <Col xs="8">{question[day].question}</Col>
-    <Col xs="4"><div class="scorebox">{score}/{count}</div></Col>
-  </Row>
+    <Card class="mb-3">
+      <CardHeader>
+        <Row>
+          <Col xs="8">Day {question[day].day}: {question[day].theme}</Col>
+          <Col xs="4">Score</Col>
+        </Row>
+        <Row>
+          <Col xs="8">{question[day].question}</Col>
+          <Col xs="4"><div class="scorebox">{score}/{count}</div></Col>
+        </Row>
+      </CardHeader>
+      <CardBody>
+        <div>
+          <a href="./img/{image_status}/{question[day].day}.png" target="_blank">
+            <img class="quizz-img" src="./img/{image_status}/{question[day].day}.png" alt="map_{question[day].day}" />
+          </a>
+        </div>
+        <div class="submit">
+          <Row>
+            <Col xs="8">
+              <Input id="inputBox" bind:value={user_answer} placeholder="Your answer" />
+            </Col>
+            <Col xs="2">
+              <Button id="submitBtn" color="light" on:click={answerClick}>Submit!</Button>
+            </Col>
+            <Col xs="2"><Button id="nextBtn" color="light" outline on:click={nextClick} >{next_button_text}</Button>
+            </Col>
+          </Row>
+        </div>
+      </CardBody>
+      <CardFooter>
+        <div class="answerbox">
+          <Row>
+            <div id="resultText" class="result" style="--theme-color: {answer_result_color}">{answer_result}</div>
+          </Row>
+          <Row>
+            <Col xs="3">
+              <div style="display: {display_image}">
+                <div id="resultText" class="result"><a href="./img/i/{question[day].day}.jpeg" target="_blank">
+                  <img class="quizz-img" src="./img/i/{question[day].day}.jpeg" alt="illus_{question[day].day}" />
+                </a></div>
+                <div class="caption">{question[day].photo_source}</div>
+              </div>
+            </Col>
+            <Col xs="9"><div class="answermsg">{answer_message}</div>
+              <div><i>{answer_comment}</i></div>
+            </Col>
+          </Row>
+        </div>
+      </CardFooter>
+    </Card>
+
      
-  <a href="./img/{image_status}/{question[day].day}.png" target="_blank">
-    <img class="quizz-img" src="./img/{image_status}/{question[day].day}.png" alt="map_{question[day].day}" />
-  </a>
       <!-- {#each question as mapday}
          <p>Day {mapday.day}: {mapday.theme}</p>
          <p>{mapday.question}</p>
@@ -197,36 +249,8 @@
          
       {/each} -->
     </div>
-    <div class="submit">
-      <Row>
-        <Col xs="8">
-          <Input id="inputBox" bind:value={user_answer} placeholder="Your answer" />
-        </Col>
-        <Col xs="2">
-          <Button id="submitBtn" color="light" on:click={answerClick}>Submit!</Button>
-        </Col>
-        <Col xs="2"><Button id="nextBtn" color="light" outline on:click={nextClick} >{next_button_text}</Button>
-        </Col>
-      </Row>
-    </div>
-    <div class="answerbox">
-      <Row>
-        <div id="resultText" class="result" style="--theme-color: {answer_result_color}">{answer_result}</div>
-      </Row>
-      <Row>
-        <Col xs="3">
-          <div style="display: {display_image}">
-            <div id="resultText" class="result"><a href="./img/i/{question[day].day}.jpeg" target="_blank">
-              <img class="quizz-img" src="./img/i/{question[day].day}.jpeg" alt="illus_{question[day].day}" />
-            </a></div>
-            <div class="caption">{question[day].photo_source}</div>
-          </div>
-        </Col>
-        <Col xs="9"><div class="answermsg">{answer_message}</div>
-          <div><i>{answer_comment}</i></div>
-        </Col>
-      </Row>
-    </div>
+
+
     <Button id="submitBtndev" color="light" on:click={switchNextDay}>Next for dev use</Button>
   </div>
 
