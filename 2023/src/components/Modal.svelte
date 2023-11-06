@@ -20,7 +20,7 @@
 	throw new Error("You need to configure env API_KEY first, see README");
 	}
 
-	const initialState = { lng: 0, lat: 0, zoom: 0.1 };
+	const initialState = { lng: 0, lat: 10, zoom: 0.1 };
 
 	mapresult = new Map({
 	container: mapContainer,
@@ -28,7 +28,7 @@
 	center: [initialState.lng, initialState.lat],
 	zoom: initialState.zoom
 	});
-	mapresult.addControl(new NavigationControl(), 'top-right');
+	// mapresult.addControl(new NavigationControl(), 'top-right');
 
 
 	});

@@ -160,7 +160,7 @@
     submitBtn.disabled = true
     inputBox.disabled = true
     // nextBtn.disabled = true
-    if (score == 30) {
+    if (score == 2) {
       score_comment = 'You are my Master. Unfortunately, I cannot offer you a trip to those places, but a peaceful tatami room is waiting for you in our home at Mashiko in Japan'
     } else if (score == 29) {
       score_comment = 'Almost perfect! Does a typing error makes you miss the last point?'
@@ -184,8 +184,8 @@
   function switchNextDay(){
     // map
     map.flyTo({
-      center: [0,0], 
-      zoom: 1,
+      center: [0,5], 
+      zoom: 0.3,
       speed: 10
     });
 

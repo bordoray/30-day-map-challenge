@@ -8600,7 +8600,7 @@ var app = (function () {
     		day: 20,
     		theme: "Outdoor",
     		place: "Son Kol Lake",
-    		accepted_places: "son kol lake,sonkul lake,sonkul,sonkol,son kul lake,sonkol lake",
+    		accepted_places: "son kol lake,sonkul lake,sonkul,sonkol,son kul lake,sonkol lake,son kol,sonkol,sonkul,son kul",
     		sub_place: "Kyrgyzstan,Kirghizstan",
     		question: "Name this lake.",
     		place_comment: "The Kyrgyz pearl.",
@@ -8613,7 +8613,7 @@ var app = (function () {
     		day: 21,
     		theme: "Raster",
     		place: "Ulaanbaatar",
-    		accepted_places: "oulan-bator,ulaanbaatar,ulanbaatar,ulaanbatar,ulanbatar,ulanbataar,ulaanbataar,ulan bator,ulanbator,ulan-bator",
+    		accepted_places: "oulan-bator,ulaanbaatar,ulanbaatar,ulaanbatar,ulanbatar,ulanbataar,ulaanbataar,ulan bator,ulanbator,ulan-bator,ulaan baatar,ulan baatar,ulaan batar,ulan batar,ulan bataar,ulaan bataar,",
     		sub_place: "Mongolia,Mongolie",
     		question: "In which city is located this place?",
     		place_comment: "Ginghis Khaan Statue Complex in Ulaanbaatar country side.",
@@ -8665,11 +8665,11 @@ var app = (function () {
     		day: 25,
     		theme: "Antarctica",
     		place: "Ljubljana",
-    		accepted_places: "ljubljana,ljubjana",
+    		accepted_places: "ljubljana,ljubjana,lubjana",
     		sub_place: "",
     		question: "Northern cities has been moved to the ice continent. Name the city which fall to the south pole.",
     		place_comment: "White dragons guards South Pole.",
-    		lat: -84.99,
+    		lat: -80.99,
     		lon: 0,
     		zoom: 3,
     		photo_source: "© bordoray"
@@ -8826,21 +8826,21 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			if (!src_url_equal(img.src, img_src_value = "https://api.maptiler.com/resources/logo.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "MapTiler logo");
-    			add_location(img, file$2, 51, 56, 1361);
+    			add_location(img, file$2, 51, 56, 1365);
     			attr_dev(a, "href", "https://www.maptiler.com");
     			attr_dev(a, "class", "watermark svelte-14nwb9v");
-    			add_location(a, file$2, 51, 3, 1308);
+    			add_location(a, file$2, 51, 3, 1312);
     			attr_dev(div0, "class", "map svelte-14nwb9v");
     			attr_dev(div0, "id", "map");
-    			add_location(div0, file$2, 53, 3, 1449);
+    			add_location(div0, file$2, 53, 3, 1453);
     			attr_dev(div1, "class", "map-wrap svelte-14nwb9v");
-    			add_location(div1, file$2, 50, 2, 1282);
+    			add_location(div1, file$2, 50, 2, 1286);
     			attr_dev(div2, "class", "close-modal-button svelte-14nwb9v");
-    			add_location(div2, file$2, 55, 2, 1520);
+    			add_location(div2, file$2, 55, 2, 1524);
     			attr_dev(div3, "class", "svelte-14nwb9v");
-    			add_location(div3, file$2, 47, 1, 1213);
+    			add_location(div3, file$2, 47, 1, 1217);
     			attr_dev(dialog_1, "class", "svelte-14nwb9v");
-    			add_location(dialog_1, file$2, 41, 0, 1046);
+    			add_location(dialog_1, file$2, 41, 0, 1050);
     		},
     		l: function claim(nodes) {
     			throw new Error_1("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8976,7 +8976,7 @@ var app = (function () {
     			throw new Error("You need to configure env API_KEY first, see README");
     		}
 
-    		const initialState = { lng: 0, lat: 0, zoom: 0.1 };
+    		const initialState = { lng: 0, lat: 10, zoom: 0.1 };
 
     		$$invalidate(3, mapresult = new maplibreGl.Map({
     				container: mapContainer,
@@ -8984,9 +8984,7 @@ var app = (function () {
     				center: [initialState.lng, initialState.lat],
     				zoom: initialState.zoom
     			}));
-
-    		mapresult.addControl(new maplibreGl.NavigationControl(), 'top-right');
-    	});
+    	}); // mapresult.addControl(new NavigationControl(), 'top-right');
 
     	onDestroy(() => {
     		mapresult.remove();
@@ -9144,12 +9142,12 @@ var app = (function () {
     			t7 = space();
     			div2 = element("div");
     			t8 = text(/*score_comment*/ ctx[12]);
-    			add_location(h4, file$1, 211, 6, 5077);
-    			add_location(div0, file$1, 214, 6, 5119);
+    			add_location(h4, file$1, 211, 6, 5078);
+    			add_location(div0, file$1, 214, 6, 5120);
     			attr_dev(div1, "class", "scorebox svelte-14ysd5o");
-    			add_location(div1, file$1, 215, 6, 5147);
+    			add_location(div1, file$1, 215, 6, 5148);
     			attr_dev(div2, "class", "scorecomment svelte-14ysd5o");
-    			add_location(div2, file$1, 216, 6, 5197);
+    			add_location(div2, file$1, 216, 6, 5198);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h4, anchor);
@@ -9208,7 +9206,7 @@ var app = (function () {
     			t1 = text(t1_value);
     			t2 = text(": ");
     			t3 = text(t3_value);
-    			add_location(b, file$1, 222, 22, 5357);
+    			add_location(b, file$1, 222, 22, 5358);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, b, anchor);
@@ -9391,7 +9389,7 @@ var app = (function () {
     			t1 = text("/");
     			t2 = text(/*count*/ ctx[2]);
     			attr_dev(div, "class", "scorebox svelte-14ysd5o");
-    			add_location(div, file$1, 227, 22, 5555);
+    			add_location(div, file$1, 227, 22, 5556);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -9963,13 +9961,13 @@ var app = (function () {
     			attr_dev(img, "class", "quizz-img svelte-14ysd5o");
     			if (!src_url_equal(img.src, img_src_value = "./img/" + /*image_status*/ ctx[9] + "/" + question[/*day*/ ctx[3]].day + ".png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = "map_" + question[/*day*/ ctx[3]].day);
-    			add_location(img, file$1, 233, 12, 5765);
+    			add_location(img, file$1, 233, 12, 5766);
     			attr_dev(a, "href", a_href_value = "./img/" + /*image_status*/ ctx[9] + "/" + question[/*day*/ ctx[3]].day + ".png");
     			attr_dev(a, "target", "_blank");
-    			add_location(a, file$1, 232, 10, 5681);
-    			add_location(div0, file$1, 231, 8, 5665);
+    			add_location(a, file$1, 232, 10, 5682);
+    			add_location(div0, file$1, 231, 8, 5666);
     			attr_dev(div1, "class", "submit svelte-14ysd5o");
-    			add_location(div1, file$1, 236, 8, 5910);
+    			add_location(div1, file$1, 236, 8, 5911);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -10055,17 +10053,17 @@ var app = (function () {
     			attr_dev(img, "class", "quizz-img svelte-14ysd5o");
     			if (!src_url_equal(img.src, img_src_value = "./img/i/" + question[/*day*/ ctx[3]].day + ".jpeg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = "illus_" + question[/*day*/ ctx[3]].day);
-    			add_location(img, file$1, 255, 18, 6684);
+    			add_location(img, file$1, 255, 18, 6685);
     			attr_dev(a, "href", a_href_value = "./img/i/" + question[/*day*/ ctx[3]].day + ".jpeg");
     			attr_dev(a, "target", "_blank");
-    			add_location(a, file$1, 254, 52, 6606);
+    			add_location(a, file$1, 254, 52, 6607);
     			attr_dev(div0, "id", "resultText");
     			attr_dev(div0, "class", "result svelte-14ysd5o");
-    			add_location(div0, file$1, 254, 16, 6570);
+    			add_location(div0, file$1, 254, 16, 6571);
     			attr_dev(div1, "class", "caption svelte-14ysd5o");
-    			add_location(div1, file$1, 257, 16, 6824);
+    			add_location(div1, file$1, 257, 16, 6825);
     			set_style(div2, "display", /*display_image*/ ctx[13]);
-    			add_location(div2, file$1, 253, 14, 6515);
+    			add_location(div2, file$1, 253, 14, 6516);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -10137,11 +10135,11 @@ var app = (function () {
     			attr_dev(div0, "id", "resultText");
     			attr_dev(div0, "class", "result svelte-14ysd5o");
     			set_style(div0, "--theme-color", /*answer_result_color*/ ctx[7]);
-    			add_location(div0, file$1, 261, 14, 6959);
+    			add_location(div0, file$1, 261, 14, 6960);
     			attr_dev(div1, "class", "answermsg svelte-14ysd5o");
-    			add_location(div1, file$1, 262, 14, 7076);
-    			add_location(i, file$1, 263, 19, 7141);
-    			add_location(div2, file$1, 263, 14, 7136);
+    			add_location(div1, file$1, 262, 14, 7077);
+    			add_location(i, file$1, 263, 19, 7142);
+    			add_location(div2, file$1, 263, 14, 7137);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -10285,7 +10283,7 @@ var app = (function () {
     			div = element("div");
     			create_component(row.$$.fragment);
     			attr_dev(div, "class", "answerbox svelte-14ysd5o");
-    			add_location(div, file$1, 250, 8, 6436);
+    			add_location(div, file$1, 250, 8, 6437);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -10484,9 +10482,9 @@ var app = (function () {
     			div0 = element("div");
     			create_component(card.$$.fragment);
     			attr_dev(div0, "class", "quizz");
-    			add_location(div0, file$1, 218, 2, 5258);
+    			add_location(div0, file$1, 218, 2, 5259);
     			attr_dev(div1, "class", "Quizzbox svelte-14ysd5o");
-    			add_location(div1, file$1, 209, 0, 5007);
+    			add_location(div1, file$1, 209, 0, 5008);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -10693,7 +10691,7 @@ var app = (function () {
     		inputBox.disabled = true;
 
     		// nextBtn.disabled = true
-    		if (score == 30) {
+    		if (score == 2) {
     			$$invalidate(12, score_comment = 'You are my Master. Unfortunately, I cannot offer you a trip to those places, but a peaceful tatami room is waiting for you in our home at Mashiko in Japan');
     		} else if (score == 29) {
     			$$invalidate(12, score_comment = 'Almost perfect! Does a typing error makes you miss the last point?');
@@ -10717,7 +10715,7 @@ var app = (function () {
 
     	function switchNextDay() {
     		// map
-    		map.flyTo({ center: [0, 0], zoom: 1, speed: 10 });
+    		map.flyTo({ center: [0, 5], zoom: 0.3, speed: 10 });
 
     		if (count >= 30) {
     			game_over();

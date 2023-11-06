@@ -8,7 +8,6 @@ import dotenv from 'dotenv';
 import replace from '@rollup/plugin-replace';
 import json from '@rollup/plugin-json';
 
-
 dotenv.config();
 
 const production = !process.env.ROLLUP_WATCH;
