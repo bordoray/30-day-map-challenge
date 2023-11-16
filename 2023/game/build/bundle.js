@@ -8444,7 +8444,7 @@ var app = (function () {
     		day: 8,
     		theme: "Africa",
     		place: "Okavango",
-    		accepted_places: "okavango,okawango,cubango,kubango",
+    		accepted_places: "okavango,okawango,cubango,kubango,okovango,okovanggo",
     		sub_place: "Botswana",
     		question: "Name this remarkable river.",
     		place_comment: "This river does not end to the sea but in this inland delta located at Botswana.",
