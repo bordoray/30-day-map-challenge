@@ -8208,15 +8208,15 @@ var app = (function () {
     			div0 = element("div");
     			if (!src_url_equal(img.src, img_src_value = "https://api.maptiler.com/resources/logo.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "MapTiler logo");
-    			add_location(img, file$3, 38, 55, 902);
+    			add_location(img, file$3, 62, 55, 1949);
     			attr_dev(a, "href", "https://www.maptiler.com");
     			attr_dev(a, "class", "watermark svelte-ou34wz");
-    			add_location(a, file$3, 38, 2, 849);
+    			add_location(a, file$3, 62, 2, 1896);
     			attr_dev(div0, "class", "map svelte-ou34wz");
     			attr_dev(div0, "id", "map");
-    			add_location(div0, file$3, 40, 2, 991);
+    			add_location(div0, file$3, 64, 2, 2038);
     			attr_dev(div1, "class", "map-wrap svelte-ou34wz");
-    			add_location(div1, file$3, 37, 0, 824);
+    			add_location(div1, file$3, 61, 0, 1871);
     		},
     		l: function claim(nodes) {
     			throw new Error_1$1("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8270,7 +8270,30 @@ var app = (function () {
 
     		$$invalidate(1, map = new maplibreGl.Map({
     				container: mapContainer,
-    				style: `https://api.maptiler.com/maps/jp-mierune-streets/style.json?key=${apiKey}`,
+    				style: {
+    					'version': 8,
+    					"glyphs": "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
+    					'sources': {
+    						'raster-tiles': {
+    							'type': 'raster',
+    							'tiles': [
+    								'https://api.maptiler.com/maps/jp-mierune-streets/{z}/{x}/{y}.png?key=' + apiKey
+    							],
+    							'tileSize': 256,
+    							'attribution': '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> <a href="https://maptiler.jp/" target="_blank">&copy; MIERUNE</a>'
+    						}
+    					},
+    					'layers': [
+    						{
+    							'id': 'simple-tiles',
+    							'type': 'raster',
+    							'source': 'raster-tiles',
+    							'minzoom': 0,
+    							'maxzoom': 22
+    						}
+    					]
+    				},
+    				// style: `https://api.maptiler.com/maps/jp-mierune-streets/style.json?key=${apiKey}`,
     				center: [initialState.lng, initialState.lat],
     				zoom: initialState.zoom
     			}));
@@ -8369,7 +8392,7 @@ var app = (function () {
     		accepted_places: "qomolangma,everest,mt. everest,mt.everest,mt everest,mont everest, mount everest",
     		sub_place: "Himalaya,Nepal,Tibet",
     		question: "Name the peak at the center of this map.",
-    		place_comment: "The top of the world!",
+    		place_comment: "The roof of the world!",
     		lat: 27.9881637480718,
     		lon: 86.9250962194349,
     		zoom: 13,
@@ -8381,7 +8404,7 @@ var app = (function () {
     		place: "the Forbidden City",
     		accepted_places: "the forbidden city,la cité interdite,forbidden city",
     		sub_place: "Beijing,Pékin,China",
-    		question: "Name this place full of polygons.",
+    		question: "Guess this place full of polygons.",
     		place_comment: "Let's Get Lost.",
     		lat: 39.9167866278191,
     		lon: 116.390744439148,
@@ -8394,7 +8417,7 @@ var app = (function () {
     		place: "Istanbul",
     		accepted_places: "istanbul",
     		sub_place: "Turkey",
-    		question: "Name the major city of this weird coloured map.",
+    		question: "Guess the city of this weird coloured map.",
     		place_comment: "The unique city covering two continents.",
     		lat: 41.0159913479463,
     		lon: 28.9819546694404,
@@ -8420,7 +8443,7 @@ var app = (function () {
     		place: "Tonlé sap, Cambodia",
     		accepted_places: "tonle sap,tonlé sap,tonlésap lake,tonlé sap lake,tonlesap lake,tonle sap lake,tonlésap,tonlesap",
     		sub_place: "Cambodia",
-    		question: "Name this lake.",
+    		question: "Guess this lake.",
     		place_comment: "The land of my Khmer roots.",
     		lat: 12.7317,
     		lon: 104.0493,
@@ -8433,7 +8456,7 @@ var app = (function () {
     		place: "Venezia",
     		accepted_places: "venezia,venice,venise,venesia,venexia",
     		sub_place: "Italia,Italie,Italy",
-    		question: "Name this city.",
+    		question: "Guess this town.",
     		place_comment: "“Paris is an ideal place to become informed, while Venice is a place to think and write” - Pontus Hulten",
     		lat: 45.4383286517221,
     		lon: 12.3301945720289,
@@ -8443,11 +8466,11 @@ var app = (function () {
     	{
     		day: 8,
     		theme: "Africa",
-    		place: "Okavango",
-    		accepted_places: "okavango,okawango,cubango,kubango,okovango,okovanggo",
+    		place: "Okavango delta in Botswana",
+    		accepted_places: "okavango,okawango,cubango,kubango,okovango,okovanggo,okavango delta,okawango delta,cubango delta,kubango delta,okovango delta,okovanggo delta,okavango river,okawango river,cubango river,kubango river,okovango river,okovanggo river",
     		sub_place: "Botswana",
-    		question: "Name this remarkable river.",
-    		place_comment: "This river does not end to the sea but in this inland delta located at Botswana.",
+    		question: "Guess this natural wonder.",
+    		place_comment: "This river does not end to the sea but there.",
     		lat: -19.8899073403724,
     		lon: 23.4345716036357,
     		zoom: 10,
@@ -8459,7 +8482,7 @@ var app = (function () {
     		place: "Grammichele",
     		accepted_places: "grammichele",
     		sub_place: "Sicilia",
-    		question: "Name this town.",
+    		question: "Guess this town.",
     		place_comment: "A well layout built town in Sicily.",
     		lat: 37.2147327312971,
     		lon: 14.6366290847497,
@@ -8469,13 +8492,13 @@ var app = (function () {
     	{
     		day: 10,
     		theme: "North America",
-    		place: "Vancouver",
-    		accepted_places: "vancouver",
+    		place: "Boulder, Colorado",
+    		accepted_places: "boulder",
     		sub_place: "",
-    		question: "Name the major city of this area.",
-    		place_comment: "Nice to peak you",
-    		lat: 49.2453883470166,
-    		lon: -123.103080322627,
+    		question: "Guess this city.",
+    		place_comment: "Where Rocky Mountains starts.",
+    		lat: 40.017,
+    		lon: -105.28,
     		zoom: 7.5,
     		photo_source: "© bordoray"
     	},
@@ -8498,7 +8521,7 @@ var app = (function () {
     		place: "Ushuaia",
     		accepted_places: "ushuaia,ushuaïa",
     		sub_place: "Terra del Fuego",
-    		question: "Name this city.",
+    		question: "Guess this city.",
     		place_comment: "The End of the World!",
     		lat: -54.8079619333556,
     		lon: -68.3102616271834,
@@ -8516,12 +8539,12 @@ var app = (function () {
     		lat: 78.6213595406461,
     		lon: 16.9864786456367,
     		zoom: 4,
-    		photo_source: "Unsplash"
+    		photo_source: "Bjørn Christian Tørrissen"
     	},
     	{
     		day: 14,
     		theme: "Europe",
-    		place: "Kirkjufell",
+    		place: "Kirkjufell, Iceland",
     		accepted_places: "kirkjufell,grundarfjörður,grundarfjördur,grundarfjordur",
     		sub_place: "Iceland,Snaefellsness",
     		question: "Name this mountain. Surrounding town is also allowed.",
@@ -8537,8 +8560,8 @@ var app = (function () {
     		place: "Sarajevo",
     		accepted_places: "sarajevo",
     		sub_place: "Bosnia,Bosnia Herzegovina",
-    		question: "Name this city which hosts a mix of christian (purple points) and muslim (green points) places.",
-    		place_comment: "Where church bells and mosque call can live together.",
+    		question: "Name this city where people live together no matter religion.",
+    		place_comment: "Where you can hear church bells and mosque calls.",
     		lat: 43.8495619143722,
     		lon: 18.3897512177645,
     		zoom: 12,
@@ -8748,7 +8771,7 @@ var app = (function () {
     const get_header_slot_changes = dirty => ({});
     const get_header_slot_context = ctx => ({});
 
-    // (58:3) <Button autofocus on:click={() => dialog.close()}>
+    // (82:3) <Button autofocus on:click={() => dialog.close()}>
     function create_default_slot$1(ctx) {
     	let t;
 
@@ -8768,7 +8791,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(58:3) <Button autofocus on:click={() => dialog.close()}>",
+    		source: "(82:3) <Button autofocus on:click={() => dialog.close()}>",
     		ctx
     	});
 
@@ -8826,21 +8849,21 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			if (!src_url_equal(img.src, img_src_value = "https://api.maptiler.com/resources/logo.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "MapTiler logo");
-    			add_location(img, file$2, 51, 56, 1365);
+    			add_location(img, file$2, 75, 56, 2407);
     			attr_dev(a, "href", "https://www.maptiler.com");
     			attr_dev(a, "class", "watermark svelte-14nwb9v");
-    			add_location(a, file$2, 51, 3, 1312);
+    			add_location(a, file$2, 75, 3, 2354);
     			attr_dev(div0, "class", "map svelte-14nwb9v");
     			attr_dev(div0, "id", "map");
-    			add_location(div0, file$2, 53, 3, 1453);
+    			add_location(div0, file$2, 77, 3, 2495);
     			attr_dev(div1, "class", "map-wrap svelte-14nwb9v");
-    			add_location(div1, file$2, 50, 2, 1286);
+    			add_location(div1, file$2, 74, 2, 2328);
     			attr_dev(div2, "class", "close-modal-button svelte-14nwb9v");
-    			add_location(div2, file$2, 55, 2, 1524);
+    			add_location(div2, file$2, 79, 2, 2566);
     			attr_dev(div3, "class", "svelte-14nwb9v");
-    			add_location(div3, file$2, 47, 1, 1217);
+    			add_location(div3, file$2, 71, 1, 2259);
     			attr_dev(dialog_1, "class", "svelte-14nwb9v");
-    			add_location(dialog_1, file$2, 41, 0, 1050);
+    			add_location(dialog_1, file$2, 65, 0, 2092);
     		},
     		l: function claim(nodes) {
     			throw new Error_1("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8980,7 +9003,30 @@ var app = (function () {
 
     		$$invalidate(3, mapresult = new maplibreGl.Map({
     				container: mapContainer,
-    				style: `https://api.maptiler.com/maps/jp-mierune-streets/style.json?key=${apiKey}`,
+    				style: {
+    					'version': 8,
+    					"glyphs": "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
+    					'sources': {
+    						'raster-tiles': {
+    							'type': 'raster',
+    							'tiles': [
+    								'https://api.maptiler.com/maps/jp-mierune-streets/{z}/{x}/{y}.png?key=' + apiKey
+    							],
+    							'tileSize': 256,
+    							'attribution': '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> <a href="https://maptiler.jp/" target="_blank">&copy; MIERUNE</a>'
+    						}
+    					},
+    					'layers': [
+    						{
+    							'id': 'simple-tiles',
+    							'type': 'raster',
+    							'source': 'raster-tiles',
+    							'minzoom': 0,
+    							'maxzoom': 22
+    						}
+    					]
+    				},
+    				// style: `https://api.maptiler.com/maps/jp-mierune-streets/style.json?key=${apiKey}`,
     				center: [initialState.lng, initialState.lat],
     				zoom: initialState.zoom
     			}));
