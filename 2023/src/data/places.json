@@ -126,7 +126,7 @@
     "place_comment": "Where Rocky Mountains starts.",
     "lat": 40.017,
     "lon": -105.28,
-    "zoom": 7.5,
+    "zoom": 10,
     "photo_source": "© bordoray"
   },
   {
@@ -223,7 +223,7 @@
   {
     "day": 18,
     "theme": "Atmosphere",
-    "place": "Male",
+    "place": "Male, Maldives",
     "accepted_places": "male,malé",
     "sub_place": "Maldives",
     "question": "Name this city threaten by the ocean rising.",
@@ -249,10 +249,10 @@
   {
     "day": 20,
     "theme": "Outdoor",
-    "place": "Son Kol Lake",
+    "place": "Son Kol Lake, Kyrgyzstan",
     "accepted_places": "son kol lake,sonkul lake,sonkul,sonkol,son kul lake,sonkol lake,son kol,sonkol,sonkul,son kul",
     "sub_place": "Kyrgyzstan,Kirghizstan",
-    "question": "Name this lake.",
+    "question": "Name this wonderful lake.",
     "place_comment": "The Kyrgyz pearl.",
     "lat": 41.8395934606049,
     "lon": 75.1519719190007,
@@ -265,7 +265,7 @@
     "place": "Ulaanbaatar",
     "accepted_places": "oulan-bator,ulaanbaatar,ulanbaatar,ulaanbatar,ulanbatar,ulanbataar,ulaanbataar,ulan bator,ulanbator,ulan-bator,ulaan baatar,ulan baatar,ulaan batar,ulan batar,ulan bataar,ulaan bataar,",
     "sub_place": "Mongolia,Mongolie",
-    "question": "In which city is located this place?",
+    "question": "In which capital is located this place?",
     "place_comment": "Ginghis Khaan Statue Complex in Ulaanbaatar country side.",
     "lat": 47.808125132594,
     "lon": 107.529844055325,
