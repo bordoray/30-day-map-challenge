@@ -8193,39 +8193,23 @@ var app = (function () {
 
     function create_fragment$3(ctx) {
     	let div1;
-    	let a;
-    	let img;
-    	let img_src_value;
-    	let t;
     	let div0;
 
     	const block = {
     		c: function create() {
     			div1 = element("div");
-    			a = element("a");
-    			img = element("img");
-    			t = space();
     			div0 = element("div");
-    			if (!src_url_equal(img.src, img_src_value = "https://api.maptiler.com/resources/logo.svg")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", "MapTiler logo");
-    			add_location(img, file$3, 62, 55, 1949);
-    			attr_dev(a, "href", "https://www.maptiler.com");
-    			attr_dev(a, "class", "watermark svelte-ou34wz");
-    			add_location(a, file$3, 62, 2, 1896);
     			attr_dev(div0, "class", "map svelte-ou34wz");
     			attr_dev(div0, "id", "map");
-    			add_location(div0, file$3, 64, 2, 2038);
+    			add_location(div0, file$3, 66, 2, 2256);
     			attr_dev(div1, "class", "map-wrap svelte-ou34wz");
-    			add_location(div1, file$3, 61, 0, 1871);
+    			add_location(div1, file$3, 63, 0, 2080);
     		},
     		l: function claim(nodes) {
     			throw new Error_1$1("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
-    			append_dev(div1, a);
-    			append_dev(a, img);
-    			append_dev(div1, t);
     			append_dev(div1, div0);
     			/*div0_binding*/ ctx[2](div0);
     		},
@@ -8277,10 +8261,12 @@ var app = (function () {
     						'raster-tiles': {
     							'type': 'raster',
     							'tiles': [
-    								'https://api.maptiler.com/maps/jp-mierune-streets/{z}/{x}/{y}.png?key=' + apiKey
+    								// 'https://api.maptiler.com/maps/jp-mierune-streets/{z}/{x}/{y}.png?key=' + apiKey
+    								'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
     							],
     							'tileSize': 256,
-    							'attribution': '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> <a href="https://maptiler.jp/" target="_blank">&copy; MIERUNE</a>'
+    							'attribution': // '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> <a href="https://maptiler.jp/" target="_blank">&copy; MIERUNE</a>'
+    							'<a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
     						}
     					},
     					'layers': [
@@ -8771,7 +8757,7 @@ var app = (function () {
     const get_header_slot_changes = dirty => ({});
     const get_header_slot_context = ctx => ({});
 
-    // (82:3) <Button autofocus on:click={() => dialog.close()}>
+    // (84:3) <Button autofocus on:click={() => dialog.close()}>
     function create_default_slot$1(ctx) {
     	let t;
 
@@ -8791,7 +8777,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(82:3) <Button autofocus on:click={() => dialog.close()}>",
+    		source: "(84:3) <Button autofocus on:click={() => dialog.close()}>",
     		ctx
     	});
 
@@ -8804,12 +8790,8 @@ var app = (function () {
     	let t0;
     	let t1;
     	let div1;
-    	let a;
-    	let img;
-    	let img_src_value;
-    	let t2;
     	let div0;
-    	let t3;
+    	let t2;
     	let div2;
     	let button;
     	let current;
@@ -8840,30 +8822,21 @@ var app = (function () {
     			if (default_slot) default_slot.c();
     			t1 = space();
     			div1 = element("div");
-    			a = element("a");
-    			img = element("img");
-    			t2 = space();
     			div0 = element("div");
-    			t3 = space();
+    			t2 = space();
     			div2 = element("div");
     			create_component(button.$$.fragment);
-    			if (!src_url_equal(img.src, img_src_value = "https://api.maptiler.com/resources/logo.svg")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", "MapTiler logo");
-    			add_location(img, file$2, 75, 56, 2407);
-    			attr_dev(a, "href", "https://www.maptiler.com");
-    			attr_dev(a, "class", "watermark svelte-14nwb9v");
-    			add_location(a, file$2, 75, 3, 2354);
     			attr_dev(div0, "class", "map svelte-14nwb9v");
     			attr_dev(div0, "id", "map");
-    			add_location(div0, file$2, 77, 3, 2495);
+    			add_location(div0, file$2, 79, 3, 2677);
     			attr_dev(div1, "class", "map-wrap svelte-14nwb9v");
-    			add_location(div1, file$2, 74, 2, 2328);
+    			add_location(div1, file$2, 76, 2, 2501);
     			attr_dev(div2, "class", "close-modal-button svelte-14nwb9v");
-    			add_location(div2, file$2, 79, 2, 2566);
+    			add_location(div2, file$2, 81, 2, 2748);
     			attr_dev(div3, "class", "svelte-14nwb9v");
-    			add_location(div3, file$2, 71, 1, 2259);
+    			add_location(div3, file$2, 73, 1, 2432);
     			attr_dev(dialog_1, "class", "svelte-14nwb9v");
-    			add_location(dialog_1, file$2, 65, 0, 2092);
+    			add_location(dialog_1, file$2, 67, 0, 2265);
     		},
     		l: function claim(nodes) {
     			throw new Error_1("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8884,12 +8857,9 @@ var app = (function () {
 
     			append_dev(div3, t1);
     			append_dev(div3, div1);
-    			append_dev(div1, a);
-    			append_dev(a, img);
-    			append_dev(div1, t2);
     			append_dev(div1, div0);
     			/*div0_binding*/ ctx[6](div0);
-    			append_dev(div3, t3);
+    			append_dev(div3, t2);
     			append_dev(div3, div2);
     			mount_component(button, div2, null);
     			/*dialog_1_binding*/ ctx[8](dialog_1);
@@ -9010,10 +8980,12 @@ var app = (function () {
     						'raster-tiles': {
     							'type': 'raster',
     							'tiles': [
-    								'https://api.maptiler.com/maps/jp-mierune-streets/{z}/{x}/{y}.png?key=' + apiKey
+    								// 'https://api.maptiler.com/maps/jp-mierune-streets/{z}/{x}/{y}.png?key=' + apiKey
+    								'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
     							],
     							'tileSize': 256,
-    							'attribution': '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> <a href="https://maptiler.jp/" target="_blank">&copy; MIERUNE</a>'
+    							'attribution': // '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> <a href="https://maptiler.jp/" target="_blank">&copy; MIERUNE</a>'
+    							'<a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
     						}
     					},
     					'layers': [
@@ -10763,7 +10735,7 @@ var app = (function () {
     		// map
     		map.flyTo({ center: [0, 5], zoom: 0.3, speed: 10 });
 
-    		if (count >= 30) {
+    		if (count >= 22) {
     			game_over();
     		} else {
     			$$invalidate(9, image_status = 'q');

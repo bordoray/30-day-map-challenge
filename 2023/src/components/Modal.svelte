@@ -31,11 +31,13 @@
                 'raster-tiles': {
                     'type': 'raster',
                     'tiles': [
-                        'https://api.maptiler.com/maps/jp-mierune-streets/{z}/{x}/{y}.png?key=' + apiKey
+                        // 'https://api.maptiler.com/maps/jp-mierune-streets/{z}/{x}/{y}.png?key=' + apiKey
+						'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
                     ],
                     'tileSize': 256,
                     'attribution':
-                        '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> <a href="https://maptiler.jp/" target="_blank">&copy; MIERUNE</a>'
+                        // '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> <a href="https://maptiler.jp/" target="_blank">&copy; MIERUNE</a>'
+						'<a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
                 }
             },
             'layers': [
@@ -73,8 +75,8 @@
 		<slot name="header" />
 		<slot />
 		<div class="map-wrap">
-			<a href="https://www.maptiler.com" class="watermark"><img
-				src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"/></a>
+			<!-- <a href="https://www.maptiler.com" class="watermark"><img
+				src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"/></a> -->
 			<div class="map" id="map" bind:this={mapContainer}></div>
 		  </div>
 		<div class="close-modal-button">
