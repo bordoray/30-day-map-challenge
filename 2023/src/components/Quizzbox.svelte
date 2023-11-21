@@ -189,7 +189,7 @@
       speed: 10
     });
 
-    if (count >= 30){
+    if (count >= 22){
       game_over()
     } else {
       image_status = 'q'
