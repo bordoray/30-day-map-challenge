@@ -189,7 +189,7 @@
       speed: 10
     });
 
-    if (count >= 22){
+    if (count >= 30){
       game_over()
     } else {
       image_status = 'q'
@@ -253,7 +253,7 @@
             <Col xs="3">
               <div style="display: {display_image}">
                 <div id="resultText" class="result"><a href="./img/i/{question[day].day}.jpeg" target="_blank">
-                  <img class="quizz-img" src="./img/i/{question[day].day}.jpeg" alt="illus_{question[day].day}" />
+                  <img class="quizz-img" src="./img/i/{question[day].day}.jpg" alt="illus_{question[day].day}" />
                 </a></div>
                 <div class="caption">{question[day].photo_source}</div>
               </div>

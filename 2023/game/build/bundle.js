@@ -8650,7 +8650,7 @@ var app = (function () {
     		place: "Torres del Paine",
     		accepted_places: "torres del paine,torres del paine national park,トーレス・デル・パイネ,トーレスデルパイネ,トーレス・デル・パイネ国立公園,トーレスデルパイネ国立公園",
     		sub_place: "Chile",
-    		question: "Name this place.",
+    		question: "Name this wonderful place.",
     		place_comment: "Patagonia mi amor",
     		lat: -51.0029303875002,
     		lon: -73.0972775304178,
@@ -8689,7 +8689,7 @@ var app = (function () {
     		place: "Pitcairn",
     		accepted_places: "pitcairn,ピトケアン諸島,ピトケアン",
     		sub_place: "",
-    		question: "Name this island.",
+    		question: "Name this minimal island.",
     		place_comment: "Pitcairn is the dependency having the minimal population.",
     		lat: -25.0692396577367,
     		lon: -130.105773008269,
@@ -8702,7 +8702,7 @@ var app = (function () {
     		place: "Beaufort Sea",
     		accepted_places: "beaufort,beaufort sea,sea of beaufort,mer de beaufort,ボーフォート海,ボーフォート",
     		sub_place: "",
-    		question: "Name the sea where polar bears has been tracked here.",
+    		question: "Name this sea where polar bears has been tracked.",
     		place_comment: "A track of up to 300 polar bears.",
     		lat: 71.3597172198159,
     		lon: -154.724482964392,
@@ -10069,7 +10069,7 @@ var app = (function () {
     			div1 = element("div");
     			t1 = text(t1_value);
     			attr_dev(img, "class", "quizz-img svelte-14ysd5o");
-    			if (!src_url_equal(img.src, img_src_value = "./img/i/" + question[/*day*/ ctx[3]].day + ".jpeg")) attr_dev(img, "src", img_src_value);
+    			if (!src_url_equal(img.src, img_src_value = "./img/i/" + question[/*day*/ ctx[3]].day + ".jpg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = "illus_" + question[/*day*/ ctx[3]].day);
     			add_location(img, file$1, 255, 18, 6685);
     			attr_dev(a, "href", a_href_value = "./img/i/" + question[/*day*/ ctx[3]].day + ".jpeg");
@@ -10079,7 +10079,7 @@ var app = (function () {
     			attr_dev(div0, "class", "result svelte-14ysd5o");
     			add_location(div0, file$1, 254, 16, 6571);
     			attr_dev(div1, "class", "caption svelte-14ysd5o");
-    			add_location(div1, file$1, 257, 16, 6825);
+    			add_location(div1, file$1, 257, 16, 6824);
     			set_style(div2, "display", /*display_image*/ ctx[13]);
     			add_location(div2, file$1, 253, 14, 6516);
     		},
@@ -10093,7 +10093,7 @@ var app = (function () {
     			append_dev(div1, t1);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*day*/ 8 && !src_url_equal(img.src, img_src_value = "./img/i/" + question[/*day*/ ctx[3]].day + ".jpeg")) {
+    			if (dirty & /*day*/ 8 && !src_url_equal(img.src, img_src_value = "./img/i/" + question[/*day*/ ctx[3]].day + ".jpg")) {
     				attr_dev(img, "src", img_src_value);
     			}
 
@@ -10153,11 +10153,11 @@ var app = (function () {
     			attr_dev(div0, "id", "resultText");
     			attr_dev(div0, "class", "result svelte-14ysd5o");
     			set_style(div0, "--theme-color", /*answer_result_color*/ ctx[7]);
-    			add_location(div0, file$1, 261, 14, 6960);
+    			add_location(div0, file$1, 261, 14, 6959);
     			attr_dev(div1, "class", "answermsg svelte-14ysd5o");
-    			add_location(div1, file$1, 262, 14, 7077);
-    			add_location(i, file$1, 263, 19, 7142);
-    			add_location(div2, file$1, 263, 14, 7137);
+    			add_location(div1, file$1, 262, 14, 7076);
+    			add_location(i, file$1, 263, 19, 7141);
+    			add_location(div2, file$1, 263, 14, 7136);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -10735,7 +10735,7 @@ var app = (function () {
     		// map
     		map.flyTo({ center: [0, 5], zoom: 0.3, speed: 10 });
 
-    		if (count >= 22) {
+    		if (count >= 30) {
     			game_over();
     		} else {
     			$$invalidate(9, image_status = 'q');
