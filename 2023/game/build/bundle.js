@@ -10902,7 +10902,7 @@ var app = (function () {
     function create_fragment(ctx) {
     	let styles;
     	let t0;
-    	let div1;
+    	let div3;
     	let navbar;
     	let t1;
     	let div0;
@@ -10911,6 +10911,11 @@ var app = (function () {
     	let t2;
     	let map_1;
     	let updating_map_1;
+    	let t3;
+    	let div1;
+    	let a;
+    	let t5;
+    	let div2;
     	let current;
 
     	styles = new Styles({
@@ -10950,17 +10955,32 @@ var app = (function () {
     		c: function create() {
     			create_component(styles.$$.fragment);
     			t0 = space();
-    			div1 = element("div");
+    			div3 = element("div");
     			create_component(navbar.$$.fragment);
     			t1 = space();
     			div0 = element("div");
     			create_component(quizzbox.$$.fragment);
     			t2 = space();
     			create_component(map_1.$$.fragment);
-    			attr_dev(div0, "class", "container svelte-gqjcva");
+    			t3 = space();
+    			div1 = element("div");
+    			a = element("a");
+    			a.textContent = "See 2023 gallery";
+    			t5 = space();
+    			div2 = element("div");
+    			div2.textContent = "© bordoray #30DayMapChallenge 2023. All rights reserved.";
+    			attr_dev(div0, "class", "container svelte-zocrhp");
     			add_location(div0, file, 12, 1, 288);
-    			attr_dev(div1, "class", "app svelte-gqjcva");
-    			add_location(div1, file, 10, 0, 257);
+    			attr_dev(a, "href", "https://bordoray.github.io/30-day-map-challenge/2023/");
+    			attr_dev(a, "target", "_blank");
+    			attr_dev(a, "class", "svelte-zocrhp");
+    			add_location(a, file, 17, 2, 393);
+    			attr_dev(div1, "class", "container link svelte-zocrhp");
+    			add_location(div1, file, 16, 1, 362);
+    			attr_dev(div2, "class", "container footering svelte-zocrhp");
+    			add_location(div2, file, 19, 1, 503);
+    			attr_dev(div3, "class", "app svelte-zocrhp");
+    			add_location(div3, file, 10, 0, 257);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -10968,13 +10988,18 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			mount_component(styles, target, anchor);
     			insert_dev(target, t0, anchor);
-    			insert_dev(target, div1, anchor);
-    			mount_component(navbar, div1, null);
-    			append_dev(div1, t1);
-    			append_dev(div1, div0);
+    			insert_dev(target, div3, anchor);
+    			mount_component(navbar, div3, null);
+    			append_dev(div3, t1);
+    			append_dev(div3, div0);
     			mount_component(quizzbox, div0, null);
     			append_dev(div0, t2);
     			mount_component(map_1, div0, null);
+    			append_dev(div3, t3);
+    			append_dev(div3, div1);
+    			append_dev(div1, a);
+    			append_dev(div3, t5);
+    			append_dev(div3, div2);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
@@ -11015,7 +11040,7 @@ var app = (function () {
     		d: function destroy(detaching) {
     			destroy_component(styles, detaching);
     			if (detaching) detach_dev(t0);
-    			if (detaching) detach_dev(div1);
+    			if (detaching) detach_dev(div3);
     			destroy_component(navbar);
     			destroy_component(quizzbox);
     			destroy_component(map_1);
