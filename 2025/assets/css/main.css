@@ -2708,6 +2708,9 @@ input, select, textarea {
 			/* .tiles article.style1 > .image:before {
 				background-color: #555555;
 			} */
+			.tiles article.style1 > a h2 {
+				text-shadow: 0px 0px 6px #000000;
+			}
 
 			.tiles article.style2 > .image:before {
 				background-color: #7ecaf6;
